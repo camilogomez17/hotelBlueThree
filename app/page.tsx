@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ServicesGrid } from "./components/ServicesGrid";
+import PolicyTabs from "./components/PolicyTabs";
 
 const photos = [
   {
@@ -214,15 +215,8 @@ export default function Home() {
       </section>
 
       <section className="home-policies-section section-wrap" id="politicas">
-        <div className="section-heading"><div><p className="eyebrow">ANTES DE TU LLEGADA</p><h2>Información<br/>y <em>políticas.</em></h2></div><p>Conoce las principales condiciones de tu estadía. Revisa los detalles completos antes de reservar.</p></div>
-        <div className="home-policies-grid">
-          <article className="home-policy-card"><span>01</span><h3>Horario de silencio</h3><p>10:30 p. m. a 9:00 a. m.</p></article>
-          <article className="home-policy-card"><span>02</span><h3>Identificación</h3><p>Check-in para mayores de 18 años con identificación válida.</p></article>
-          <article className="home-policy-card"><span>03</span><h3>Menores de 5 años</h3><p>Alojamiento sin cargo extra, sujeto a la capacidad de la habitación.</p></article>
-          <article className="home-policy-card"><span>04</span><h3>Habitaciones libres de humo</h3><p>No fumar en habitaciones. Multa indicada: S/ 250.</p></article>
-          <article className="home-policy-card"><span>05</span><h3>Daños y perjuicios</h3><p>Se cobra el costo de los daños ocasionados a instalaciones y suministros.</p></article>
-          <article className="home-policy-card"><span>06</span><h3>Seguridad y registro</h3><p>Confidencialidad, venta responsable de alcohol y documentación de huéspedes extranjeros.</p></article>
-        </div>
+        <div className="section-heading"><div><p className="eyebrow">ANTES DE TU LLEGADA</p><h2>Información<br/>y <em>políticas.</em></h2></div><p>Consulta tarifas, familias, estacionamiento, mascotas, fumar y Wi-Fi antes de reservar.</p></div>
+        <PolicyTabs language="es" />
         <div className="home-policies-more"><a className="room-explore-button" href="/politicas">Ver todas las políticas ↗</a></div>
       </section>
 
