@@ -1,5 +1,5 @@
-import HomeLocation from "./components/HomeLocation";
 "use client";
+import HomeLocation from "./components/HomeLocation";
 
 import { useState } from "react";
 import { ServicesGrid } from "./components/ServicesGrid";
