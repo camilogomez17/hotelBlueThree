@@ -16,7 +16,7 @@ export default function HomeRoomCards() {
     <section className="home-room-showcase section-wrap" id="habitaciones" aria-labelledby="home-room-heading">
       <h2 id="home-room-heading">Habitaciones y suites</h2>
       <div className="home-room-cards" aria-label="Habitaciones y suites">
-        {rooms.slice(0, 4).map((room, index) => (
+        {rooms.map((room, index) => (
           <article className="home-room-card" key={room.src}>
             <div className="home-room-image"><img src={room.src} alt={room.name} loading="lazy" /></div>
             <div className="home-room-card-body">
