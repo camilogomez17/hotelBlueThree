@@ -48,7 +48,7 @@ export function SiteHeader() {
             <a href="/en/habitaciones" onClick={() => setMenuOpen(false)}>Rooms</a>
             <a href="/en/servicios" onClick={() => setMenuOpen(false)}>Services</a>
             <a href="/en/galeria" onClick={() => setMenuOpen(false)}>Gallery</a>
-            <a href="/en/#ubicacion" onClick={() => setMenuOpen(false)}>Location</a>
+            <a href="/en/ubicacion" onClick={() => setMenuOpen(false)}>Location</a>
             <a href="/en/contacto" onClick={() => setMenuOpen(false)}>Contact</a>
           </nav>
           <div className="header-actions">
