@@ -17,9 +17,15 @@ export default function Politicas() {
     <section className="section-wrap hotel-policies-page">
       <div className="section-heading"><div><p className="eyebrow">HOTEL INFORMATION</p><h2>Amenities and services</h2></div><p>Explore services available during your stay. Confirm details with reception.</p></div>
       <div className="home-policies-grid">
-        <article className="home-policy-card"><h3>Dining</h3><p>On-site café and menu options.</p></article>
-        <article className="home-policy-card"><h3>Transport</h3><p>Local and airport transfers available for an additional charge upon request.</p></article>
-        <article className="home-policy-card"><h3>Conveniences</h3><p>Free Wi-Fi and self-parking. Special occasion decorations upon request.</p></article>
+        <article className="home-policy-card"><h3>Dining</h3><p>On-site café</p></article>
+        <article className="home-policy-card"><h3>Transport</h3><p>Local transfers · Airport transfers by request (additional charge)</p></article>
+        <article className="home-policy-card"><h3>Conveniences</h3><p>Free parking · Free Wi-Fi · Special occasion arrangements by request</p></article>
+      </div>
+      <div className="section-heading"><div><p className="eyebrow">FEATURED AMENITIES</p><h2>Highlights</h2></div></div>
+      <div className="home-policies-grid">
+        <article className="home-policy-card"><h3>Café</h3><p>Food and drinks during your stay.</p></article>
+        <article className="home-policy-card"><h3>Parking</h3><p>Complimentary self-parking.</p></article>
+        <article className="home-policy-card"><h3>Wi-Fi</h3><p>Complimentary connection in rooms and lobby.</p></article>
       </div>
       <div className="section-heading"><div><p className="eyebrow">FOR YOUR STAY</p><h2>Arrival information</h2></div></div>
       <div className="hotel-policy-times">
@@ -27,6 +33,14 @@ export default function Politicas() {
         <div><span>CHECK-OUT</span><strong>11:00 a. m.</strong></div>
       </div>
       <p>Address: Residencial Buena Vista – Las Tres Pirámides, Chancay 15130, Peru. For directions, transport and special requests, contact reception.</p>
+      <div className="home-policies-grid">
+        <article className="home-policy-card"><h3>Parking</h3><p>Self-parking: complimentary · Valet: unavailable · EV charging: unavailable · Secured: available · Covered: unavailable · In/out privileges: unavailable</p></article>
+        <article className="home-policy-card"><h3>Airport shuttle</h3><p>Transfer available on request for an additional charge. Confirm schedule and price.</p></article>
+        <article className="home-policy-card"><h3>Kids services</h3><p>Children up to 12 stay free sharing a parent's bed. Confirm room capacity.</p></article>
+        <article className="home-policy-card"><h3>Smoke-free</h3><p>Smoking in non-smoking rooms may incur a penalty.</p></article>
+        <article className="home-policy-card"><h3>Breakfast</h3><p>Ask reception about café breakfast availability and pricing.</p></article>
+        <article className="home-policy-card"><h3>Pets</h3><p>Pets are not allowed.</p></article>
+      </div>
       <div className="section-heading"><div><p className="eyebrow">OUR POLICIES</p><h2>Stay conditions</h2></div></div>
       <PolicyTabs language="en" />
       <div className="hotel-policy-note">
