@@ -120,7 +120,7 @@ export default function Home() {
       </section>
 
       <section className="filmstrip-intro" aria-label="About Hotel BlueThree">
-        <p>Enjoy your stay in Chancay, near attractions such as Chancay Castle, Chancay Municipal Museum, Eco Truly Park and Lachay National Reserve. Explore our rooms and suites, some featuring a jacuzzi, balcony and panoramic views.</p>
+        <p>Enjoy your stay in Chancay, near attractions such as Chancay Castle, Chancay Municipal Museum, Eco Truly Park and Lachay National Reserve. Explore our rooms and suites, some featuring a jacuzzi, balcony and panoramic views.</p><div className="home-intro-actions"><a className="button button-dark" href="/en/habitaciones">Explore rooms</a><a className="button button-outline" href="/en/ubicacion">View location</a></div>
       </section>
 
       <aside className="hotel-utility-rail" aria-label="Hotel information and contact">
