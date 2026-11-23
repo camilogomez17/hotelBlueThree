@@ -752,3 +752,24 @@ img,video,iframe{max-width:100%}
 .for-your-stay-disclaimer{margin:18px 0 0;color:#52616f;font-size:13px;line-height:1.6}
 @media(max-width:900px){.for-your-stay-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.for-your-stay-grid{grid-template-columns:1fr}.for-your-stay-top .button{width:100%;text-align:center}}
+
+
+.hotel-our-policies-heading{padding-top:32px;margin:0;text-align:center;font-size:clamp(26px,3vw,36px);color:#123c55}
+.hotel-policy-note{margin-top:30px}
+.hotel-policy-proposal{font-size:14px;line-height:1.6;color:#52616f;margin:0 0 20px}
+.hotel-policy-accordion{border-top:1px solid #dce5ec}
+.hotel-policy-accordion details{border-bottom:1px solid #dce5ec}
+.hotel-policy-accordion summary{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 6px;list-style:none;cursor:pointer;font-weight:750;font-size:19px;color:#173a54}
+.hotel-policy-accordion summary::-webkit-details-marker{display:none}
+.hotel-policy-accordion summary span{display:grid;place-items:center;flex:0 0 32px;width:32px;height:32px;border-radius:50%;background:#003b71;color:#fff;font-size:23px;transition:transform .15s}
+.hotel-policy-accordion details[open] summary span{transform:rotate(180deg)}
+.hotel-policy-accordion summary:focus-visible{outline:2px solid #003b71;outline-offset:2px}
+.hotel-policy-accordion-content{padding:0 6px 24px;line-height:1.7}
+.hotel-policy-accordion-content>p{margin:0 0 12px}
+.hotel-policy-accordion-content>a{color:#003b71;text-decoration:underline}
+.hotel-policy-accordion-rows{margin:0}
+.hotel-policy-accordion-rows>div{display:grid;grid-template-columns:minmax(180px,1fr) minmax(0,2fr);gap:16px;padding:12px 0}
+.hotel-policy-accordion-rows dt{font-weight:700}
+.hotel-policy-accordion-rows dd{margin:0}
+@media(max-width:600px){.hotel-policy-accordion-rows>div{grid-template-columns:1fr;gap:3px}.hotel-policy-accordion summary{font-size:17px}}
+@media(prefers-reduced-motion:reduce){.hotel-policy-accordion summary span{transition:none}}
