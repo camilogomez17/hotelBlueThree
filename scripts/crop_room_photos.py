@@ -5,6 +5,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "public"
 DEST = SOURCE / "rooms-clean"
 DEST.mkdir(parents=True, exist_ok=True)
+# Preserve original brochure images while generating clean photos.
 
 cuts = {
     "StandardRoom.jpeg": (0.454, 0.695),
