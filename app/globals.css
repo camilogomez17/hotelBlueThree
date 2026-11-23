@@ -894,3 +894,5 @@ img,video,iframe{max-width:100%}
 .site-header .main-nav{margin-left:0;margin-right:auto}
 .site-header .header-actions{margin-left:auto}
 @media(max-width:760px){.site-header .main-nav{margin-left:0;margin-right:0}.site-header .header-actions{margin-left:auto}}
+
+.room-card h3,.blue-room-body h2{text-transform:uppercase}
