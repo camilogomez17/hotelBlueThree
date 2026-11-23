@@ -56,7 +56,6 @@ export default function ForYourStay({ language }: { language: Language }) {
           </article>
         ))}
       </div>
-      <p className="for-your-stay-disclaimer">{es ? "Los detalles de servicios son orientativos y deben confirmarse con el hotel antes de reservar." : "Service details are indicative and must be confirmed with the hotel before booking."}</p>
     </section>
   );
 }
