@@ -93,13 +93,6 @@ export function SiteHeader() {
 }
 export function SiteFooter() {
  return <>
-      <section className="location-section" id="ubicacion"><div className="section-wrap location-layout">
-        <div className="location-copy"><p className="eyebrow">IN THE HEART OF CHANCAY</p><h2>Discover what<br/>surrounds you in <em>Huaral.</em></h2><p className="location-address">{address}</p><a className="button button-dark" href={mapsUrl} target="_blank" rel="noreferrer">Directions <span>↗</span></a>
-          <div className="attractions"><h3>Explore nearby</h3>{attractions.map(([name, detail]) => <div className="attraction" key={name}><strong>{name}</strong><p>{detail}</p></div>)}</div>
-        </div>
-        <div className="map-panel"><iframe title="Hotel BlueThree Chancay location on Google Maps" src="https://maps.google.com/maps?q=Hotel%20BlueThree%20Chancay&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade"/></div>
-      </div></section>
-
       <section className="contact-section section-wrap" id="contacto">
         <div className="contact-copy"><p className="eyebrow">PLAN YOUR STAY</p><h2>Book your next<br/><em>visit to Chancay.</em></h2><p>Check rates, availability, room types and special requests through the hotel's official channels or Tripadvisor.</p><BookingLinks/></div>
         <div className="social-panel"><p className="eyebrow">OFFICIAL CHANNELS</p>{socials.map(([name, href]) => <a className="social-link" href={href} key={name} target="_blank" rel="noreferrer">{name}<span>↗</span></a>)}<a className="social-link" href="/en/contacto">All our links<span>↗</span></a><a className="social-link" href={tripAdvisor} target="_blank" rel="noreferrer">Tripadvisor · Bookings and reviews<span>↗</span></a><a className="social-link" href="https://www.booking.com/searchresults.html?aid=390156&amp;label=duc511jc-10CAsosQFCE3RyZXMtYXJib2xlcy1henVsZXNIM1gDaKcCiAEBmAEzuAEHyAEP2AED6AEB-AEBiAIBqAIBuAKmhYjYBsACAdICJGVlNTI4NjhkLTY0YTUtNDg3MS1hZGRlLWI3ZTEwYTE5YWVlZtgCAeACAQ&amp;redirected=1&amp;city=-341519&amp;highlighted_hotels=15241340&amp;hlrd=user_sh&amp;source=hotel&amp;checkin=2026-11-21&amp;checkout=2026-11-22&amp;keep_landing=1&amp;sid=c027b02c5e916b27cfe75db44e9fae5d" target="_blank" rel="noopener noreferrer">Booking.com · Bookings<span>↗</span></a></div>
@@ -115,7 +108,7 @@ export function SiteFooter() {
               </a>
               <p>Discover Chancay. Relax at BlueThree.</p>
               <address>{address}</address>
-              <a className="footer-map-link" href={mapsUrl} target="_blank" rel="noopener noreferrer">View location ↗</a>
+              <a className="footer-map-link" href="/en/ubicacion" target="_blank" rel="noopener noreferrer">View location ↗</a>
             </div>
             <div className="footer-column">
               <h3>Explore</h3>
@@ -124,7 +117,7 @@ export function SiteFooter() {
               <a href="/en/galeria">Gallery</a>
               <a href="/en/gastronomia">Dining</a>
               <a href="/en/eventos">Events</a>
-              <a href="/en/#ubicacion">Location</a>
+              <a href="/en/ubicacion">Location</a>
             </div>
             <div className="footer-column">
               <h3>Your stay</h3>
