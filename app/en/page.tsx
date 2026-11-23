@@ -240,6 +240,8 @@ export default function Home() {
         <div className="home-policies-more"><a className="room-explore-button" href="/en/politicas">View all policies ↗</a></div>
       </section>
 
+      <section className="bluethree-events" aria-labelledby="bluethree-events-heading"><div className="bluethree-events-inner"><h2 id="bluethree-events-heading">Meetings and events</h2><p>Plan your next meeting, celebration, or special occasion at BlueThree in Chancay. Contact our team to discuss available spaces, event arrangements, and options for your group.</p><a href="/en/contacto" className="bluethree-events-button">Plan an Event</a></div></section>
+
     </main>
   );
 }
