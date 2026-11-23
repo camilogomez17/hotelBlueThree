@@ -4,26 +4,10 @@ import { useState } from "react";
 import { ServicesGrid } from "./components/ServicesGrid";
 
 const photos = [
-  {
-    src: "https://images.trvl-media.com/lodging/90000000/89740000/89732700/89732652/c6474fe1.jpg?impolicy=resizecrop&ra=fill&rh=575&rw=575",
-    alt: "Hotel BlueThree y atractivos de Chancay",
-    title: "Descubre Chancay",
-  },
-  {
-    src: "https://images.trvl-media.com/lodging/90000000/89740000/89732700/89732652/af4713ea.jpg?h=800&impolicy=fcrop&p=1&q=medium&w=1200",
-    alt: "Habitación con cama y detalles azules",
-    title: "Habitaciones",
-  },
-  {
-    src: "https://images.trvl-media.com/lodging/90000000/89740000/89732700/89732652/8571c6b5.jpg?impolicy=resizecrop&ra=fill&rh=575&rw=575",
-    alt: "Habitación con dos camas y escritorio",
-    title: "Espacios para descansar",
-  },
-  {
-    src: "https://images.trvl-media.com/lodging/90000000/89740000/89732700/89732652/8b6c1da2.jpg?impolicy=resizecrop&ra=fill&rh=575&rw=575",
-    alt: "Habitación con vista al atardecer",
-    title: "Vistas",
-  },
+  { src: "/StandardRoom.jpeg", alt: "Habitación estándar de Hotel BlueThree", title: "Habitación estándar" },
+  { src: "/JuniorSuite.jpeg", alt: "Junior suite de Hotel BlueThree", title: "Junior suite" },
+  { src: "/DeluxeJuniorSuite.jpeg", alt: "Suite junior deluxe de Hotel BlueThree", title: "Suite junior deluxe" },
+  { src: "/JacuzziBalconyGardenViewSuite.jpeg", alt: "Suite con jacuzzi y balcón", title: "Suite con jacuzzi" },
 ];
 
 const salesPhotos = [
@@ -65,7 +49,7 @@ const diningItems = [
 ];
 
 const roomPhotos = salesPhotos;
-const amenities = ["Wi-Fi", "Estacionamiento", "Aire acondicionado", "Restaurante y cafetería", "Desayuno", "Recepción 24 horas", "Servicio a la habitación", "Jardín", "Habitaciones con jacuzzi", "Lavandería", "Eventos y reuniones", "Asistencia turística"];
+
 const attractions = [
   ["Castillo de Chancay", "Un emblemático atractivo histórico y cultural de la ciudad."],
   ["Museo Municipal de Chancay", "Conoce la historia y cultura local."],
@@ -119,7 +103,7 @@ export default function Home() {
       </section>
 
       <section className="filmstrip-intro" aria-label="Presentación de Hotel BlueThree">
-        <p>Disfruta de una estadía en Chancay, cerca de atractivos como el Castillo de Chancay, el Museo Municipal de Chancay, Eco Truly Park y la Reserva Nacional de Lachay. Explora nuestras habitaciones y suites, algunas con jacuzzi, balcón y vistas panorámicas.</p>
+        <p>Disfruta de una estadía en Chancay, cerca de atractivos como el Castillo de Chancay, el Museo Municipal de Chancay, Eco Truly Park y la Reserva Nacional de Lachay. Explora nuestras habitaciones y suites, algunas con jacuzzi, balcón y vistas panorámicas.</p>\n        <div className="home-intro-actions"><a className="button button-dark" href="/habitaciones">Explorar habitaciones</a><a className="button button-outline" href="/politicas">Información del hotel</a></div>
       </section>
 
       <aside className="hotel-utility-rail" aria-label="Información y contacto del hotel">
