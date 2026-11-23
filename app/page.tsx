@@ -1,3 +1,4 @@
+import HomeLocation from "./components/HomeLocation";
 "use client";
 
 import { useState } from "react";
@@ -207,6 +208,8 @@ export default function Home() {
       </section>
 
       <section className="bluethree-events" aria-labelledby="bluethree-events-heading"><div className="bluethree-events-inner"><h2 id="bluethree-events-heading">Reuniones y eventos</h2><p>Organiza tu próxima reunión, celebración u ocasión especial en BlueThree, Chancay. Comunícate con nuestro equipo para consultar los espacios disponibles, la organización y las opciones para tu grupo.</p><a href="/contacto" className="bluethree-events-button">Planificar un evento</a></div></section>
+
+      <HomeLocation language="es" />
 
     </main>
   );
