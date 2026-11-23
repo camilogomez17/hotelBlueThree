@@ -2,7 +2,7 @@ export const whatsapp = "https://wa.me/message/IPFK3E5CKTNGK1";
 export const tripAdvisor = "https://www.tripadvisor.com/Hotel_Review-g2336594-d24005682-Reviews-Hotel_BlueThree_Chancay-Chancay_Lima_Region.html";
 export const rooms = [
   {
-    "src": "/StandardRoom.jpeg",
+    "src": "/rooms-clean/StandardRoom.jpeg",
     "name": "Habitación estándar",
     "description": "Habitación con cama de 2 plazas, Smart TV de 32 pulgadas, minibar y escritorio.",
     "features": [
@@ -24,7 +24,7 @@ export const rooms = [
     ]
   },
   {
-    "src": "/JuniorSuite.jpeg",
+    "src": "/rooms-clean/JuniorSuite.jpeg",
     "name": "Suite junior",
     "description": "Suite junior para dos personas con escritorio, minibar y Smart TV de 32 pulgadas.",
     "features": [
@@ -47,7 +47,7 @@ export const rooms = [
     ]
   },
   {
-    "src": "/DeluxeJuniorSuite.jpeg",
+    "src": "/rooms-clean/DeluxeJuniorSuite.jpeg",
     "name": "Junior suite deluxe",
     "description": "Suite junior deluxe con escritorio, minibar, aire acondicionado y Smart TV de 32 pulgadas.",
     "features": [
@@ -70,7 +70,7 @@ export const rooms = [
     ]
   },
   {
-    "src": "/DeluxeSuiteTwoBed.jpeg",
+    "src": "/rooms-clean/DeluxeSuiteTwoBed.jpeg",
     "name": "Suite deluxe",
     "description": "Suite deluxe con cama de 2 plazas, Smart TV de 42 pulgadas, minibar y caja fuerte.",
     "features": [
@@ -93,7 +93,7 @@ export const rooms = [
     ]
   },
   {
-    "src": "/DoubleBedRoomJacuzziBalconyPanoramicView.jpeg",
+    "src": "/rooms-clean/DoubleBedRoomJacuzziBalconyPanoramicView.jpeg",
     "name": "Jacuzzi con dos camas, balcón y vista panorámica",
     "description": "Habitación con dos camas de distinto tamaño, jacuzzi, balcón y vista panorámica.",
     "features": [
@@ -118,7 +118,7 @@ export const rooms = [
     ]
   },
   {
-    "src": "/GardenViewRoomWithJacuzzi.jpeg",
+    "src": "/rooms-clean/GardenViewRoomWithJacuzzi.jpeg",
     "name": "Jacuzzi tántrica con vista al jardín",
     "description": "Habitación para dos personas con jacuzzi, silla tántrica y vista al jardín.",
     "features": [
@@ -144,7 +144,7 @@ export const rooms = [
     ]
   },
   {
-    "src": "/JacuzziBalconyGardenViewSuite.jpeg",
+    "src": "/rooms-clean/JacuzziBalconyGardenViewSuite.jpeg",
     "name": "Jacuzzi y balcón con vista al jardín",
     "description": "Habitación con jacuzzi, balcón con vista al jardín y Smart TV de 42 pulgadas.",
     "features": [
@@ -169,7 +169,7 @@ export const rooms = [
     ]
   },
   {
-    "src": "/JacuzziBalconyRoomPanoramicView.jpeg",
+    "src": "/rooms-clean/JacuzziBalconyRoomPanoramicView.jpeg",
     "name": "Jacuzzi y balcón con vista panorámica",
     "description": "Habitación para dos personas con jacuzzi, balcón panorámico y Smart TV de 42 pulgadas.",
     "features": [
@@ -194,7 +194,7 @@ export const rooms = [
     ]
   },
   {
-    "src": "/JacuzziRoomGardenView.jpeg",
+    "src": "/rooms-clean/JacuzziRoomGardenView.jpeg",
     "name": "Jacuzzi tántrica con vista al jardín",
     "description": "Habitación para dos personas con jacuzzi, silla tántrica y vista al jardín.",
     "features": [
