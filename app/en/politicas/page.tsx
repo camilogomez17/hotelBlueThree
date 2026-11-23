@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PolicyTabs from "../../components/PolicyTabs";
 import HotelAmenities from "../../components/HotelAmenities";
+import FeaturedAmenities from "../../components/FeaturedAmenities";
 import { whatsapp } from "../data/hotel";
 
 export const metadata: Metadata = {
@@ -17,12 +18,7 @@ export default function Politicas() {
     </section>
     <section className="section-wrap hotel-policies-page">
       <HotelAmenities language="en" />
-      <div className="section-heading"><div><p className="eyebrow">FEATURED AMENITIES</p><h2>Highlights</h2></div></div>
-      <div className="home-policies-grid">
-        <article className="home-policy-card"><h3>Café</h3><p>Food and drinks during your stay.</p></article>
-        <article className="home-policy-card"><h3>Parking</h3><p>Complimentary self-parking.</p></article>
-        <article className="home-policy-card"><h3>Wi-Fi</h3><p>Complimentary connection in rooms and lobby.</p></article>
-      </div>
+      <FeaturedAmenities language="en" />
       <div className="section-heading"><div><p className="eyebrow">FOR YOUR STAY</p><h2>Arrival information</h2></div></div>
       <div className="hotel-policy-times">
         <div><span>CHECK-IN</span><strong>2:00 p. m.</strong></div>
