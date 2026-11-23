@@ -211,6 +211,8 @@ export default function Home() {
         <div className="room-more"><a className="room-explore-button" href="/en/habitaciones">Explore all rooms</a></div>
       </section>
 
+      <section className="bluethree-benefits" aria-labelledby="bluethree-benefits-title"><div className="bluethree-benefits-inner"><h2 id="bluethree-benefits-title">Benefits of staying at BlueThree</h2><ul className="bluethree-benefits-list"><li><a href="/en/habitaciones"><span className="bluethree-benefit-icon" aria-hidden="true">▣</span><span>Explore our rooms</span></a></li><li><a href="/en/contacto"><span className="bluethree-benefit-icon" aria-hidden="true">▤</span><span>Check availability</span></a></li><li><a href="/en/servicios"><span className="bluethree-benefit-icon" aria-hidden="true">◉</span><span>Discover amenities</span></a></li><li><a href="/en/ubicacion"><span className="bluethree-benefit-icon" aria-hidden="true">⌖</span><span>Explore our location</span></a></li><li><a href="/en/contacto"><span className="bluethree-benefit-icon" aria-hidden="true">◎</span><span>Ask about special stays</span></a></li><li><a href="/en/contacto"><span className="bluethree-benefit-icon" aria-hidden="true">☎</span><span>Contact us directly</span></a></li></ul></div></section>
+
       <section className="home-dining-section section-wrap" id="gastronomia">
         <div className="section-heading"><div><p className="eyebrow">BLUETHREE CAFÉ</p><h2>Flavors to enjoy<br/>your <em>stay.</em></h2></div><p>Explore our menu categories and selections. Check prices, ingredients and details on the full menu.</p></div>
         <div className="home-dining-grid" aria-label="Dining categories">
