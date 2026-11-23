@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PolicyTabs from "../components/PolicyTabs";
+import HotelAmenities from "../components/HotelAmenities";
 import { whatsapp } from "../data/hotel";
 
 export const metadata: Metadata = {
@@ -15,12 +16,7 @@ export default function Politicas() {
       <p>Consulta las condiciones de tu estadía.</p>
     </section>
     <section className="section-wrap hotel-policies-page">
-      <div className="section-heading"><div><p className="eyebrow">INFORMACIÓN DEL HOTEL</p><h2>Servicios y comodidades</h2></div><p>Conoce los servicios durante tu estadía. Confirma los detalles con recepción.</p></div>
-      <div className="home-policies-grid">
-        <article className="home-policy-card"><h3>Gastronomía</h3><p>Cafetería en el hotel</p></article>
-        <article className="home-policy-card"><h3>Transporte</h3><p>Traslados locales · Traslados al aeropuerto por solicitud (costo adicional)</p></article>
-        <article className="home-policy-card"><h3>Comodidades</h3><p>Estacionamiento gratuito · Wi-Fi gratuito · Decoraciones especiales previa solicitud</p></article>
-      </div>
+      <HotelAmenities language="es" />
       <div className="section-heading"><div><p className="eyebrow">SERVICIOS DESTACADOS</p><h2>Lo más destacado</h2></div></div>
       <div className="home-policies-grid">
         <article className="home-policy-card"><h3>Cafetería</h3><p>Alimentos y bebidas durante tu estadía.</p></article>
