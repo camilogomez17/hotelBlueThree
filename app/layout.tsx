@@ -4,6 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Hotel BlueThree Chancay | Hotel en Chancay, Huaral",
+  icons: { icon: [{ url: "/favicon.svg", type: "image/svg+xml" }], shortcut: "/favicon.svg" },
   description: "Descubre Chancay y descansa en Hotel BlueThree. Consulta habitaciones, servicios, ubicación y canales oficiales de contacto.",
   openGraph: {
     title: "Hotel BlueThree Chancay",
