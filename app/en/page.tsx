@@ -1,5 +1,6 @@
-import BlueThreeBenefits from "../components/BlueThreeBenefits";
 "use client";
+
+import BlueThreeBenefits from "../components/BlueThreeBenefits";
 import HomeLocation from "../components/HomeLocation";
 
 import { useState } from "react";
