@@ -4,47 +4,220 @@ export const rooms = [
   {
     "src": "/StandardRoom.jpeg",
     "name": "Habitación estándar",
-    "description": "Consulta la distribución, ocupación y servicios incluidos."
+    "description": "Habitación con cama de 2 plazas, Smart TV de 32 pulgadas, minibar y escritorio.",
+    "features": [
+      "1 cama de 2 plazas",
+      "2 personas",
+      "Smart TV 32 pulgadas",
+      "Wi-Fi",
+      "Aire acondicionado",
+      "Calefacción",
+      "Minibar",
+      "Intercomunicador",
+      "Plancha",
+      "Jarra eléctrica",
+      "Secadora de pelo",
+      "Champú y jabón",
+      "Toallas",
+      "No fumar",
+      "Estacionamiento incluido"
+    ]
   },
   {
     "src": "/JuniorSuite.jpeg",
-    "name": "Junior suite",
-    "description": "Solicita información sobre características y disponibilidad."
+    "name": "Suite junior",
+    "description": "Suite junior para dos personas con escritorio, minibar y Smart TV de 32 pulgadas.",
+    "features": [
+      "1 cama de 2 plazas",
+      "2 personas",
+      "Smart TV 32 pulgadas",
+      "Wi-Fi",
+      "Escritorio",
+      "Aire acondicionado",
+      "Calefacción",
+      "Minibar",
+      "Intercomunicador",
+      "Plancha",
+      "Jarra eléctrica",
+      "Secadora de pelo",
+      "Champú y jabón",
+      "Toallas",
+      "No fumar",
+      "Estacionamiento incluido"
+    ]
   },
   {
     "src": "/DeluxeJuniorSuite.jpeg",
     "name": "Junior suite deluxe",
-    "description": "Consulta los detalles y la tarifa correspondiente."
+    "description": "Suite junior deluxe con escritorio, minibar, aire acondicionado y Smart TV de 32 pulgadas.",
+    "features": [
+      "1 cama de 2 plazas",
+      "2 personas",
+      "Smart TV 32 pulgadas",
+      "Wi-Fi",
+      "Escritorio",
+      "Aire acondicionado",
+      "Calefacción",
+      "Minibar",
+      "Intercomunicador",
+      "Plancha",
+      "Jarra eléctrica",
+      "Secadora de pelo",
+      "Champú y jabón",
+      "Toallas",
+      "No fumar",
+      "Estacionamiento incluido"
+    ]
   },
   {
     "src": "/DeluxeSuiteTwoBed.jpeg",
-    "name": "Suite deluxe con dos camas",
-    "description": "Consulta la capacidad y las condiciones de reserva."
+    "name": "Suite deluxe",
+    "description": "Suite deluxe con cama de 2 plazas, Smart TV de 42 pulgadas, minibar y caja fuerte.",
+    "features": [
+      "1 cama de 2 plazas",
+      "2 personas",
+      "Smart TV 42 pulgadas",
+      "Wi-Fi",
+      "Caja fuerte",
+      "Aire acondicionado",
+      "Calefacción",
+      "Minibar",
+      "Intercomunicador",
+      "Plancha",
+      "Jarra eléctrica",
+      "Secadora de pelo",
+      "Champú y jabón",
+      "Toallas",
+      "No fumar",
+      "Estacionamiento incluido"
+    ]
   },
   {
     "src": "/DoubleBedRoomJacuzziBalconyPanoramicView.jpeg",
-    "name": "Habitación doble con jacuzzi, balcón y vista panorámica",
-    "description": "Confirma las características de la habitación antes de reservar."
+    "name": "Jacuzzi con dos camas, balcón y vista panorámica",
+    "description": "Habitación con dos camas de distinto tamaño, jacuzzi, balcón y vista panorámica.",
+    "features": [
+      "1 cama de 2½ plazas",
+      "1 cama de 1½ plazas",
+      "Jacuzzi",
+      "Balcón y vista panorámica",
+      "Smart TV 42 pulgadas",
+      "Wi-Fi",
+      "Caja fuerte",
+      "Aire acondicionado",
+      "Calefacción",
+      "Minibar",
+      "Intercomunicador",
+      "Plancha",
+      "Jarra eléctrica",
+      "Secadora de pelo",
+      "Champú y jabón",
+      "Toallas y batas",
+      "No fumar",
+      "Estacionamiento incluido"
+    ]
   },
   {
     "src": "/GardenViewRoomWithJacuzzi.jpeg",
-    "name": "Habitación con jacuzzi y vista al jardín",
-    "description": "Consulta disponibilidad y condiciones de uso del jacuzzi."
+    "name": "Jacuzzi tántrica con vista al jardín",
+    "description": "Habitación para dos personas con jacuzzi, silla tántrica y vista al jardín.",
+    "features": [
+      "1 cama de 2 plazas",
+      "2 personas",
+      "Jacuzzi",
+      "Silla tántrica",
+      "Vista al jardín",
+      "Smart TV 32 pulgadas",
+      "Wi-Fi",
+      "Escritorio",
+      "Aire acondicionado",
+      "Calefacción",
+      "Minibar",
+      "Intercomunicador",
+      "Plancha",
+      "Jarra eléctrica",
+      "Secadora de pelo",
+      "Champú y jabón",
+      "Toallas",
+      "No fumar",
+      "Estacionamiento incluido"
+    ]
   },
   {
     "src": "/JacuzziBalconyGardenViewSuite.jpeg",
-    "name": "Suite con jacuzzi, balcón y vista al jardín",
-    "description": "Solicita información sobre servicios incluidos."
+    "name": "Jacuzzi y balcón con vista al jardín",
+    "description": "Habitación con jacuzzi, balcón con vista al jardín y Smart TV de 42 pulgadas.",
+    "features": [
+      "1 cama de 2½ plazas",
+      "2 personas",
+      "Jacuzzi",
+      "Balcón con vista al jardín",
+      "Smart TV 42 pulgadas",
+      "Wi-Fi",
+      "Caja fuerte",
+      "Aire acondicionado",
+      "Calefacción",
+      "Minibar",
+      "Intercomunicador",
+      "Plancha",
+      "Jarra eléctrica",
+      "Secadora de pelo",
+      "Champú y jabón",
+      "Toallas y batas",
+      "No fumar",
+      "Estacionamiento incluido"
+    ]
   },
   {
     "src": "/JacuzziBalconyRoomPanoramicView.jpeg",
-    "name": "Habitación con jacuzzi, balcón y vista panorámica",
-    "description": "Confirma categoría y tarifa con recepción."
+    "name": "Jacuzzi y balcón con vista panorámica",
+    "description": "Habitación para dos personas con jacuzzi, balcón panorámico y Smart TV de 42 pulgadas.",
+    "features": [
+      "1 cama de 2½ plazas",
+      "2 personas",
+      "Jacuzzi",
+      "Balcón y vista panorámica",
+      "Smart TV 42 pulgadas",
+      "Wi-Fi",
+      "Caja fuerte",
+      "Aire acondicionado",
+      "Calefacción",
+      "Minibar",
+      "Intercomunicador",
+      "Plancha",
+      "Jarra eléctrica",
+      "Secadora de pelo",
+      "Champú y jabón",
+      "Toallas y batas",
+      "No fumar",
+      "Estacionamiento incluido"
+    ]
   },
   {
     "src": "/JacuzziRoomGardenView.jpeg",
-    "name": "Habitación con jacuzzi y vista al jardín",
-    "description": "Consulta las opciones disponibles para tu fecha."
+    "name": "Jacuzzi tántrica con vista al jardín",
+    "description": "Habitación para dos personas con jacuzzi, silla tántrica y vista al jardín.",
+    "features": [
+      "1 cama de 2½ plazas",
+      "2 personas",
+      "Jacuzzi",
+      "Silla tántrica",
+      "Vista al jardín",
+      "Smart TV 32 pulgadas",
+      "Wi-Fi",
+      "Escritorio",
+      "Aire acondicionado",
+      "Calefacción",
+      "Minibar",
+      "Intercomunicador",
+      "Plancha",
+      "Jarra eléctrica",
+      "Secadora de pelo",
+      "Champú y jabón",
+      "Toallas",
+      "No fumar",
+      "Estacionamiento incluido"
+    ]
   }
 ];
 export const gallery = [{src:"/Amenities.jpeg",name:"Instalaciones"},{src:"/FoodMenu.jpeg",name:"Gastronomía"},{src:"/CorporateEvents.jpeg",name:"Eventos corporativos"},{src:"/LoveorAnniversaryOrBirthdayDecorationServices.jpeg",name:"Celebraciones"},...rooms.map(room=>({src:room.src,name:room.name}))];
