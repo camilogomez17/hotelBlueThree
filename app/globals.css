@@ -117,7 +117,7 @@ a{color:inherit;text-decoration:none}
 }
 
 
-/* Hilton-inspired hotel overview and interactive image carousel */
+
 .hotel-gallery{max-width:1440px;margin:0 auto;padding:22px 32px 16px;background:#fff}
 .gallery-track{height:clamp(280px,34vw,470px);display:grid;grid-template-columns:2fr 1fr 1fr;gap:8px;overflow:hidden}
 .gallery-slide{position:relative;display:block;min-width:0;min-height:0;padding:0;border:0;background:#e6edf2;overflow:hidden;cursor:pointer;text-align:left}
@@ -203,7 +203,7 @@ a{color:inherit;text-decoration:none}
  .policy-image img{max-height:350px}
 }
 
-/* BlueThree site shell — inspired by Hilton's spacing and navigation system */
+
 :root{--shell-blue:#002f61;--shell-blue-hover:#00264e;--shell-line:#e5e5e5;--shell-max:1280px}
 .topline{height:30px;background:var(--shell-blue);color:#fff;font-size:11px;font-weight:600;letter-spacing:1.2px}
 .topline-separator{opacity:.55}
@@ -288,7 +288,7 @@ a{color:inherit;text-decoration:none}
 @media(max-width:1200px){.hotel-search-inner{flex-direction:column;align-items:stretch;gap:20px}.hotel-search-identity{flex:auto;text-align:center}.hotel-search-form{flex:auto;justify-content:center}.hotel-search-disclaimer{text-align:center}}
 @media(max-width:760px){.hotel-search-widget{padding:22px 18px 16px}.hotel-search-identity h1{font-size:24px}.hotel-search-identity a{font-size:12px}.hotel-search-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}.hotel-date-fields,.hotel-search-selects{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:12px}.hotel-date-fields input,.hotel-search-selects select,.hotel-rate-field select{width:100%}.hotel-rate-field{grid-column:1/-1}.hotel-search-submit{grid-column:1/-1;width:100%}.hotel-search-disclaimer{margin-top:12px}}
 
-/* Hilton-inspired filmstrip: centered active image, neighboring previews, floating introduction */
+
 .filmstrip-hero{position:relative;margin:0 0 48px;overflow:hidden}
 .filmstrip-frame{position:relative;margin:16px 0 0;overflow:hidden}
 .filmstrip-track{display:flex;justify-content:center;align-items:center;gap:16px;width:max-content;position:relative;left:50%;transform:translateX(-50%)}
@@ -335,7 +335,7 @@ a{color:inherit;text-decoration:none}
 .utility-reviews>a{font-size:12px}
 @media(max-width:760px){.utility-reviews{display:flex;flex-direction:column;align-items:flex-start;gap:6px}}
 
-/* Hilton-inspired responsive icon grid */
+
 .services-section{background:#fff;padding:36px 24px 42px;border:0}
 .amenities-content{max-width:1260px;margin:0 auto}
 .amenities-heading{font-size:clamp(25px,2.6vw,34px);line-height:1.2;text-align:center;color:#222;font-weight:600;margin:0 0 36px}
@@ -440,7 +440,7 @@ a{color:inherit;text-decoration:none}
 .contact-compact-location img{display:block;width:100%;max-height:310px;object-fit:cover;border-radius:8px;margin-top:26px}
 @media(max-width:760px){.contact-compact-layout{grid-template-columns:1fr;gap:26px}.contact-compact-content{padding-top:30px;padding-bottom:48px}.contact-compact-location{padding:22px}.contact-compact-hero{padding-top:36px;padding-bottom:34px}}
 
-/* Hilton-style room cards: horizontal scroll and consistent card heights */
+
 .rooms-section .room-grid{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(250px,1fr);grid-template-columns:none;gap:16px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;scrollbar-width:none;padding:2px 2px 16px;align-items:stretch}
 .rooms-section .room-grid::-webkit-scrollbar{display:none}
 .rooms-section .room-card{display:flex;flex-direction:column;min-width:0;border:1px solid #dfe3e8;border-radius:9px;overflow:hidden;scroll-snap-align:start;box-shadow:0 1px 2px #001b3820}
@@ -458,7 +458,7 @@ a{color:inherit;text-decoration:none}
 @media(max-width:1100px){.rooms-section .room-grid{grid-auto-columns:minmax(260px,42%)}}
 @media(max-width:720px){.rooms-section .room-grid{grid-auto-columns:minmax(245px,82%);gap:12px}.rooms-section .room-card img{height:auto}.rooms-section .room-card-content{padding:14px}}
 
-/* Hilton-inspired simplified booking strip */
+
 .hotel-search-widget{padding-top:24px;padding-bottom:22px}
 .hotel-search-inner{gap:24px}
 .hotel-search-form{align-items:center;flex-wrap:nowrap;gap:14px;flex:0 1 auto}
@@ -548,7 +548,7 @@ a{color:inherit;text-decoration:none}
 @media(max-width:800px){.filmstrip-intro{margin:0 auto;padding:24px 22px 0}}
 @media(max-width:480px){.filmstrip-intro{margin:0 auto;padding:20px 18px 0}.filmstrip-arrow{top:50%}}
 
-/* Hilton-style property utility rail and responsive three-tab layout */
+
 .hotel-utility-rail{background:#e9eff3;border-color:#d6e0e8}
 .hotel-utility-inner{background:transparent}
 .hotel-utility-mobile{display:none;background:#e9eff3;border-bottom:1px solid #d6e0e8}
@@ -650,3 +650,9 @@ img,video,iframe{max-width:100%}
 .language-chooser select{min-width:0;max-width:112px;border:0;outline-offset:3px;background:transparent;color:inherit;font:inherit;font-size:12px;font-weight:700;cursor:pointer}
 @media(max-width:767px){.language-chooser{padding:7px 5px;gap:2px}.language-chooser-icon{display:none}.language-chooser select{max-width:83px;font-size:11px}}
 @media(max-width:380px){.language-chooser select{max-width:73px;font-size:10px}}
+
+.home-intro-heading{max-width:760px;margin:0 auto 18px;text-align:center}
+.home-intro-heading .eyebrow{margin-bottom:10px}
+.home-intro-heading h1{font-size:clamp(30px,4vw,48px);line-height:1.15;color:var(--blue-dark);margin:0;font-weight:700;letter-spacing:-.025em}
+.home-intro-actions{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;margin-top:24px}
+@media(max-width:640px){.home-intro-heading h1{font-size:32px}.home-intro-actions .button{width:100%;justify-content:center}}
