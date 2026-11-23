@@ -727,3 +727,28 @@ img,video,iframe{max-width:100%}
 .featured-amenity-close{position:absolute;right:28px;top:26px;border:0;border-radius:50%;background:white;width:36px;height:36px;font-size:26px;cursor:pointer}
 @media(max-width:640px){.featured-amenities-grid{display:grid;grid-auto-flow:column;grid-auto-columns:85%;grid-template-columns:none;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 2px 14px;scrollbar-width:none}.featured-amenities-grid::-webkit-scrollbar{display:none}.featured-amenity-tile{scroll-snap-align:start}.featured-amenity-shade{padding:18px}}
 @media(prefers-reduced-motion:reduce){.featured-amenity-tile img,.featured-amenity-shade strong{transition:none}}
+
+
+.for-your-stay{padding:40px 0}
+.for-your-stay-top{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.for-your-stay-top h2{margin:0;font-size:clamp(26px,3vw,36px);color:#123c55}
+.for-your-stay-contact{display:flex;justify-content:space-between;align-items:center;gap:16px 28px;flex-wrap:wrap;margin:24px 0 12px}
+.for-your-stay-contact p{margin:0;font-size:16px}
+.for-your-stay-contact p span{padding:0 10px}
+.for-your-stay-links{display:flex;flex-wrap:wrap;gap:16px}
+.for-your-stay-links a{color:#003b71;text-decoration:underline;text-underline-offset:3px}
+.for-your-stay-address{color:#52616f;margin:0 0 20px}
+.for-your-stay-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.for-your-stay-tile{display:flex;gap:14px;align-items:flex-start;min-width:0;padding:20px;border:1px solid #dbe4ea;border-radius:10px;background:#fff}
+.for-your-stay-icon{display:grid;place-items:center;flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:#e8f0f6;color:#003b71;font-weight:800;font-size:19px}
+.for-your-stay-tile h3{font-size:18px;margin:2px 0 14px;color:#123c55}
+.for-your-stay-tile dl{margin:0}
+.for-your-stay-tile dl>div{margin-bottom:8px;line-height:1.5}
+.for-your-stay-tile dt{display:inline;font-weight:700}
+.for-your-stay-tile dd{display:inline;margin-left:5px}
+.for-your-stay-more{margin-top:12px}
+.for-your-stay-more summary{cursor:pointer;color:#003b71;font-weight:700}
+.for-your-stay-more p{line-height:1.5;font-size:14px}
+.for-your-stay-disclaimer{margin:18px 0 0;color:#52616f;font-size:13px;line-height:1.6}
+@media(max-width:900px){.for-your-stay-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.for-your-stay-grid{grid-template-columns:1fr}.for-your-stay-top .button{width:100%;text-align:center}}
