@@ -31,15 +31,23 @@ export default function HotelLocation({ language = "es" }: { language?: "es" | "
           </div>
         </section>
         <section className="hotel-location-info-panel hotel-location-info-panel--base">
-          <h2>{en ? "Transportation" : "Transporte"}</h2>
+          <h2>{en ? "Airports" : "Aeropuertos"}</h2>
           <div className="hotel-location-panel-body">
-            <div className="hotel-location-transport-title"><span aria-hidden="true">✈</span><strong>{en ? "Airport transfers" : "Traslados al aeropuerto"}</strong></div>
-            <dl className="hotel-location-facts">
-              <div><dt>{en ? "Service:" : "Servicio:"}</dt><dd>{en ? "Available on request" : "Disponible a solicitud"}</dd></div>
-              <div><dt>{en ? "Cost:" : "Costo:"}</dt><dd>{en ? "Additional charge" : "Cargo adicional"}</dd></div>
-              <div><dt>{en ? "Local transfers:" : "Traslados locales:"}</dt><dd>{en ? "Available for an additional charge" : "Disponibles con cargo adicional"}</dd></div>
-            </dl>
-            <a href={whatsapp} target="_blank" rel="noopener noreferrer">{en ? "Arrange transportation ↗" : "Coordinar transporte ↗"}</a>
+            <div className="hotel-location-airport">
+              <div className="hotel-location-airport-heading">
+                <div className="hotel-location-airport-name">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" width="28" height="28" fill="none"><path d="M21 3 3 10l7 3 3 8 8-18Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/><path d="m10 13 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
+                  <strong>{en ? "Jorge Chávez International Airport (LIM)" : "Aeropuerto Internacional Jorge Chávez (LIM)"}</strong>
+                </div>
+              </div>
+              <p>{en ? "Airport shuttle" : "Traslado al aeropuerto"}</p>
+              <div className="hotel-location-airport-status">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                <strong>{en ? "Available" : "Disponible"}</strong>
+              </div>
+              <p className="hotel-location-airport-note">{en ? "Available on request for an additional charge." : "Disponible a solicitud con cargo adicional."}</p>
+              <a href={whatsapp} target="_blank" rel="noopener noreferrer">{en ? "Arrange airport transfer ↗" : "Coordinar traslado ↗"}</a>
+            </div>
           </div>
         </section>
         <section className="hotel-location-info-panel">
