@@ -825,3 +825,41 @@ img,video,iframe{max-width:100%}
 .hotel-location-info dd{margin:0;text-align:right}
 .hotel-location-info ul{padding-left:20px;line-height:2}
 @media(max-width:800px){.hotel-location-info{grid-template-columns:1fr;gap:26px}}
+
+
+.blue-rooms-page{padding:44px 0 76px;background:#fff;color:#243443}
+.blue-rooms-header{padding-bottom:36px}
+.blue-rooms-header h1{font-size:clamp(34px,4vw,52px);line-height:1.12;color:#133c56;margin:12px 0}
+.blue-rooms-header>p:not(.eyebrow){max-width:680px;line-height:1.7}
+.blue-rooms-rate{margin-top:30px;border:1px solid #d8e1e8;background:#f7f9fb;border-radius:8px;padding:20px 26px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.blue-rooms-rate>div{display:grid;gap:5px}
+.blue-rooms-rate span,.blue-rooms-rate small{color:#566675;font-size:13px}
+.blue-rooms-rate strong{font-size:24px;color:#173d56}
+.blue-rooms-rate strong small{font-size:14px}
+.blue-rooms-rate a,.blue-rooms-footer a{color:#00549a;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.blue-rooms-list{display:grid;gap:28px}
+.blue-room{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);border:1px solid #dce3e8;border-radius:9px;overflow:hidden;box-shadow:0 4px 20px #16354d0a;background:#fff}
+.blue-room-image{position:relative;min-height:355px;overflow:hidden;background:#e8eef1}
+.blue-room-image img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center top}
+.blue-room-image span{position:absolute;left:20px;bottom:18px;background:#fff;padding:7px 12px;border-radius:3px;font-size:12px;letter-spacing:.08em}
+.blue-room-body{padding:28px 34px;display:flex;flex-direction:column;align-items:stretch}
+.blue-room-kicker{color:#54768d;font-size:11px;letter-spacing:.14em;font-weight:700;margin:0 0 10px}
+.blue-room-body h2{font-size:clamp(22px,2.3vw,30px);line-height:1.2;color:#173d56;margin:0 0 14px}
+.blue-room-description{line-height:1.65;color:#566675;margin:0 0 18px}
+.blue-room-highlights{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0 0 20px}
+.blue-room-highlights li{padding:7px 10px;border:1px solid #dce5ec;border-radius:4px;font-size:12px;color:#304c60}
+.blue-room-details{border-top:1px solid #e1e7eb;padding:15px 0}
+.blue-room-details summary{display:flex;justify-content:space-between;cursor:pointer;color:#00549a;font-weight:700;list-style:none}
+.blue-room-details summary::-webkit-details-marker{display:none}
+.blue-room-details[open] summary span{transform:rotate(180deg)}
+.blue-room-detail-content{padding-top:14px}
+.blue-room-detail-content h3{font-size:15px;margin:0 0 12px}
+.blue-room-detail-content ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 22px;padding-left:18px;font-size:13px;line-height:1.5}
+.blue-room-bottom{margin-top:auto;border-top:1px solid #e1e7eb;padding-top:20px;display:flex;justify-content:space-between;align-items:center;gap:15px}
+.blue-room-bottom>div{display:grid;gap:4px}
+.blue-room-bottom span{font-size:12px;color:#657685}
+.blue-room-bottom strong{font-size:18px;color:#173d56}
+.blue-room-bottom .button{white-space:nowrap;text-align:center}
+.blue-rooms-footer{margin-top:32px;display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:13px;color:#657685}
+@media(max-width:850px){.blue-room{grid-template-columns:1fr}.blue-room-image{min-height:0;aspect-ratio:3.5/2}.blue-room-body{padding:24px}.blue-rooms-rate,.blue-rooms-footer{align-items:flex-start;flex-direction:column}}
+@media(max-width:480px){.blue-room-bottom{align-items:stretch;flex-direction:column}.blue-room-detail-content ul{grid-template-columns:1fr}.blue-room-bottom .button{width:100%}}
