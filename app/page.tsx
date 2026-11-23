@@ -121,7 +121,7 @@ export default function Home() {
       </section>
 
       <section className="filmstrip-intro" aria-label="Presentación de Hotel BlueThree">
-        <p>Disfruta de una estadía en Chancay, cerca de atractivos como el Castillo de Chancay, el Museo Municipal de Chancay, Eco Truly Park y la Reserva Nacional de Lachay. Explora nuestras habitaciones y suites, algunas con jacuzzi, balcón y vistas panorámicas.</p>\n        <div className="home-intro-actions"><a className="button button-dark" href="/habitaciones">Explorar habitaciones</a><a className="button button-outline" href="/politicas">Información del hotel</a></div>
+        <p>Disfruta de una estadía en Chancay, cerca de atractivos como el Castillo de Chancay, el Museo Municipal de Chancay, Eco Truly Park y la Reserva Nacional de Lachay. Explora nuestras habitaciones y suites, algunas con jacuzzi, balcón y vistas panorámicas.</p>\n        <div className="home-intro-actions"><a className="button button-dark" href="/habitaciones">Explorar habitaciones</a><a className="button button-outline" href="/ubicacion">Ver ubicación</a></div>
       </section>
 
       <aside className="hotel-utility-rail" aria-label="Información y contacto del hotel">
