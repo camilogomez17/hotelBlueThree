@@ -4,10 +4,26 @@ import { useState } from "react";
 import { ServicesGrid } from "./components/ServicesGrid";
 
 const photos = [
-  { src: "/StandardRoom.jpeg", alt: "Habitación estándar de Hotel BlueThree", title: "Habitación estándar" },
-  { src: "/JuniorSuite.jpeg", alt: "Junior suite de Hotel BlueThree", title: "Junior suite" },
-  { src: "/DeluxeJuniorSuite.jpeg", alt: "Suite junior deluxe de Hotel BlueThree", title: "Suite junior deluxe" },
-  { src: "/JacuzziBalconyGardenViewSuite.jpeg", alt: "Suite con jacuzzi y balcón", title: "Suite con jacuzzi" },
+  {
+    src: "https://images.trvl-media.com/lodging/90000000/89740000/89732700/89732652/c6474fe1.jpg?impolicy=resizecrop&ra=fill&rh=575&rw=575",
+    alt: "Hotel BlueThree y atractivos de Chancay",
+    title: "Descubre Chancay",
+  },
+  {
+    src: "https://images.trvl-media.com/lodging/90000000/89740000/89732700/89732652/af4713ea.jpg?h=800&impolicy=fcrop&p=1&q=medium&w=1200",
+    alt: "Habitación con cama y detalles azules",
+    title: "Habitaciones",
+  },
+  {
+    src: "https://images.trvl-media.com/lodging/90000000/89740000/89732700/89732652/8571c6b5.jpg?impolicy=resizecrop&ra=fill&rh=575&rw=575",
+    alt: "Habitación con dos camas y escritorio",
+    title: "Espacios para descansar",
+  },
+  {
+    src: "https://images.trvl-media.com/lodging/90000000/89740000/89732700/89732652/8b6c1da2.jpg?impolicy=resizecrop&ra=fill&rh=575&rw=575",
+    alt: "Habitación con vista al atardecer",
+    title: "Vistas",
+  },
 ];
 
 const salesPhotos = [
