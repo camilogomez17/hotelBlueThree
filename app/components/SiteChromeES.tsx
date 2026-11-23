@@ -93,13 +93,6 @@ export function SiteHeader() {
 }
 export function SiteFooter() {
  return <>
-      <section className="location-section" id="ubicacion"><div className="section-wrap location-layout">
-        <div className="location-copy"><p className="eyebrow">EN EL CORAZÓN DE CHANCAY</p><h2>Descubre lo que<br/>te rodea en <em>Huaral.</em></h2><p className="location-address">{address}</p><a className="button button-dark" href={mapsUrl} target="_blank" rel="noreferrer">Cómo llegar <span>↗</span></a>
-          <div className="attractions"><h3>Para conocer en la zona</h3>{attractions.map(([name, detail]) => <div className="attraction" key={name}><strong>{name}</strong><p>{detail}</p></div>)}</div>
-        </div>
-        <div className="map-panel"><iframe title="Ubicación de Hotel BlueThree Chancay en Google Maps" src="https://maps.google.com/maps?q=Hotel%20BlueThree%20Chancay&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade"/></div>
-      </div></section>
-
       <section className="contact-section section-wrap" id="contacto">
         <div className="contact-copy"><p className="eyebrow">PLANIFICA TU ESTADÍA</p><h2>Reserva tu próxima<br/><em>visita a Chancay.</em></h2><p>Consulta tarifas, disponibilidad, tipos de habitación y solicitudes especiales a través de los canales oficiales del hotel o Tripadvisor.</p><BookingLinks/></div>
         <div className="social-panel"><p className="eyebrow">CANALES OFICIALES</p>{socials.map(([name, href]) => <a className="social-link" href={href} key={name} target="_blank" rel="noreferrer">{name}<span>↗</span></a>)}<a className="social-link" href="/contacto">Todos nuestros enlaces<span>↗</span></a><a className="social-link" href={tripAdvisor} target="_blank" rel="noreferrer">Tripadvisor · Reservas y opiniones<span>↗</span></a><a className="social-link" href="https://www.booking.com/searchresults.html?aid=390156&amp;label=duc511jc-10CAsosQFCE3RyZXMtYXJib2xlcy1henVsZXNIM1gDaKcCiAEBmAEzuAEHyAEP2AED6AEB-AEBiAIBqAIBuAKmhYjYBsACAdICJGVlNTI4NjhkLTY0YTUtNDg3MS1hZGRlLWI3ZTEwYTE5YWVlZtgCAeACAQ&amp;redirected=1&amp;city=-341519&amp;highlighted_hotels=15241340&amp;hlrd=user_sh&amp;source=hotel&amp;checkin=2026-11-21&amp;checkout=2026-11-22&amp;keep_landing=1&amp;sid=c027b02c5e916b27cfe75db44e9fae5d" target="_blank" rel="noopener noreferrer">Booking.com · Reservas<span>↗</span></a></div>
@@ -115,7 +108,7 @@ export function SiteFooter() {
               </a>
               <p>Descubre Chancay. Descansa en BlueThree.</p>
               <address>{address}</address>
-              <a className="footer-map-link" href={mapsUrl} target="_blank" rel="noopener noreferrer">Ver ubicación ↗</a>
+              <a className="footer-map-link" href="/ubicacion" target="_blank" rel="noopener noreferrer">Ver ubicación ↗</a>
             </div>
             <div className="footer-column">
               <h3>Explora</h3>
@@ -124,7 +117,7 @@ export function SiteFooter() {
               <a href="/galeria">Galería</a>
               <a href="/gastronomia">Gastronomía</a>
               <a href="/eventos">Eventos</a>
-              <a href="/#ubicacion">Ubicación</a>
+              <a href="/ubicacion">Ubicación</a>
             </div>
             <div className="footer-column">
               <h3>Tu estadía</h3>
