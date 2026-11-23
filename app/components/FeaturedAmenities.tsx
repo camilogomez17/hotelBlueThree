@@ -6,7 +6,7 @@ export default function FeaturedAmenities({ language }: { language: "es" | "en" 
   const [selected, setSelected] = useState<number | null>(null);
   const es = language === "es";
   const items = [
-    { title: es ? "Piscina" : "Pool", image: "/Amenities.jpeg", description: es ? "Imagen ilustrativa de las instalaciones. La disponibilidad de piscina no está confirmada; consulta con recepción." : "Illustrative property image. Pool availability is not confirmed; please ask reception." },
+    { title: es ? "Jacuzzi" : "Jacuzzi", image: "/Amenities.jpeg", description: es ? "Disfruta de jacuzzis y vistas panorámicas, transporte privado, eventos corporativos, decoración de habitaciones y el menú de la cafetería. Consulta la disponibilidad de cada servicio con recepción." : "Enjoy jacuzzis and panoramic views, private transport, corporate events, room decorations, and our cafeteria menu. Confirm each service’s availability with reception." },
     { title: es ? "Gastronomía" : "Dining", image: "/FoodMenu.jpeg", description: es ? "Explora las opciones gastronómicas y consulta horarios y disponibilidad con recepción." : "Explore dining options and confirm opening hours and availability with reception." },
   ];
   useEffect(() => {
