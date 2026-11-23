@@ -29,15 +29,15 @@ const photos = [
 ];
 
 const salesPhotos = [
-  { src: "/StandardRoom.jpeg", alt: "Habitación estándar", title: "Habitación estándar" },
-  { src: "/JuniorSuite.jpeg", alt: "Junior suite", title: "Junior suite" },
-  { src: "/DeluxeJuniorSuite.jpeg", alt: "Suite junior deluxe", title: "Suite junior deluxe" },
-  { src: "/DeluxeSuiteTwoBed.jpeg", alt: "Suite deluxe con dos camas", title: "Suite deluxe" },
-  { src: "/DoubleBedRoomJacuzziBalconyPanoramicView.jpeg", alt: "Habitación doble con jacuzzi y balcón", title: "Habitación doble con jacuzzi" },
-  { src: "/GardenViewRoomWithJacuzzi.jpeg", alt: "Habitación con jacuzzi y vista al jardín", title: "Vista al jardín" },
-  { src: "/JacuzziBalconyGardenViewSuite.jpeg", alt: "Suite con jacuzzi, balcón y vista al jardín", title: "Suite con balcón" },
-  { src: "/JacuzziBalconyRoomPanoramicView.jpeg", alt: "Habitación con jacuzzi, balcón y vista panorámica", title: "Vista panorámica" },
-  { src: "/JacuzziRoomGardenView.jpeg", alt: "Habitación con jacuzzi y jardín", title: "Suite jardín" },
+  { src: "/rooms-clean/StandardRoom.jpeg", alt: "Habitación estándar", title: "Habitación estándar" },
+  { src: "/rooms-clean/JuniorSuite.jpeg", alt: "Junior suite", title: "Junior suite" },
+  { src: "/rooms-clean/DeluxeJuniorSuite.jpeg", alt: "Suite junior deluxe", title: "Suite junior deluxe" },
+  { src: "/rooms-clean/DeluxeSuiteTwoBed.jpeg", alt: "Suite deluxe con dos camas", title: "Suite deluxe" },
+  { src: "/rooms-clean/DoubleBedRoomJacuzziBalconyPanoramicView.jpeg", alt: "Habitación doble con jacuzzi y balcón", title: "Habitación doble con jacuzzi" },
+  { src: "/rooms-clean/GardenViewRoomWithJacuzzi.jpeg", alt: "Habitación con jacuzzi y vista al jardín", title: "Vista al jardín" },
+  { src: "/rooms-clean/JacuzziBalconyGardenViewSuite.jpeg", alt: "Suite con jacuzzi, balcón y vista al jardín", title: "Suite con balcón" },
+  { src: "/rooms-clean/JacuzziBalconyRoomPanoramicView.jpeg", alt: "Habitación con jacuzzi, balcón y vista panorámica", title: "Vista panorámica" },
+  { src: "/rooms-clean/JacuzziRoomGardenView.jpeg", alt: "Habitación con jacuzzi y jardín", title: "Suite jardín" },
 ];
 
 const diningCategories = ["Desayunos incluidos", "Jugos naturales", "Omelettes y desayunos", "Bebidas"];
