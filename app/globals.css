@@ -707,3 +707,23 @@ img,video,iframe{max-width:100%}
 .hotel-accessibility-details p{margin:18px 0 0;color:#405568;line-height:1.6}
 @media(max-width:1000px){.hotel-amenities-categories{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}}
 @media(max-width:600px){.hotel-amenities-categories{grid-template-columns:1fr;gap:26px}.hotel-amenities{padding:34px 0 20px}}
+
+
+.featured-amenities{padding:32px 0 40px}
+.featured-amenities>h2{text-align:center;margin:0 0 32px;font-size:clamp(26px,3vw,36px);color:#123c55}
+.featured-amenities-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.featured-amenity-tile{position:relative;display:block;overflow:hidden;border:0;border-radius:8px;padding:0;background:#dce6ec;cursor:pointer;text-align:left;aspect-ratio:3/2;min-width:0}
+.featured-amenity-tile img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s ease}
+.featured-amenity-tile:hover img{transform:scale(1.04)}
+.featured-amenity-tile:focus-visible{outline:3px solid #003b71;outline-offset:3px}
+.featured-amenity-shade{position:absolute;inset:0;display:flex;align-items:flex-end;background:linear-gradient(transparent 30%,rgba(0,0,0,.78));color:white;padding:24px}
+.featured-amenity-shade strong{font-size:clamp(18px,2vw,25px);font-weight:800;text-transform:uppercase;line-height:1.2;transition:transform .2s}
+.featured-amenity-tile:hover strong{transform:translateY(-6px)}
+.featured-amenity-backdrop{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.75);display:flex;align-items:center;justify-content:center;padding:20px}
+.featured-amenity-dialog{position:relative;width:min(640px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:12px;padding:20px;color:#263746}
+.featured-amenity-dialog img{width:100%;max-height:350px;object-fit:cover;border-radius:6px}
+.featured-amenity-dialog h3{margin:16px 0 8px;font-size:24px}
+.featured-amenity-dialog p{line-height:1.6}
+.featured-amenity-close{position:absolute;right:28px;top:26px;border:0;border-radius:50%;background:white;width:36px;height:36px;font-size:26px;cursor:pointer}
+@media(max-width:640px){.featured-amenities-grid{display:grid;grid-auto-flow:column;grid-auto-columns:85%;grid-template-columns:none;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 2px 14px;scrollbar-width:none}.featured-amenities-grid::-webkit-scrollbar{display:none}.featured-amenity-tile{scroll-snap-align:start}.featured-amenity-shade{padding:18px}}
+@media(prefers-reduced-motion:reduce){.featured-amenity-tile img,.featured-amenity-shade strong{transition:none}}
