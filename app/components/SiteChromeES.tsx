@@ -8,18 +8,18 @@ const address = "Residencial Buena Vista – Las Tres Pirámides, Chancay 15130,
 const attractions = [["Castillo de Chancay","Un emblemático atractivo histórico y cultural de la ciudad."],["Museo Municipal de Chancay","Conoce la historia y cultura local."],["Eco Truly Park","Un espacio ecológico y cultural junto al litoral."],["Reserva Nacional de Lachay","Paisajes naturales y lomas estacionales para explorar."]];
 const socials = [["Instagram","https://www.instagram.com/hotelbluethreechancay/"],["Facebook","https://www.facebook.com/Hotelesenchancayhuaral/"],["TikTok","https://www.tiktok.com/@hotelbluethreechancay"]];
 
-const languageLabels = {es:"Español",en:"English",fr:"Français"} as const;
+const languageLabels = {es:"Español",en:"English"} as const;
 function LanguageChooser(){
- const [current,setCurrent]=useState<"es"|"en"|"fr">("es");
- useEffect(()=>{const segment=window.location.pathname.split("/")[1];setCurrent(segment==="en"||segment==="fr"?segment:"es");document.documentElement.lang=segment==="en"||segment==="fr"?segment:"es";},[]);
- function change(language:"es"|"en"|"fr"){
+ const [current,setCurrent]=useState<"es"|"en">("es");
+ useEffect(()=>{const segment=window.location.pathname.split("/")[1];setCurrent(segment==="en"?segment:"es");document.documentElement.lang=segment==="en"?segment:"es";},[]);
+ function change(language:"es"|"en"){
   const pathname=window.location.pathname;
   const segments=pathname.split("/").filter(Boolean);
-  if(segments[0]==="en"||segments[0]==="fr")segments.shift();
+  if(segments[0]==="en")segments.shift();
   const destination=(language==="es"?"":"/"+language)+(segments.length?"/"+segments.join("/"):"/");
   window.location.assign(destination+window.location.search+window.location.hash);
  }
- return <label className="language-chooser" data-language-chooser><span className="sr-only">Idioma / Language / Langue</span><span aria-hidden="true" className="language-chooser-icon">◎</span><select aria-label="Idioma / Language / Langue" value={current} onChange={e=>change(e.target.value as "es"|"en"|"fr")}>{Object.entries(languageLabels).map(([code,label])=><option key={code} value={code}>{label}</option>)}</select></label>;
+ return <label className="language-chooser" data-language-chooser><span className="sr-only">Idioma / Language</span><span aria-hidden="true" className="language-chooser-icon">◎</span><select aria-label="Idioma / Language" value={current} onChange={e=>change(e.target.value as "es"|"en")}>{Object.entries(languageLabels).map(([code,label])=><option key={code} value={code}>{label}</option>)}</select></label>;
 }
 
 function BookingLinks() { return <div className="booking-links"><a className="button button-dark" href={tripAdvisor} target="_blank" rel="noreferrer">Reservar en Tripadvisor <span>↗</span></a><a className="button button-outline" href="https://wa.me/message/IPFK3E5CKTNGK1" target="_blank" rel="noopener noreferrer">Contactar al hotel <span>↗</span></a></div>; }
