@@ -3,7 +3,7 @@ import { ServicesGrid } from "../components/ServicesGrid";
 
 export const metadata: Metadata = {
   title: "Servicios | Hotel BlueThree Chancay",
-  description: "Conoce los servicios de Hotel BlueThree Chancay: Wi-Fi, habitaciones con jacuzzi, restaurante, estacionamiento y más.",
+  description: "Conoce los servicios de Hotel BlueThree Chancay: Wi-Fi, habitaciones con jacuzzi, cafetería, estacionamiento y más.",
 };
 
 export default function ServiciosPage() {
