@@ -31,14 +31,11 @@ export default function HotelAmenities({ language }: { language: Language }) {
           </div>
         ))}
       </div>
-      <p className="hotel-amenities-disclaimer">{es
-        ? "Catálogo de referencia: algunos servicios pueden no estar disponibles en este establecimiento. Consulta con recepción antes de reservar."
-        : "Reference amenities catalog: some services may not be available at this property. Confirm with reception before booking."}</p>
       <details className="hotel-accessibility-details">
         <summary>{es ? "Características de accesibilidad" : "Accessible Features"}</summary>
         <p>{es
-          ? "Solicita información sobre accesos, habitaciones y servicios adaptados directamente a recepción. La disponibilidad no ha sido confirmada."
-          : "Contact reception for details about accessible entrances, rooms, and services. Availability has not been confirmed."}</p>
+          ? "Solicita información sobre accesos, habitaciones y servicios adaptados directamente a recepción. "
+          : "Contact reception for details about accessible entrances, rooms, and services. "}</p>
       </details>
     </section>
   );
