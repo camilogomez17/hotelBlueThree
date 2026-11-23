@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ServicesGrid } from "./components/ServicesGrid";
+import PolicyTabs from "../components/PolicyTabs";
 
 const photos = [
   {
@@ -232,15 +233,8 @@ export default function Home() {
       </section>
 
       <section className="home-policies-section section-wrap" id="politicas">
-        <div className="section-heading"><div><p className="eyebrow">BEFORE YOUR ARRIVAL</p><h2>Information<br/>and <em>policies.</em></h2></div><p>Learn about the main conditions of your stay. Review the full details before booking.</p></div>
-        <div className="home-policies-grid">
-          <article className="home-policy-card"><span>01</span><h3>Quiet hours</h3><p>10:30 p.m. to 9:00 a.m.</p></article>
-          <article className="home-policy-card"><span>02</span><h3>Identification</h3><p>Check-in is restricted to guests over 18 with valid identification.</p></article>
-          <article className="home-policy-card"><span>03</span><h3>Children under 5</h3><p>Free accommodation, subject to room occupancy limits.</p></article>
-          <article className="home-policy-card"><span>04</span><h3>Non-smoking rooms</h3><p>No smoking in rooms. Stated fine: S/ 250.</p></article>
-          <article className="home-policy-card"><span>05</span><h3>Damage and losses</h3><p>Damage to facilities and supplies will be charged.</p></article>
-          <article className="home-policy-card"><span>06</span><h3>Security and registration</h3><p>Privacy, responsible alcohol sales and documentation for foreign guests.</p></article>
-        </div>
+        <div className="section-heading"><div><p className="eyebrow">BEFORE YOUR ARRIVAL</p><h2>Information<br/>and <em>policies.</em></h2></div><p>Review fees, family policies, parking, pets, smoking and Wi-Fi before booking.</p></div>
+        <PolicyTabs language="en" />
         <div className="home-policies-more"><a className="room-explore-button" href="/en/politicas">View all policies ↗</a></div>
       </section>
 
