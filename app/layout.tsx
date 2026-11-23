@@ -4,6 +4,23 @@ import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : undefined);
 
+const hotelSchema = {
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  name: "Hotel BlueThree Chancay",
+  description: "Hotel en Chancay, Perú, con habitaciones y suites.",
+  telephone: "+51 914 046 710",
+  email: "bluethreechancay@gmail.com",
+  address: { "@type": "PostalAddress", streetAddress: "Residencial Buena Vista – Las Tres Pirámides", addressLocality: "Chancay", addressRegion: "Lima", postalCode: "15130", addressCountry: "PE" },
+  geo: { "@type": "GeoCoordinates", latitude: -11.5453985, longitude: -77.2588947 },
+  ...(siteUrl ? { url: siteUrl } : {}),
+  sameAs: [
+    "https://www.instagram.com/hotelbluethreechancay/",
+    "https://www.facebook.com/Hotelesenchancayhuaral/",
+    "https://www.tiktok.com/@hotelbluethreechancay",
+  ],
+};
+
 export const metadata: Metadata = {
   metadataBase: siteUrl ? new URL(siteUrl) : undefined,
   title: "Hotel BlueThree Chancay | Habitaciones y Suites en Chancay",
@@ -23,7 +40,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es">
-      <body><SiteHeader />{children}<SiteFooter /></body>
+      <body><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(hotelSchema).replace(/</g, "\\u003c") }} /><SiteHeader />{children}<SiteFooter /></body>
     </html>
   );
 }
