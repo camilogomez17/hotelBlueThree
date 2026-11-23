@@ -28,15 +28,15 @@ const photos = [
 ];
 
 const salesPhotos = [
-  { src: "/StandardRoom.jpeg", alt: "Standard room", title: "Standard room" },
-  { src: "/JuniorSuite.jpeg", alt: "Junior suite", title: "Junior suite" },
-  { src: "/DeluxeJuniorSuite.jpeg", alt: "Deluxe junior suite", title: "Deluxe junior suite" },
-  { src: "/DeluxeSuiteTwoBed.jpeg", alt: "Deluxe suite with two beds", title: "Deluxe suite" },
-  { src: "/DoubleBedRoomJacuzziBalconyPanoramicView.jpeg", alt: "Double room with jacuzzi and balcony", title: "Double room with jacuzzi" },
-  { src: "/GardenViewRoomWithJacuzzi.jpeg", alt: "Room with jacuzzi and garden view", title: "Garden view" },
-  { src: "/JacuzziBalconyGardenViewSuite.jpeg", alt: "Suite with jacuzzi, balcony and garden view", title: "Suite with balcony" },
-  { src: "/JacuzziBalconyRoomPanoramicView.jpeg", alt: "Room with jacuzzi, balcony and panoramic view", title: "Panoramic view" },
-  { src: "/JacuzziRoomGardenView.jpeg", alt: "Room with jacuzzi and garden", title: "Garden suite" },
+  { src: "/rooms-clean/StandardRoom.jpeg", alt: "Standard room", title: "Standard room" },
+  { src: "/rooms-clean/JuniorSuite.jpeg", alt: "Junior suite", title: "Junior suite" },
+  { src: "/rooms-clean/DeluxeJuniorSuite.jpeg", alt: "Deluxe junior suite", title: "Deluxe junior suite" },
+  { src: "/rooms-clean/DeluxeSuiteTwoBed.jpeg", alt: "Deluxe suite with two beds", title: "Deluxe suite" },
+  { src: "/rooms-clean/DoubleBedRoomJacuzziBalconyPanoramicView.jpeg", alt: "Double room with jacuzzi and balcony", title: "Double room with jacuzzi" },
+  { src: "/rooms-clean/GardenViewRoomWithJacuzzi.jpeg", alt: "Room with jacuzzi and garden view", title: "Garden view" },
+  { src: "/rooms-clean/JacuzziBalconyGardenViewSuite.jpeg", alt: "Suite with jacuzzi, balcony and garden view", title: "Suite with balcony" },
+  { src: "/rooms-clean/JacuzziBalconyRoomPanoramicView.jpeg", alt: "Room with jacuzzi, balcony and panoramic view", title: "Panoramic view" },
+  { src: "/rooms-clean/JacuzziRoomGardenView.jpeg", alt: "Room with jacuzzi and garden", title: "Garden suite" },
 ];
 
 const diningCategories = ["Included breakfasts", "Fresh juices", "Omelettes and breakfasts", "Drinks"];
