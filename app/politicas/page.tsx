@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PolicyTabs from "../components/PolicyTabs";
 import HotelAmenities from "../components/HotelAmenities";
 import FeaturedAmenities from "../components/FeaturedAmenities";
+import ForYourStay from "../components/ForYourStay";
 import { whatsapp } from "../data/hotel";
 
 export const metadata: Metadata = {
@@ -19,20 +20,7 @@ export default function Politicas() {
     <section className="section-wrap hotel-policies-page">
       <HotelAmenities language="es" />
       <FeaturedAmenities language="es" />
-      <div className="section-heading"><div><p className="eyebrow">PARA TU ESTADÍA</p><h2>Información de llegada</h2></div></div>
-      <div className="hotel-policy-times">
-        <div><span>CHECK-IN</span><strong>2:00 p. m.</strong></div>
-        <div><span>CHECK-OUT</span><strong>11:00 a. m.</strong></div>
-      </div>
-      <p>Dirección: Residencial Buena Vista – Las Tres Pirámides, Chancay 15130, Perú. Para indicaciones, traslados y solicitudes especiales, comunícate con recepción.</p>
-      <div className="home-policies-grid">
-        <article className="home-policy-card"><h3>Estacionamiento</h3><p>Propio: gratuito · Valet: no disponible · Carga eléctrica: no disponible · Vigilado: disponible · Techado: no disponible · Entradas y salidas: no disponibles</p></article>
-        <article className="home-policy-card"><h3>Traslado al aeropuerto</h3><p>Disponible previa solicitud con costo adicional. Confirma horario y precio.</p></article>
-        <article className="home-policy-card"><h3>Servicios para niños</h3><p>Menores de hasta 12 años sin costo al compartir cama con sus padres. Confirma capacidad.</p></article>
-        <article className="home-policy-card"><h3>Habitaciones sin humo</h3><p>Fumar en habitaciones para no fumadores puede generar penalidad.</p></article>
-        <article className="home-policy-card"><h3>Desayuno</h3><p>Consulta en recepción la disponibilidad y el precio del desayuno en cafetería.</p></article>
-        <article className="home-policy-card"><h3>Mascotas</h3><p>No se admiten mascotas.</p></article>
-      </div>
+      <ForYourStay language="es" />
       <div className="section-heading"><div><p className="eyebrow">NUESTRAS POLÍTICAS</p><h2>Condiciones de estadía</h2></div></div>
       <PolicyTabs language="es" />
       <div className="hotel-policy-note">
