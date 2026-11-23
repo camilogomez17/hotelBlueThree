@@ -890,3 +890,7 @@ img,video,iframe{max-width:100%}
 .hotel-location-airport a{display:inline-block;margin-top:8px}
 
 .hotel-location-nearby-note{font-size:12px;color:#607181;line-height:1.5;margin:14px 0 0}
+
+.site-header .main-nav{margin-left:0;margin-right:auto}
+.site-header .header-actions{margin-left:auto}
+@media(max-width:760px){.site-header .main-nav{margin-left:0;margin-right:0}.site-header .header-actions{margin-left:auto}}
