@@ -879,3 +879,12 @@ img,video,iframe{max-width:100%}
 .hotel-location-transport-title span{font-size:26px}
 .hotel-location-info .hotel-location-info-panel a{display:inline-block;margin-top:10px}
 @media(max-width:900px){.hotel-location-info{grid-template-columns:1fr;width:100%}.hotel-location-info .hotel-location-info-panel{padding-bottom:24px}.hotel-location-panel-body{width:88%}.hotel-location-info .hotel-location-facts>div,.hotel-location-info .hotel-location-nearby>li{grid-template-columns:minmax(0,2fr) minmax(0,1.25fr)}}
+
+
+.hotel-location-airport-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;border-bottom:1px solid #d7e0e6;padding:8px 0 14px;margin-bottom:18px}
+.hotel-location-airport-name{display:flex;align-items:flex-start;gap:10px;min-width:0;line-height:1.5}
+.hotel-location-airport-name svg{flex-shrink:0;color:#173d56}
+.hotel-location-airport>p{margin:0 0 12px;font-size:14px}
+.hotel-location-airport-status{display:flex;align-items:center;gap:7px;color:#245d40;font-size:14px;margin-bottom:10px}
+.hotel-location-airport-note{color:#566675;line-height:1.5}
+.hotel-location-airport a{display:inline-block;margin-top:8px}
