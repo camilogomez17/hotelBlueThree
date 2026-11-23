@@ -773,3 +773,29 @@ img,video,iframe{max-width:100%}
 .hotel-policy-accordion-rows dd{margin:0}
 @media(max-width:600px){.hotel-policy-accordion-rows>div{grid-template-columns:1fr;gap:3px}.hotel-policy-accordion summary{font-size:17px}}
 @media(prefers-reduced-motion:reduce){.hotel-policy-accordion summary span{transition:none}}
+
+
+.home-room-showcase{padding-top:40px;padding-bottom:40px}
+.home-room-showcase>h2{text-align:center;font-size:clamp(28px,3vw,38px);margin:0 0 30px;color:#153a53}
+.home-room-cards{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(255px,1fr);grid-template-columns:none;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 0 14px;scrollbar-width:thin}
+.home-room-card{scroll-snap-align:start;display:flex;flex-direction:column;min-width:0;border:1px solid #dbe4ea;border-radius:10px;overflow:hidden;background:#fff}
+.home-room-image{aspect-ratio:3.5/2;overflow:hidden}
+.home-room-image img{display:block;width:100%;height:100%;object-fit:cover}
+.home-room-card-body{display:flex;flex-direction:column;flex:1;padding:16px;gap:12px}
+.home-room-card h3{font-size:17px;line-height:1.4;margin:0;min-height:48px;color:#153a53}
+.home-room-details{align-self:flex-start;border:0;background:none;padding:0;color:#004c87;text-decoration:underline;text-underline-offset:3px;cursor:pointer;font:inherit;font-weight:650}
+.home-room-highlights{display:grid;grid-template-columns:1fr 1.3fr;gap:12px;margin:8px 0 auto;min-height:76px}
+.home-room-highlights strong{border-right:1px solid #dbe4ea;padding-right:10px}
+.home-room-highlights ul{margin:0;padding-left:20px}
+.home-room-highlights li{margin-bottom:4px}
+.home-room-book{display:block;background:#003b71;color:white!important;text-align:center;text-decoration:none;padding:13px 12px;border-radius:5px;font-weight:700}
+.home-room-all{text-align:center;margin-top:22px}
+.home-room-all a{display:inline-block;border:1px solid #003b71;color:#003b71;padding:12px 24px;border-radius:5px;text-decoration:none;font-weight:700}
+.home-room-modal-backdrop{position:fixed;inset:0;z-index:1000;background:#0009;display:grid;place-items:center;padding:20px}
+.home-room-modal{position:relative;width:min(100%,650px);max-height:90vh;overflow:auto;background:white;border-radius:10px;padding:24px}
+.home-room-modal>img{width:100%;max-height:370px;object-fit:cover;border-radius:5px}
+.home-room-modal h3{margin:18px 0 8px}
+.home-room-modal p{margin:0 0 20px}
+.home-room-modal-close{position:absolute;top:30px;right:30px;background:white;border:0;border-radius:50%;width:36px;height:36px;font-size:25px;cursor:pointer}
+@media(min-width:1200px){.home-room-cards{grid-auto-columns:calc((100% - 48px)/4)}}
+@media(max-width:700px){.home-room-cards{grid-auto-columns:minmax(265px,82%)}}
