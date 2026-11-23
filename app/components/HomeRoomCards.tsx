@@ -23,11 +23,9 @@ export default function HomeRoomCards() {
               <h3>{room.name}</h3>
               <button type="button" className="home-room-details" onClick={() => setSelected(index)}>Ver detalles de la habitación</button>
               <div className="home-room-highlights">
-                <strong>{room.name.toLowerCase().includes("suite") ? "Suite" : "Habitación"}</strong>
+                <strong>{room.features.find((feature) => feature.includes("cama")) ?? "Habitación"}</strong>
                 <ul>
-                  <li>{room.name.toLowerCase().includes("jacuzzi") ? "Jacuzzi" : "Estadía cómoda"}</li>
-                  {room.name.toLowerCase().includes("dos camas") && <li>Dos camas</li>}
-                  {room.name.toLowerCase().includes("vista") && <li>Vistas</li>}
+                  {room.features.filter((feature) => feature.includes("personas") || feature.includes("Jacuzzi") || feature.includes("Balcón") || feature.includes("TV")).slice(0, 3).map((feature) => <li key={feature}>{feature}</li>)}
                 </ul>
               </div>
               <a className="home-room-book" href={whatsapp} target="_blank" rel="noopener noreferrer">Consultar tarifas</a>
@@ -43,6 +41,8 @@ export default function HomeRoomCards() {
             <img src={rooms[selected].src} alt={rooms[selected].name} />
             <h3>{rooms[selected].name}</h3>
             <p>{rooms[selected].description}</p>
+            <h4>Características de la habitación</h4>
+            <ul className="home-room-modal-features">{rooms[selected].features.map((feature) => <li key={feature}>{feature}</li>)}</ul>
             <a className="home-room-book" href={whatsapp} target="_blank" rel="noopener noreferrer">Consultar disponibilidad y tarifas</a>
           </div>
         </div>
