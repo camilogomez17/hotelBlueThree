@@ -1,18 +1,20 @@
 import Link from "next/link";
 
 export const services = [
-  { name: "Wi-Fi", icon: "wifi", detail: "Connectivity during your stay." },
-  { name: "Parking", icon: "parking", detail: "Ask about parking conditions." },
-  { name: "Air conditioning", icon: "air", detail: "Comfort in selected rooms." },
-  { name: "Restaurant and café", icon: "dining", detail: "Food and beverage options." },
-  { name: "Breakfast", icon: "breakfast", detail: "Ask about hours and available options." },
-  { name: "24-hour reception", icon: "clock", detail: "Reception assistance throughout your visit." },
-  { name: "Room service", icon: "service", detail: "Ask about room service options." },
-  { name: "Garden", icon: "garden", detail: "Outdoor spaces to relax." },
+  { name: "Wi-Fi", icon: "wifi", detail: "Ask about connectivity during your stay." },
+  { name: "Parking", icon: "parking", detail: "Confirm availability and parking conditions." },
+  { name: "Air conditioning", icon: "air", detail: "Available in selected room categories." },
+  { name: "Café", icon: "dining", detail: "Food and drinks from the hotel's café menu." },
+  { name: "Breakfast", icon: "breakfast", detail: "Ask about included options and serving hours." },
+  { name: "24-hour reception", icon: "clock", detail: "Reception assistance during your stay." },
+  { name: "Room service", icon: "service", detail: "Confirm available options with reception." },
+  { name: "Garden", icon: "garden", detail: "Outdoor space to enjoy." },
   { name: "Rooms with jacuzzi", icon: "bath", detail: "Available in selected room categories." },
-  { name: "Laundry", icon: "laundry", detail: "Ask about availability and service charges." },
-  { name: "Events and meetings", icon: "meeting", detail: "Spaces and services for special occasions." },
-  { name: "Tourist assistance", icon: "map", detail: "Information to explore Chancay and its surroundings." },
+  { name: "Laundry", icon: "laundry", detail: "Ask about availability and possible charges." },
+  { name: "Events and meetings", icon: "meeting", detail: "Ask about spaces and arrangements." },
+  { name: "Local information", icon: "map", detail: "Ask for information about Chancay." },
+  { name: "Airport and local transfers", icon: "map", detail: "Available on request for an additional charge; confirm routes and pricing." },
+  { name: "Special occasion decorations", icon: "meeting", detail: "Ask about decoration packages, availability and pricing." },
 ];
 
 const paths: Record<string, string[]> = {
@@ -39,8 +41,8 @@ export function ServiceIcon({ icon }: { icon: string }) {
 export function ServicesGrid({ full = false }: { full?: boolean }) {
   return <div className={full ? "amenities-content amenities-full" : "amenities-content"}>
     <h2 className="amenities-heading">{full ? "Hotel BlueThree amenities" : "Our amenities"}</h2>
-    <ul className="hilton-amenity-grid">
-      {services.map((service) => <li key={service.name} className="hilton-amenity-item">
+    <ul className="hotel-amenity-grid">
+      {services.map((service) => <li key={service.name} className="hotel-amenity-item">
         <ServiceIcon icon={service.icon} />
         <span>{service.name}</span>
         {full && <p>{service.detail}</p>}
