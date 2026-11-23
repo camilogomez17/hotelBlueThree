@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ServicesGrid } from "./components/ServicesGrid";
 import PolicyTabs from "./components/PolicyTabs";
+import HomeRoomCards from "./components/HomeRoomCards";
 
 const photos = [
   {
@@ -174,24 +175,7 @@ export default function Home() {
 
       <section className="services-section" id="servicios"><ServicesGrid /></section>
 
-      <section className="rooms-section section-wrap">
-        <div className="section-heading"><div><p className="eyebrow">HABITACIONES Y SUITES</p><h2>Encuentra tu espacio<br/>para <em>descansar.</em></h2></div><p>Explora las fotografías de las habitaciones disponibles. Consulta directamente con el hotel para confirmar categorías, capacidad, tarifas y servicios incluidos.</p></div>
-        <div className="room-grid" aria-label="Habitaciones y suites disponibles">
-          {roomPhotos.slice(0, 4).map((photo) => (
-            <article className="room-card" key={photo.src}>
-              <img src={photo.src} alt={photo.alt} loading="lazy" />
-              <div className="room-card-content">
-                <h3>{photo.title}</h3>
-                <a className="room-details-link" href="/habitaciones">Ver detalles de la habitación</a>
-                <div className="room-card-spacer" />
-                <a className="room-book-button" href="https://api.whatsapp.com/message/IPFK3E5CKTNGK1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer">Consultar disponibilidad</a>
-                <p className="room-rate-note">Confirma tarifas, capacidad y servicios directamente con el hotel.</p>
-              </div>
-            </article>
-          ))}
-        </div>
-        <div className="room-more"><a className="room-explore-button" href="/habitaciones">Explorar todas las habitaciones</a></div>
-      </section>
+      <HomeRoomCards />
 
       <section className="home-dining-section section-wrap" id="gastronomia">
         <div className="section-heading"><div><p className="eyebrow">CAFETERÍA BLUETHREE</p><h2>Sabores para disfrutar<br/>tu <em>estadía.</em></h2></div><p>Descubre las categorías y opciones de nuestra carta. Consulta los precios, ingredientes y detalles en el menú completo.</p></div>
