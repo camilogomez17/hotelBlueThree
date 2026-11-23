@@ -863,3 +863,19 @@ img,video,iframe{max-width:100%}
 .blue-rooms-footer{margin-top:32px;display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:13px;color:#657685}
 @media(max-width:850px){.blue-room{grid-template-columns:1fr}.blue-room-image{min-height:0;aspect-ratio:3.5/2}.blue-room-body{padding:24px}.blue-rooms-rate,.blue-rooms-footer{align-items:flex-start;flex-direction:column}}
 @media(max-width:480px){.blue-room-bottom{align-items:stretch;flex-direction:column}.blue-room-detail-content ul{grid-template-columns:1fr}.blue-room-bottom .button{width:100%}}
+
+
+.hotel-location-info{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;width:100%;margin:30px auto 0;align-items:stretch}
+.hotel-location-info .hotel-location-info-panel{border:0;padding:0 0 30px;background:#f2f4f6;min-width:0}
+.hotel-location-info .hotel-location-info-panel--base{background:#fff}
+.hotel-location-info .hotel-location-info-panel h2{font-size:clamp(20px,2vw,26px);color:#173d56;text-align:center;padding:30px 12px;margin:0;font-weight:700}
+.hotel-location-panel-body{width:88%;margin:0 auto}
+.hotel-location-info .hotel-location-facts{margin:0;padding:0;list-style:none}
+.hotel-location-info .hotel-location-facts>div,.hotel-location-info .hotel-location-nearby>li{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:12px;align-items:start;margin:0 0 18px;padding:0;border:0;line-height:1.5;font-size:14px}
+.hotel-location-info .hotel-location-facts dt,.hotel-location-info .hotel-location-nearby strong{font-weight:700;overflow-wrap:anywhere}
+.hotel-location-info .hotel-location-facts dd{margin:0;text-align:left;overflow-wrap:anywhere}
+.hotel-location-info .hotel-location-nearby span{overflow-wrap:anywhere}
+.hotel-location-transport-title{display:flex;align-items:center;gap:10px;border-bottom:1px solid #d7e0e6;padding:0 0 14px;margin-bottom:20px;font-size:15px}
+.hotel-location-transport-title span{font-size:26px}
+.hotel-location-info .hotel-location-info-panel a{display:inline-block;margin-top:10px}
+@media(max-width:900px){.hotel-location-info{grid-template-columns:1fr;width:100%}.hotel-location-info .hotel-location-info-panel{padding-bottom:24px}.hotel-location-panel-body{width:88%}.hotel-location-info .hotel-location-facts>div,.hotel-location-info .hotel-location-nearby>li{grid-template-columns:minmax(0,2fr) minmax(0,1.25fr)}}
