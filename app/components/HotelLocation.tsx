@@ -54,8 +54,16 @@ export default function HotelLocation({ language = "es" }: { language?: "es" | "
           <h2>{en ? "What's nearby" : "Lugares cercanos"}</h2>
           <div className="hotel-location-panel-body">
             <ul className="hotel-location-facts hotel-location-nearby">
-              {["Castillo de Chancay", "Museo Municipal de Chancay", "Eco Truly Park", "Reserva Nacional de Lachay"].map(name => <li key={name}><strong>{name}</strong><span>{en ? "Distance on request" : "Consultar distancia"}</span></li>)}
+              {[
+                ["Castillo de Chancay", 16],
+                ["Museo Municipal de Chancay", 13],
+                ["Plaza de Armas de Chancay", 13],
+                ["Playa Chorrillos", 16],
+                ["Plaza de Armas de Huaral", 16],
+                ["Eco Truly Park", 26],
+              ].map(([name, minutes]) => <li key={name}><strong>{name}</strong><span>{en ? `${minutes} min drive` : `${minutes} min en auto`}</span></li>)}
             </ul>
+            <p className="hotel-location-nearby-note">{en ? "Approximate driving times; traffic may affect travel." : "Tiempos aproximados en auto; pueden variar según el tráfico."}</p>
           </div>
         </section>
       </div>
