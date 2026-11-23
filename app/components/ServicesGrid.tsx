@@ -1,18 +1,20 @@
 import Link from "next/link";
 
 export const services = [
-  { name: "Wi-Fi", icon: "wifi", detail: "Conectividad para tu estadía." },
-  { name: "Estacionamiento", icon: "parking", detail: "Consulta las condiciones de estacionamiento." },
-  { name: "Aire acondicionado", icon: "air", detail: "Comodidad en habitaciones seleccionadas." },
-  { name: "Restaurante y cafetería", icon: "dining", detail: "Opciones de alimentos y bebidas." },
-  { name: "Desayuno", icon: "breakfast", detail: "Consulta horarios y opciones disponibles." },
-  { name: "Recepción 24 horas", icon: "clock", detail: "Atención en recepción durante tu visita." },
-  { name: "Servicio a la habitación", icon: "service", detail: "Consulta opciones de atención a la habitación." },
-  { name: "Jardín", icon: "garden", detail: "Espacios al aire libre para descansar." },
-  { name: "Habitaciones con jacuzzi", icon: "bath", detail: "Disponibles en determinadas categorías." },
-  { name: "Lavandería", icon: "laundry", detail: "Consulta disponibilidad y cargos del servicio." },
-  { name: "Eventos y reuniones", icon: "meeting", detail: "Espacios y servicios para ocasiones especiales." },
-  { name: "Asistencia turística", icon: "map", detail: "Información para explorar Chancay y sus alrededores." },
+  { name: "Wi-Fi", icon: "wifi", detail: "Consulta la conectividad disponible durante tu estadía." },
+  { name: "Estacionamiento", icon: "parking", detail: "Confirma disponibilidad y condiciones." },
+  { name: "Aire acondicionado", icon: "air", detail: "Disponible en categorías seleccionadas." },
+  { name: "Cafetería", icon: "dining", detail: "Alimentos y bebidas de la carta de la cafetería." },
+  { name: "Desayuno", icon: "breakfast", detail: "Consulta opciones incluidas y horarios." },
+  { name: "Recepción 24 horas", icon: "clock", detail: "Atención durante tu estadía." },
+  { name: "Servicio a la habitación", icon: "service", detail: "Confirma las opciones disponibles con recepción." },
+  { name: "Jardín", icon: "garden", detail: "Espacio exterior para disfrutar." },
+  { name: "Habitaciones con jacuzzi", icon: "bath", detail: "Disponibles en categorías seleccionadas." },
+  { name: "Lavandería", icon: "laundry", detail: "Consulta disponibilidad y posibles cargos." },
+  { name: "Eventos y reuniones", icon: "meeting", detail: "Consulta espacios y condiciones." },
+  { name: "Información local", icon: "map", detail: "Consulta información para conocer Chancay." },
+  { name: "Traslados al aeropuerto y locales", icon: "map", detail: "Servicio a solicitud con costo adicional; confirma rutas y tarifas." },
+  { name: "Decoraciones para ocasiones especiales", icon: "meeting", detail: "Consulta paquetes, disponibilidad y precios." },
 ];
 
 const paths: Record<string, string[]> = {
@@ -39,8 +41,8 @@ export function ServiceIcon({ icon }: { icon: string }) {
 export function ServicesGrid({ full = false }: { full?: boolean }) {
   return <div className={full ? "amenities-content amenities-full" : "amenities-content"}>
     <h2 className="amenities-heading">{full ? "Servicios de Hotel BlueThree" : "Nuestros servicios"}</h2>
-    <ul className="hilton-amenity-grid">
-      {services.map((service) => <li key={service.name} className="hilton-amenity-item">
+    <ul className="hotel-amenity-grid">
+      {services.map((service) => <li key={service.name} className="hotel-amenity-item">
         <ServiceIcon icon={service.icon} />
         <span>{service.name}</span>
         {full && <p>{service.detail}</p>}
