@@ -36,7 +36,9 @@ function BookingLinks() { return <div className="booking-links"><a className="bu
 export function SiteHeader() {
  const [menuOpen,setMenuOpen]=useState(false);
  const [bedOption,setBedOption]=useState("1 bed · 2 guests");
- const [stayDates] = useState(() => {
+ const [stayDates, setStayDates] = useState<{day:string;month:string;weekday:string}[]>([]);
+ useEffect(() => {
+  const timer = window.setTimeout(() => {
   const formatter = new Intl.DateTimeFormat("en-US", {
     timeZone: "America/Lima",
     day: "numeric",
@@ -46,7 +48,7 @@ export function SiteHeader() {
 
   const now = new Date();
 
-  return [0, 1].map(offset => {
+  setStayDates([0, 1].map(offset => {
     const date = new Date(now.getTime() + offset * 86400000);
     const parts = formatter.formatToParts(date);
     const part = (type: string) =>
@@ -57,8 +59,10 @@ export function SiteHeader() {
       month: part("month").replace(".", ""),
       weekday: part("weekday").replace(".", ""),
     };
-  });
-});
+  }));
+  }, 0);
+  return () => window.clearTimeout(timer);
+ }, []);
  return <>
       <header className="site-header">
         <div className="hotel-top-navigation"><button className="menu-toggle" type="button" aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>

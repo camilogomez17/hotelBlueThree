@@ -13,9 +13,11 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Read the latest committed versions before editing; preserve user fixes and unrelated changes.
 - Do not call state setters synchronously inside effects. Derive route state with `usePathname` from `next/navigation`; keep effects for external synchronization only.
 - Keep derived values in the scope where JSX consumes them. Remove obsolete setters and imports without removing referenced values.
-- Preserve lazy initialization of stay dates; account for server/client hydration and Peru time when changing date logic. Use `weekday`, not `weekay`.
+- Never read current time during render or lazy state initialization with Cache Components enabled. Defer stay date calculation to a browser effect callback, with cleanup; preserve Peru time and a deterministic initial fallback. Use `weekday`, not `weekay`.
 - Import `Link` from `next/link` for internal navigation and `Image` from `next/image` where appropriate. Ensure links wrap their intended children and JSX tags are balanced.
 - Keep Spanish and English implementations consistent, with appropriate localized text and date formatting.
 - Before pushing, run `npx eslint .`, `npx tsc --noEmit`, and `npm run build`. Report any checks that cannot be run; do not claim they passed.
 
 - Every dynamic or string-source Next.js Image needs width and height or fill; configure remotePatterns for external image hosts. Verify Tailwind important modifiers are suffixes on complete utility names.
+
+- Keep tsconfig JSX set to react-jsx as required by Next.js 16.4.6. Production prerender checks are required in addition to TypeScript.

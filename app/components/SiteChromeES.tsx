@@ -35,25 +35,29 @@ function BookingLinks() { return <div className="booking-links"><a className="bu
 export function SiteHeader() {
  const [menuOpen,setMenuOpen]=useState(false);
  const [bedOption,setBedOption]=useState("1 cama · 2 huéspedes");
- const [stayDates] = useState(() => {
+ const [stayDates, setStayDates] = useState<{day:string;month:string;weekday:string}[]>([]);
+ useEffect(() => {
+  const timer = window.setTimeout(() => {
     const formatter=new Intl.DateTimeFormat("es-PE",{timeZone:"America/Lima",day:"numeric",month:"short",weekday:"short"});
     const now=new Date();
-    return [0,1].map(offset=>{
+    setStayDates([0, 1].map(offset => {
       const date=new Date(now.getTime()+offset*86400000);
       const parts=formatter.formatToParts(date);
       const part=(type:string)=>parts.find(item=>item.type===type)?.value??"";
       return {day:part("day"),month:part("month").replace(".",""),weekday:part("weekday").replace(".","")};
-    });
- });
+    }));
+  }, 0);
+  return () => window.clearTimeout(timer);
+ }, []);
  return <>
       <header className="site-header">
         <div className="hotel-top-navigation"><button className="menu-toggle" type="button" aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"} aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>
               <span></span><span></span><span></span>
             </button><LanguageChooser /></div>
         <div className="header-inner">
-          <Link className="brand" href="/" aria-label="Hotel BlueThree, ir al inicio" onClick={() => setMenuOpen(false)}></Link>
+          <Link className="brand" href="/" aria-label="Hotel BlueThree, ir al inicio" onClick={() => setMenuOpen(false)}>
             <Image className="brand-logo" src="/logo2.jpeg" alt="" width={88} height={88} onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.nextElementSibling?.classList.remove("brand-fallback-hidden"); }} /><span className="brand-mark brand-fallback-hidden" aria-hidden="true">B<span>3</span></span>
-            
+          </Link>
           <nav className={menuOpen ? "main-nav is-open" : "main-nav"} id="main-navigation" aria-label="Navegación principal">
             <Link href="/" onClick={() => setMenuOpen(false)}>Inicio</Link>
             <a href="/informacion-del-hotel" onClick={() => setMenuOpen(false)}>Información de Hotel</a>
