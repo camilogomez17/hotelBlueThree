@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import { ServicesGrid } from "../components/ServicesGrid";
 
 export const metadata: Metadata = {
-  title: "Amenities | Hotel BlueThree Chancay",
+  title: "Hotel Information | Hotel BlueThree Chancay",
   description: "Discover Hotel BlueThree Chancay amenities: Wi-Fi, rooms with jacuzzi, café, parking and more.",
 };
 
-export default function ServiciosPage() {
+export default function HotelInformationPage() {
   return <main className="services-page">
     <div className="services-page-banner">
       <p className="eyebrow">HOTEL BLUETHREE CHANCAY</p>
-      <h1>Services and amenities</h1>
+      <h1>Hotel Information</h1>
       <p>Discover the amenities and services available during your stay in Chancay.</p>
     </div>
     <section className="services-page-main" aria-label="List of amenities"><ServicesGrid full /></section>

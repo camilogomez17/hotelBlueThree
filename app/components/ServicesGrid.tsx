@@ -48,7 +48,7 @@ export function ServicesGrid({ full = false }: { full?: boolean }) {
         {full && <p>{service.detail}</p>}
       </li>)}
     </ul>
-    {!full && <div className="amenities-action"><Link href="/servicios" className="amenities-all-button">Todos los servicios</Link></div>}
+    {!full && <div className="amenities-action"><Link href="/informacion-del-hotel" className="amenities-all-button">Todos los servicios</Link></div>}
     <p className="amenities-disclaimer">Los servicios pueden variar según la habitación, la fecha y la disponibilidad. Confirma las condiciones directamente con el hotel.</p>
   </div>;
 }

@@ -14,14 +14,14 @@ export default function BlueThreeBenefits({language}:{language:"es"|"en"}) {
   const items=english?[
     ["Explore our rooms","/en/rooms"],
     ["Check availability","/en/contact"],
-    ["Discover amenities","/en/services"],
+    ["Discover amenities","/en/hotel-information"],
     ["Explore our location","/en/location"],
     ["Ask about special stays","/en/contact"],
     ["Contact us directly","/en/contact"]
   ]:[
     ["Explora nuestras habitaciones","/habitaciones"],
     ["Consulta disponibilidad","/contacto"],
-    ["Conoce los servicios","/servicios"],
+    ["Conoce los servicios","/informacion-del-hotel"],
     ["Descubre la ubicación","/ubicacion"],
     ["Consulta estadías especiales","/contacto"],
     ["Contáctanos directamente","/contacto"]

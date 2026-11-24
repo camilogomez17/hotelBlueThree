@@ -16,7 +16,7 @@ function LanguageChooser(){
   const pathname=window.location.pathname;
   const segments=pathname.split("/").filter(Boolean);
   if(segments[0]==="en")segments.shift();
-  const routes: Record<string,string> = {"habitaciones":"rooms","servicios":"services","galeria":"gallery","ubicacion":"location","politicas":"policies","contacto":"contact","gastronomia":"dining","eventos":"events"};
+  const routes: Record<string,string> = {"habitaciones":"rooms","informacion-del-hotel":"hotel-information","galeria":"gallery","ubicacion":"location","politicas":"policies","contacto":"contact","gastronomia":"dining","eventos":"events"};
   if(segments.length){
     const slug=segments[0];
     segments[0]=language==="en"?(routes[slug]??slug):(Object.keys(routes).find(key=>routes[key]===slug)??slug);
@@ -50,8 +50,8 @@ export function SiteHeader() {
             
           </a>
           <nav className={menuOpen ? "main-nav is-open" : "main-nav"} id="main-navigation" aria-label="Main navigation">
+            <a href="/en/hotel-information" onClick={() => setMenuOpen(false)}>Hotel Information</a>
             <a href="/en/rooms" onClick={() => setMenuOpen(false)}>Rooms</a>
-            <a href="/en/services" onClick={() => setMenuOpen(false)}>Services</a>
             <a href="/en/gallery" onClick={() => setMenuOpen(false)}>Gallery</a>
             <a href="/en/location" onClick={() => setMenuOpen(false)}>Location</a>
             <a href="/en/contact" onClick={() => setMenuOpen(false)}>Contact</a>
@@ -118,7 +118,7 @@ export function SiteFooter() {
             <div className="footer-column">
               <h3>Explore</h3>
               <a href="/en/rooms">Rooms and suites</a>
-              <a href="/en/services">Services</a>
+              <a href="/en/hotel-information">Hotel Information</a>
               <a href="/en/gallery">Gallery</a>
               <a href="/en/dining">Dining</a>
               <a href="/en/events">Events</a>
