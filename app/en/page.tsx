@@ -123,7 +123,7 @@ export default function Home() {
       </section>
 
       <section className="filmstrip-intro" aria-label="About Hotel BlueThree">
-        <p>Enjoy your stay in Chancay, near attractions such as Chancay Castle, Chancay Municipal Museum, Eco Truly Park and Lachay National Reserve. Explore our rooms and suites, some featuring a jacuzzi, balcony and panoramic views.</p><div className="home-intro-actions"><a className="button button-dark" href="/en/habitaciones">Explore rooms</a><a className="button button-outline" href="/en/ubicacion">View location</a></div>
+        <p>Enjoy your stay in Chancay, near attractions such as Chancay Castle, Chancay Municipal Museum, Eco Truly Park and Lachay National Reserve. Explore our rooms and suites, some featuring a jacuzzi, balcony and panoramic views.</p><div className="home-intro-actions"><a className="button button-dark" href="/en/rooms">Explore rooms</a><a className="button button-outline" href="/en/location">View location</a></div>
       </section>
 
       <aside className="hotel-utility-rail" aria-label="Hotel information and contact">
@@ -203,7 +203,7 @@ export default function Home() {
               <img src={photo.src} alt={photo.alt} loading="lazy" />
               <div className="room-card-content">
                 <h3>{photo.title}</h3>
-                <a className="room-details-link" href="/en/habitaciones">View room details</a>
+                <a className="room-details-link" href="/en/rooms">View room details</a>
                 <div className="room-card-spacer" />
                 <a className="room-book-button" href="https://api.whatsapp.com/message/IPFK3E5CKTNGK1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer">Check availability</a>
                 <p className="room-rate-note">Confirm rates, occupancy and amenities directly with the hotel.</p>
@@ -211,7 +211,7 @@ export default function Home() {
             </article>
           ))}
         </div>
-        <div className="room-more"><a className="room-explore-button" href="/en/habitaciones">Explore all rooms</a></div>
+        <div className="room-more"><a className="room-explore-button" href="/en/rooms">Explore all rooms</a></div>
       </section>
 
       <BlueThreeBenefits language="en" />
@@ -234,16 +234,16 @@ export default function Home() {
             </div>)}
           </div>
         </div>
-        <div className="home-dining-more"><a className="room-explore-button" href="/en/gastronomia">View full menu and prices ↗</a></div>
+        <div className="home-dining-more"><a className="room-explore-button" href="/en/dining">View full menu and prices ↗</a></div>
       </section>
 
       <section className="home-policies-section section-wrap" id="politicas">
         <div className="section-heading"><div><p className="eyebrow">BEFORE YOUR ARRIVAL</p><h2>Information<br/>and <em>policies.</em></h2></div><p>Review fees, family policies, parking, pets, smoking and Wi-Fi before booking.</p></div>
         <PolicyTabs language="en" />
-        <div className="home-policies-more"><a className="room-explore-button" href="/en/politicas">View all policies ↗</a></div>
+        <div className="home-policies-more"><a className="room-explore-button" href="/en/policies">View all policies ↗</a></div>
       </section>
 
-      <section className="bluethree-events" aria-labelledby="bluethree-events-heading"><div className="bluethree-events-inner"><h2 id="bluethree-events-heading">Meetings and events</h2><p>Plan your next meeting, celebration, or special occasion at BlueThree in Chancay. Contact our team to discuss available spaces, event arrangements, and options for your group.</p><a href="/en/contacto" className="bluethree-events-button">Plan an Event</a></div></section>
+      <section className="bluethree-events" aria-labelledby="bluethree-events-heading"><div className="bluethree-events-inner"><h2 id="bluethree-events-heading">Meetings and events</h2><p>Plan your next meeting, celebration, or special occasion at BlueThree in Chancay. Contact our team to discuss available spaces, event arrangements, and options for your group.</p><a href="/en/contact" className="bluethree-events-button">Plan an Event</a></div></section>
 
       <HomeLocation language="en" />
 

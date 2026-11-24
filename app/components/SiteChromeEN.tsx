@@ -16,6 +16,11 @@ function LanguageChooser(){
   const pathname=window.location.pathname;
   const segments=pathname.split("/").filter(Boolean);
   if(segments[0]==="en")segments.shift();
+  const routes: Record<string,string> = {"habitaciones":"rooms","servicios":"services","galeria":"gallery","ubicacion":"location","politicas":"policies","contacto":"contact","gastronomia":"dining","eventos":"events"};
+  if(segments.length){
+    const slug=segments[0];
+    segments[0]=language==="en"?(routes[slug]??slug):(Object.keys(routes).find(key=>routes[key]===slug)??slug);
+  }
   const destination=(language==="es"?"":"/"+language)+(segments.length?"/"+segments.join("/"):"/");
   window.location.assign(destination+window.location.search+window.location.hash);
  }
@@ -45,11 +50,11 @@ export function SiteHeader() {
             
           </a>
           <nav className={menuOpen ? "main-nav is-open" : "main-nav"} id="main-navigation" aria-label="Main navigation">
-            <a href="/en/habitaciones" onClick={() => setMenuOpen(false)}>Rooms</a>
-            <a href="/en/servicios" onClick={() => setMenuOpen(false)}>Services</a>
-            <a href="/en/galeria" onClick={() => setMenuOpen(false)}>Gallery</a>
-            <a href="/en/ubicacion" onClick={() => setMenuOpen(false)}>Location</a>
-            <a href="/en/contacto" onClick={() => setMenuOpen(false)}>Contact</a>
+            <a href="/en/rooms" onClick={() => setMenuOpen(false)}>Rooms</a>
+            <a href="/en/services" onClick={() => setMenuOpen(false)}>Services</a>
+            <a href="/en/gallery" onClick={() => setMenuOpen(false)}>Gallery</a>
+            <a href="/en/location" onClick={() => setMenuOpen(false)}>Location</a>
+            <a href="/en/contact" onClick={() => setMenuOpen(false)}>Contact</a>
           </nav>
           <div className="header-actions">
             <LanguageChooser />
@@ -95,7 +100,7 @@ export function SiteFooter() {
  return <>
       <section className="contact-section section-wrap" id="contacto">
         <div className="contact-copy"><p className="eyebrow">PLAN YOUR STAY</p><h2>Book your next<br/><em>visit to Chancay.</em></h2><p>Check rates, availability, room types and special requests through the hotel's official channels or Tripadvisor.</p><BookingLinks/></div>
-        <div className="social-panel"><p className="eyebrow">OFFICIAL CHANNELS</p>{socials.map(([name, href]) => <a className="social-link" href={href} key={name} target="_blank" rel="noreferrer">{name}<span>↗</span></a>)}<a className="social-link" href="/en/contacto">All our links<span>↗</span></a><a className="social-link" href={tripAdvisor} target="_blank" rel="noreferrer">Tripadvisor · Bookings and reviews<span>↗</span></a><a className="social-link" href="https://www.booking.com/searchresults.html?aid=390156&amp;label=duc511jc-10CAsosQFCE3RyZXMtYXJib2xlcy1henVsZXNIM1gDaKcCiAEBmAEzuAEHyAEP2AED6AEB-AEBiAIBqAIBuAKmhYjYBsACAdICJGVlNTI4NjhkLTY0YTUtNDg3MS1hZGRlLWI3ZTEwYTE5YWVlZtgCAeACAQ&amp;redirected=1&amp;city=-341519&amp;highlighted_hotels=15241340&amp;hlrd=user_sh&amp;source=hotel&amp;checkin=2026-11-21&amp;checkout=2026-11-22&amp;keep_landing=1&amp;sid=c027b02c5e916b27cfe75db44e9fae5d" target="_blank" rel="noopener noreferrer">Booking.com · Bookings<span>↗</span></a></div>
+        <div className="social-panel"><p className="eyebrow">OFFICIAL CHANNELS</p>{socials.map(([name, href]) => <a className="social-link" href={href} key={name} target="_blank" rel="noreferrer">{name}<span>↗</span></a>)}<a className="social-link" href="/en/contact">All our links<span>↗</span></a><a className="social-link" href={tripAdvisor} target="_blank" rel="noreferrer">Tripadvisor · Bookings and reviews<span>↗</span></a><a className="social-link" href="https://www.booking.com/searchresults.html?aid=390156&amp;label=duc511jc-10CAsosQFCE3RyZXMtYXJib2xlcy1henVsZXNIM1gDaKcCiAEBmAEzuAEHyAEP2AED6AEB-AEBiAIBqAIBuAKmhYjYBsACAdICJGVlNTI4NjhkLTY0YTUtNDg3MS1hZGRlLWI3ZTEwYTE5YWVlZtgCAeACAQ&amp;redirected=1&amp;city=-341519&amp;highlighted_hotels=15241340&amp;hlrd=user_sh&amp;source=hotel&amp;checkin=2026-11-21&amp;checkout=2026-11-22&amp;keep_landing=1&amp;sid=c027b02c5e916b27cfe75db44e9fae5d" target="_blank" rel="noopener noreferrer">Booking.com · Bookings<span>↗</span></a></div>
       </section>
 
       <footer className="site-footer">
@@ -108,23 +113,23 @@ export function SiteFooter() {
               </a>
               <p>Discover Chancay. Relax at BlueThree.</p>
               <address>{address}</address>
-              <a className="footer-map-link" href="/en/ubicacion" target="_blank" rel="noopener noreferrer">View location ↗</a>
+              <a className="footer-map-link" href="/en/location" target="_blank" rel="noopener noreferrer">View location ↗</a>
             </div>
             <div className="footer-column">
               <h3>Explore</h3>
-              <a href="/en/habitaciones">Rooms and suites</a>
-              <a href="/en/servicios">Services</a>
-              <a href="/en/galeria">Gallery</a>
-              <a href="/en/gastronomia">Dining</a>
-              <a href="/en/eventos">Events</a>
-              <a href="/en/ubicacion">Location</a>
+              <a href="/en/rooms">Rooms and suites</a>
+              <a href="/en/services">Services</a>
+              <a href="/en/gallery">Gallery</a>
+              <a href="/en/dining">Dining</a>
+              <a href="/en/events">Events</a>
+              <a href="/en/location">Location</a>
             </div>
             <div className="footer-column">
               <h3>Your stay</h3>
-              <a href="/en/contacto">Contact</a>
+              <a href="/en/contact">Contact</a>
               <a href={tripAdvisor} target="_blank" rel="noopener noreferrer">Book on Tripadvisor ↗</a>
               <a href={linktree} target="_blank" rel="noopener noreferrer">Contact the hotel ↗</a>
-              <a href="/en/politicas">Hotel policies</a>
+              <a href="/en/policies">Hotel policies</a>
             </div>
             <div className="footer-column">
               <h3>Follow us</h3>

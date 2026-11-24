@@ -16,6 +16,11 @@ function LanguageChooser(){
   const pathname=window.location.pathname;
   const segments=pathname.split("/").filter(Boolean);
   if(segments[0]==="en")segments.shift();
+  const routes: Record<string,string> = {"habitaciones":"rooms","servicios":"services","galeria":"gallery","ubicacion":"location","politicas":"policies","contacto":"contact","gastronomia":"dining","eventos":"events"};
+  if(segments.length){
+    const slug=segments[0];
+    segments[0]=language==="en"?(routes[slug]??slug):(Object.keys(routes).find(key=>routes[key]===slug)??slug);
+  }
   const destination=(language==="es"?"":"/"+language)+(segments.length?"/"+segments.join("/"):"/");
   window.location.assign(destination+window.location.search+window.location.hash);
  }

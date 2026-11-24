@@ -12,12 +12,12 @@ const icons = [
 export default function BlueThreeBenefits({language}:{language:"es"|"en"}) {
   const english=language==="en";
   const items=english?[
-    ["Explore our rooms","/en/habitaciones"],
-    ["Check availability","/en/contacto"],
-    ["Discover amenities","/en/servicios"],
-    ["Explore our location","/en/ubicacion"],
-    ["Ask about special stays","/en/contacto"],
-    ["Contact us directly","/en/contacto"]
+    ["Explore our rooms","/en/rooms"],
+    ["Check availability","/en/contact"],
+    ["Discover amenities","/en/services"],
+    ["Explore our location","/en/location"],
+    ["Ask about special stays","/en/contact"],
+    ["Contact us directly","/en/contact"]
   ]:[
     ["Explora nuestras habitaciones","/habitaciones"],
     ["Consulta disponibilidad","/contacto"],
