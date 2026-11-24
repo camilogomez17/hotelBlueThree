@@ -21,10 +21,19 @@ export default function RoomsCatalog({ language = "es" }: { language?: "es" | "e
   const en = language === "en";
   const tr = (s: string) => en ? (translations[s] ?? s) : s;
   return <main className="blue-rooms-page">
-    <header className="blue-rooms-header section-wrap">
-      <p className="eyebrow">HOTEL BLUETHREE CHANCAY</p>
-      <h1>{en ? "Rooms & suites" : "Habitaciones y suites"}</h1>
-      <p>{en ? "Find the right space for your stay. Explore room features and inquire about available rates." : "Encuentra el espacio ideal para tu estadía. Explora las características y consulta las tarifas disponibles."}</p>
+    <header className="section-wrap">
+      <h1 className="py-6 text-center text-[32px] leading-tight font-bold text-[#002b55] sm:py-7 sm:text-[40px]">{en ? "Rooms and suites" : "Habitaciones y suites"}</h1>
+      <div className="mb-4 sm:mb-5">
+        <h2 className="pb-2 text-center text-lg font-bold text-[#002b55]">{en ? "Your stay includes" : "Tu estadía incluye"}</h2>
+        <ul className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-base">
+          {["Wi-Fi", "No fumar", "Estacionamiento incluido", "Aire acondicionado", "Calefacción", "Minibar"].filter(feature => rooms.length > 0 && rooms.every(room => room.features.includes(feature))).map(feature => (
+            <li key={feature} className="flex items-center gap-1">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6" /></svg>
+              {feature === "No fumar" ? (en ? "Non-smoking rooms" : "Habitaciones para no fumadores") : tr(feature)}
+            </li>
+          ))}
+        </ul>
+      </div>
       <div className="blue-rooms-rate">
         <div><span>{en ? "Tripadvisor standard-room reference" : "Referencia Tripadvisor: habitación estándar"}</span><strong>US$33–$41 <small>{en ? "/ night" : "/ noche"}</small></strong><small>{en ? "Historical average range; not a guaranteed rate. Taxes may be additional." : "Rango promedio de referencia; no es una tarifa garantizada. Impuestos no incluidos."}</small></div>
         <a href={tripAdvisor} target="_blank" rel="noopener noreferrer">{en ? "Check prices for your dates ↗" : "Consultar precios para tus fechas ↗"}</a>
