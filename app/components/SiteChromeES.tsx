@@ -1,17 +1,21 @@
 "use client";
 import { useEffect, useState } from "react";
+import { usePathname } from 'next/navigation';
+import Image from 'next/image';
+import Link from 'next/link';
+
 
 const tripAdvisor = "https://www.tripadvisor.com/Hotel_Review-g2336594-d24005682-Reviews-Hotel_BlueThree_Chancay-Chancay_Lima_Region.html";
 const linktree = "https://linktr.ee/bluethree";
 const mapsUrl = "https://www.google.com/maps/place/Hotel+BlueThree+Chancay+%7C+Hoteles+en+Chancay+%26+Huaral/@-11.5491071,-77.260408,15.39z/data=!4m9!3m8!1s0x91068921449d21a5:0x7351952174e4f1fe!5m2!4m1!1i2!8m2!3d-11.5453985!4d-77.2588947!16s%2Fg%2F11rsr5p47y?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D";
 const address = "Residencial Buena Vista – Las Tres Pirámides, Chancay 15130, Perú";
-const attractions = [["Castillo de Chancay","Un emblemático atractivo histórico y cultural de la ciudad."],["Museo Municipal de Chancay","Conoce la historia y cultura local."],["Eco Truly Park","Un espacio ecológico y cultural junto al litoral."],["Reserva Nacional de Lachay","Paisajes naturales y lomas estacionales para explorar."]];
 const socials = [["Instagram","https://www.instagram.com/hotelbluethreechancay/"],["Facebook","https://www.facebook.com/Hotelesenchancayhuaral/"],["TikTok","https://www.tiktok.com/@hotelbluethreechancay"]];
 
 const languageLabels = {es:"Español",en:"English"} as const;
 function LanguageChooser(){
- const [current,setCurrent]=useState<"es"|"en">("es");
- useEffect(()=>{const segment=window.location.pathname.split("/")[1];setCurrent(segment==="en"?segment:"es");document.documentElement.lang=segment==="en"?segment:"es";},[]);
+  const pathname = usePathname();
+  const current = pathname.split("/")[1] === "en" ? "en" : "es";
+ useEffect(()=>{const segment=window.location.pathname.split("/")[1];document.documentElement.lang=segment==="en"?segment:"es";},[]);
  function change(language:"es"|"en"){
   const pathname=window.location.pathname;
   const segments=pathname.split("/").filter(Boolean);
@@ -48,12 +52,11 @@ export function SiteHeader() {
               <span></span><span></span><span></span>
             </button><LanguageChooser /></div>
         <div className="header-inner">
-          <a className="brand" href="/" aria-label="Hotel BlueThree, ir al inicio" onClick={() => setMenuOpen(false)}>
-            <img className="brand-logo" src="/logo2.jpeg" alt="" width={88} height={88} onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.nextElementSibling?.classList.remove("brand-fallback-hidden"); }} /><span className="brand-mark brand-fallback-hidden" aria-hidden="true">B<span>3</span></span>
+          <Link className="brand" href="/" aria-label="Hotel BlueThree, ir al inicio" onClick={() => setMenuOpen(false)}></Link>
+            <Image className="brand-logo" src="/logo2.jpeg" alt="" width={88} height={88} onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.nextElementSibling?.classList.remove("brand-fallback-hidden"); }} /><span className="brand-mark brand-fallback-hidden" aria-hidden="true">B<span>3</span></span>
             
-          </a>
           <nav className={menuOpen ? "main-nav is-open" : "main-nav"} id="main-navigation" aria-label="Navegación principal">
-            <a href="/" onClick={() => setMenuOpen(false)}>Inicio</a>
+            <Link href="/" onClick={() => setMenuOpen(false)}>Inicio</Link>
             <a href="/informacion-del-hotel" onClick={() => setMenuOpen(false)}>Información de Hotel</a>
             <a href="/habitaciones" onClick={() => setMenuOpen(false)}>Habitaciones</a>
             <a href="/galeria" onClick={() => setMenuOpen(false)}>Galería</a>
@@ -111,22 +114,22 @@ export function SiteFooter() {
         <div className="footer-inner">
           <div className="footer-main">
             <div className="footer-about">
-              <a className="brand footer-brand" href="/" aria-label="Hotel BlueThree, volver al inicio">
-                <img className="brand-logo" src="/logo.jpeg" alt="" width={88} height={88} onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.nextElementSibling?.classList.remove("brand-fallback-hidden"); }} /><span className="brand-mark brand-fallback-hidden" aria-hidden="true">B<span>3</span></span>
+              <Link className="brand footer-brand" href="/" aria-label="Hotel BlueThree, volver al inicio">
+                <Image className="brand-logo" src="/logo.jpeg" alt="" width={88} height={88} onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.nextElementSibling?.classList.remove("brand-fallback-hidden"); }} /><span className="brand-mark brand-fallback-hidden" aria-hidden="true">B<span>3</span></span>
                 
-              </a>
+              </Link>
               <p>Descubre Chancay. Descansa en BlueThree.</p>
               <address>{address}</address>
-              <a className="footer-map-link" href="/ubicacion" target="_blank" rel="noopener noreferrer">Ver ubicación ↗</a>
+              <Link className="footer-map-link" href="/ubicacion" target="_blank" rel="noopener noreferrer">Ver ubicación ↗</Link>
             </div>
             <div className="footer-column">
               <h3>Explora</h3>
-              <a href="/habitaciones">Habitaciones y suites</a>
-              <a href="/informacion-del-hotel">Información de Hotel</a>
-              <a href="/galeria">Galería</a>
-              <a href="/gastronomia">Gastronomía</a>
-              <a href="/eventos">Eventos</a>
-              <a href="/ubicacion">Ubicación</a>
+              <Link href="/habitaciones">Habitaciones y suites</Link>
+              <Link href="/informacion-del-hotel">Información de Hotel</Link>
+              <Link href="/galeria">Galería</Link>
+              <Link href="/gastronomia">Gastronomía</Link>
+              <Link href="/eventos">Eventos</Link>
+              <Link href="/ubicacion">Ubicación</Link>
             </div>
             <div className="footer-column">
               <h3>Tu estadía</h3>
@@ -142,7 +145,7 @@ export function SiteFooter() {
           </div>
           <div className="footer-bottom">
             <small>© 2026 Hotel BlueThree Chancay. Todos los derechos reservados.</small>
-            <a href="/">Volver arriba ↑</a>
+            <Link href="/">Volver arriba ↑</Link>
           </div>
         </div>
       </footer>
