@@ -53,10 +53,13 @@ export function SiteHeader() {
             
           </a>
           <nav className={menuOpen ? "main-nav is-open" : "main-nav"} id="main-navigation" aria-label="Main navigation">
+            <a href="/en" onClick={() => setMenuOpen(false)}>Home</a>
             <a href="/en/hotel-information" onClick={() => setMenuOpen(false)}>Hotel Information</a>
             <a href="/en/rooms" onClick={() => setMenuOpen(false)}>Rooms</a>
             <a href="/en/gallery" onClick={() => setMenuOpen(false)}>Gallery</a>
             <a href="/en/location" onClick={() => setMenuOpen(false)}>Location</a>
+            <a href="/en/dining" onClick={() => setMenuOpen(false)}>Dining</a>
+            <a href="/en/events" onClick={() => setMenuOpen(false)}>Meetings and events</a>
             <a href="/en/contact" onClick={() => setMenuOpen(false)}>Contact</a>
           </nav>
           <div className="header-actions">

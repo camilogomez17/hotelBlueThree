@@ -53,10 +53,13 @@ export function SiteHeader() {
             
           </a>
           <nav className={menuOpen ? "main-nav is-open" : "main-nav"} id="main-navigation" aria-label="Navegación principal">
+            <a href="/" onClick={() => setMenuOpen(false)}>Inicio</a>
             <a href="/informacion-del-hotel" onClick={() => setMenuOpen(false)}>Información de Hotel</a>
             <a href="/habitaciones" onClick={() => setMenuOpen(false)}>Habitaciones</a>
             <a href="/galeria" onClick={() => setMenuOpen(false)}>Galería</a>
             <a href="/ubicacion" onClick={() => setMenuOpen(false)}>Ubicación</a>
+            <a href="/gastronomia" onClick={() => setMenuOpen(false)}>Gastronomía</a>
+            <a href="/eventos" onClick={() => setMenuOpen(false)}>Reuniones y eventos</a>
             <a href="/contacto" onClick={() => setMenuOpen(false)}>Contacto</a>
           </nav>
           <div className="header-actions">

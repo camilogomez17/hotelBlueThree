@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import ForYourStay from "../../components/ForYourStay";
+import FeaturedAmenities from "../../components/FeaturedAmenities";
 import { ServicesGrid } from "../components/ServicesGrid";
 
 export const metadata: Metadata = {
@@ -13,7 +15,7 @@ export default function HotelInformationPage() {
       <h1>Hotel Information</h1>
       <p>Discover the amenities and services available during your stay in Chancay.</p>
     </div>
-    <section className="services-page-main" aria-label="List of amenities"><ServicesGrid full /></section>
+    <section className="section-wrap hotel-policies-page"><ForYourStay language="en" /><h2 className="hotel-our-policies-heading">Amenities</h2><ServicesGrid full /><FeaturedAmenities language="en" /></section>
     <section className="services-page-contact">
       <h2>Need information about a service?</h2>
       <p>Check availability, conditions and possible charges before booking.</p>

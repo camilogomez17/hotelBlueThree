@@ -24,7 +24,7 @@ const policyContent = {
 
 export default function PolicyTabs({ language }: { language: Language }) {
   const [active, setActive] = useState(0);
-  const policies = policyContent[language];
+  const policies = [...policyContent[language].slice(1), policyContent[language][0]];
   const policy = policies[active];
   return <section className="policy-tabs" aria-label={language === "es" ? "Políticas del hotel" : "Hotel policies"}>
     <div className="policy-tabs-list" role="tablist" aria-label={language === "es" ? "Categorías de políticas" : "Policy categories"}>

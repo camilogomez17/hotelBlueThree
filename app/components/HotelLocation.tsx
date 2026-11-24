@@ -1,7 +1,7 @@
 import { whatsapp } from "../data/hotel";
 
 const address = "Residencial Buena Vista – Las Tres Pirámides, Chancay 15130, Perú";
-const mapsUrl = "https://www.google.com/maps/search/?api=1&query=Hotel%20BlueThree%20Chancay";
+const mapsUrl = "https://www.google.com/maps/dir/?api=1&destination=-11.5453985,-77.2588947";
 const mapEmbed = "https://www.google.com/maps?q=-11.5453985,-77.2588947&z=15&output=embed";
 
 export default function HotelLocation({ language = "es" }: { language?: "es" | "en" }) {
@@ -13,8 +13,8 @@ export default function HotelLocation({ language = "es" }: { language?: "es" | "
       <p>{address}</p>
       <a href={mapsUrl} target="_blank" rel="noopener noreferrer">{en ? "Get directions ↗" : "Cómo llegar ↗"}</a>
     </section>
-    <section className="section-wrap">
-      <iframe className="hotel-location-map" title={en ? "Map of Hotel BlueThree Chancay" : "Mapa de Hotel BlueThree Chancay"} src={mapEmbed} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
+    <section className="hotel-location-wide">
+      <div className="hotel-map-frame"><iframe className="hotel-location-map" title={en ? "Map of Hotel BlueThree Chancay" : "Mapa de Hotel BlueThree Chancay"} src={mapEmbed} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen /><a className="hotel-map-brand" href={mapsUrl} target="_blank" rel="noopener noreferrer"><img src="/logo2.jpeg" alt="" width="48" height="48"/><span><strong>Hotel BlueThree Chancay</strong><br/>{en ? "Get directions ↗" : "Cómo llegar ↗"}</span></a></div>
       <p className="hotel-location-description">{en ? "Hotel BlueThree is located in Chancay, in the Buena Vista residential area near Las Tres Pirámides." : "Hotel BlueThree se encuentra en Chancay, en la zona residencial Buena Vista, cerca de Las Tres Pirámides."}</p>
       <div className="hotel-location-info">
         <section className="hotel-location-info-panel">

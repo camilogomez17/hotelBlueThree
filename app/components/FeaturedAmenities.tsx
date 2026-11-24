@@ -6,8 +6,8 @@ export default function FeaturedAmenities({ language }: { language: "es" | "en" 
   const [selected, setSelected] = useState<number | null>(null);
   const es = language === "es";
   const items = [
-    { title: es ? "Jacuzzi" : "Jacuzzi", image: "/Amenities.jpeg", description: es ? "Disfruta de jacuzzis y vistas panorámicas, transporte privado, eventos corporativos, decoración de habitaciones y el menú de la cafetería." : "Enjoy jacuzzis and panoramic views, private transport, corporate events, room decorations, and our cafeteria menu." },
-    { title: es ? "Gastronomía" : "Dining", image: "/FoodMenu.jpeg", description: es ? "Explora las opciones gastronómicas y el menú de la cafetería." : "Explore dining options and the cafeteria menu." },
+    { title: es ? "Salón de eventos" : "Event hall", image: "/CorporateEvents.jpeg", description: es ? "Consulta las opciones para reuniones y celebraciones." : "Ask about meeting and celebration options.", href: es ? "/eventos" : "/en/events" },
+    { title: es ? "Menú de la cafetería" : "Food menu", image: "/FoodMenu.jpeg", description: es ? "Explora el menú de la cafetería." : "Explore the cafeteria menu.", href: es ? "/gastronomia" : "/en/dining" },
   ];
   useEffect(() => {
     if (selected === null) return;
@@ -32,7 +32,7 @@ export default function FeaturedAmenities({ language }: { language: "es" | "en" 
             <button type="button" className="featured-amenity-close" onClick={() => setSelected(null)} aria-label={es ? "Cerrar" : "Close"}>×</button>
             <img src={items[selected].image} alt={items[selected].title} />
             <h3>{items[selected].title}</h3>
-            <p>{items[selected].description}</p>
+            <p>{items[selected].description}</p><a className="button button-dark" href={items[selected].href}>{es ? "Ver más" : "Learn more"}</a>
           </div>
         </div>
       )}
