@@ -44,6 +44,9 @@ export function SiteHeader() {
  },[]);
  return <>
       <header className="site-header">
+        <div className="hotel-top-navigation"><button className="menu-toggle" type="button" aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"} aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>
+              <span></span><span></span><span></span>
+            </button><LanguageChooser /></div>
         <div className="header-inner">
           <a className="brand" href="/" aria-label="Hotel BlueThree, ir al inicio" onClick={() => setMenuOpen(false)}>
             <img className="brand-logo" src="/logo2.jpeg" alt="" width={88} height={88} onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.nextElementSibling?.classList.remove("brand-fallback-hidden"); }} /><span className="brand-mark brand-fallback-hidden" aria-hidden="true">B<span>3</span></span>
@@ -57,11 +60,9 @@ export function SiteHeader() {
             <a href="/contacto" onClick={() => setMenuOpen(false)}>Contacto</a>
           </nav>
           <div className="header-actions">
-            <LanguageChooser />
+            
             <a className="header-cta" href={tripAdvisor} target="_blank" rel="noopener noreferrer">Reservar <span aria-hidden="true">↗</span></a>
-            <button className="menu-toggle" type="button" aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"} aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>
-              <span></span><span></span><span></span>
-            </button>
+            
           </div>
         </div>
       </header>
