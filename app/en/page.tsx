@@ -7,6 +7,8 @@ import { useState } from "react";
 import { ServicesGrid } from "./components/ServicesGrid";
 import PolicyTabs from "../components/PolicyTabs";
 
+import Image from 'next/image'
+
 const photos = [
   {
     src: "https://images.trvl-media.com/lodging/90000000/89740000/89732700/89732652/c6474fe1.jpg?impolicy=resizecrop&ra=fill&rh=575&rw=575",
@@ -69,22 +71,7 @@ const diningItems = [
 ];
 
 const roomPhotos = salesPhotos;
-const amenities = ["Wi-Fi", "Parking", "Air conditioning", "Restaurant and café", "Breakfast", "24-hour reception", "Room service", "Garden", "Rooms with jacuzzi", "Laundry", "Events and meetings", "Tourist assistance"];
-const attractions = [
-  ["Castillo de Chancay", "An iconic historical and cultural attraction in the city."],
-  ["Museo Municipal de Chancay", "Discover local history and culture."],
-  ["Eco Truly Park", "An ecological and cultural site near the coast."],
-  ["Reserva Nacional de Lachay", "Explore natural landscapes and seasonal coastal hills."],
-];
-const socials = [
-  ["Instagram", "https://www.instagram.com/hotelbluethreechancay/"],
-  ["Facebook", "https://www.facebook.com/Hotelesenchancayhuaral/"],
-  ["TikTok", "https://www.tiktok.com/@hotelbluethreechancay"],
-];
-const tripAdvisor = "https://www.tripadvisor.com/Hotel_Review-g2336594-d24005682-Reviews-Hotel_BlueThree_Chancay-Chancay_Lima_Region.html";
-const linktree = "https://linktr.ee/bluethree";
-const mapsUrl = "https://www.google.com/maps/place/Hotel+BlueThree+Chancay+%7C+Hoteles+en+Chancay+%26+Huaral/@-11.5491071,-77.260408,15.39z/data=!4m9!3m8!1s0x91068921449d21a5:0x7351952174e4f1fe!5m2!4m1!1i2!8m2!3d-11.5453985!4d-77.2588947!16s%2Fg%2F11rsr5p47y?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D";
-const address = "Residencial Buena Vista – Las Tres Pirámides, Chancay 15130, Perú";
+const tripAdvisor = "https://www.tripadvisor.com/Hotel_Review-g2336594-d24005682-Reviews-Hotel_BlueThree_Chancay-Chancay_Lima_Region.html"
 
 function BookingLinks({ compact = false }: { compact?: boolean }) {
   return <div className={compact ? "booking-links compact" : "booking-links"}>
@@ -109,7 +96,7 @@ export default function Home() {
               const index = (active + offset + photos.length) % photos.length;
               const photo = photos[index];
               return <button key={offset} type="button" className={offset === 0 ? "filmstrip-slide is-current" : "filmstrip-slide"} onClick={() => offset < 0 ? previous() : offset > 0 ? next() : setShowAll(!showAll)} aria-label={offset === 0 ? "View all photos" : `Ver fotografía: ${photo.title}`}>
-                <img src={photo.src} alt={photo.alt} loading={offset === 0 ? "eager" : "lazy"} />
+                <Image src={photo.src} alt={photo.alt} loading={offset === 0 ? "eager" : "lazy"} />
               </button>;
             })}
           </div>
@@ -118,7 +105,7 @@ export default function Home() {
           <button className="filmstrip-count" type="button" onClick={() => setShowAll(!showAll)} aria-label="Open full gallery">{active + 1}/{photos.length}</button>
         </div>
         {showAll && <div className="filmstrip-thumbnails" aria-label="All photos">
-          {photos.map((photo, index) => <button key={photo.src} type="button" className={active === index ? "filmstrip-thumb is-active" : "filmstrip-thumb"} onClick={() => setActive(index)} aria-label={`Seleccionar ${photo.title}`}><img src={photo.src} alt={photo.alt} loading="lazy" /></button>)}
+          {photos.map((photo, index) => <button key={photo.src} type="button" className={active === index ? "filmstrip-thumb is-active" : "filmstrip-thumb"} onClick={() => setActive(index)} aria-label={`Seleccionar ${photo.title}`}><Image src={photo.src} alt={photo.alt} loading="lazy" /></button>)}
         </div>}
       </section>
 
@@ -200,7 +187,7 @@ export default function Home() {
         <div className="room-grid" aria-label="Available rooms and suites">
           {roomPhotos.map((photo) => (
             <article className="room-card" key={photo.src}>
-              <img src={photo.src} alt={photo.alt} loading="lazy" />
+              <Image src={photo.src} alt={photo.alt} loading="lazy" />
               <div className="room-card-content">
                 <h3>{photo.title}</h3>
                 <a className="room-details-link" href="/en/rooms">View room details</a>
