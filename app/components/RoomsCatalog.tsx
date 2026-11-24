@@ -34,10 +34,6 @@ export default function RoomsCatalog({ language = "es" }: { language?: "es" | "e
           ))}
         </ul>
       </div>
-      <div className="blue-rooms-rate">
-        <div><span>{en ? "Tripadvisor standard-room reference" : "Referencia Tripadvisor: habitación estándar"}</span><strong>US$33–$41 <small>{en ? "/ night" : "/ noche"}</small></strong><small>{en ? "Historical average range; not a guaranteed rate. Taxes may be additional." : "Rango promedio de referencia; no es una tarifa garantizada. Impuestos no incluidos."}</small></div>
-        <a href={tripAdvisor} target="_blank" rel="noopener noreferrer">{en ? "Check prices for your dates ↗" : "Consultar precios para tus fechas ↗"}</a>
-      </div>
     </header>
     <section className="section-wrap blue-rooms-list" aria-label={en ? "Room categories" : "Categorías de habitaciones"}>
       {rooms.map((room, index) => {
