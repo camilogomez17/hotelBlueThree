@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { rooms, tripAdvisor, whatsapp } from "../data/hotel";
 
 const translations: Record<string, string> = {
@@ -19,6 +22,9 @@ const translations: Record<string, string> = {
 
 export default function RoomsCatalog({ language = "es" }: { language?: "es" | "en" }) {
   const en = language === "en";
+  const [category, setCategory] = useState("all");
+  const tabs = [{id:"all",es:"Todas",en:"All"},{id:"guest",es:"Habitaciones",en:"Guest rooms"},{id:"suites",es:"Suites",en:"Suites"},{id:"accessible",es:"Accesibles",en:"Accessible"}];
+  const visibleRooms = rooms.filter(room => category === "all" || (category === "accessible" ? room.features.some(feature => /accesible|movilidad reducida/i.test(feature)) : category === "suites" ? /suite/i.test(room.name) : !/suite/i.test(room.name)));
   const tr = (s: string) => en ? (translations[s] ?? s) : s;
   return <main className="blue-rooms-page">
     <header className="section-wrap">
@@ -35,27 +41,44 @@ export default function RoomsCatalog({ language = "es" }: { language?: "es" | "e
         </ul>
       </div>
     </header>
-    <section className="section-wrap blue-rooms-list" aria-label={en ? "Room categories" : "Categorías de habitaciones"}>
-      {rooms.map((room, index) => {
-        const highlights = room.features.filter(f => /cama|personas|Jacuzzi|Balcón|Vista|Smart TV/.test(f)).slice(0, 4);
-        return <article className="blue-room" key={room.src}>
-          <div className="blue-room-image"><img src={room.src} alt={tr(room.name)} loading={index < 2 ? "eager" : "lazy"}/><span>{String(index + 1).padStart(2,"0")} / {String(rooms.length).padStart(2,"0")}</span></div>
-          <div className="blue-room-body">
-            <p className="blue-room-kicker">{en ? "ROOM & SUITE" : "HABITACIÓN Y SUITE"}</p>
-            <h2>{tr(room.name)}</h2>
-            <p className="blue-room-description">{en ? tr(room.name) + ". " + highlights.map(tr).join(" · ") + "." : room.description}</p>
-            <ul className="blue-room-highlights">{highlights.map(f => <li key={f}>{tr(f)}</li>)}</ul>
-            <details className="blue-room-details"><summary>{en ? "View room details" : "Ver detalles de la habitación"} <span aria-hidden="true">⌄</span></summary>
-              <div className="blue-room-detail-content"><h3>{en ? "Room amenities" : "Características de la habitación"}</h3><ul>{room.features.map(f => <li key={f}>{tr(f)}</li>)}</ul></div>
-            </details>
-            <div className="blue-room-bottom">
-              <div><span>{en ? "Rate for your dates" : "Tarifa para tus fechas"}</span><strong>{en ? "Request rate" : "Consultar tarifa"}</strong></div>
-              <a className="button button-dark" href={whatsapp} target="_blank" rel="noopener noreferrer">{en ? "Check availability ↗" : "Consultar disponibilidad ↗"}</a>
-            </div>
+    <section aria-label={en ? "Room categories" : "Categorías de habitaciones"}>
+      <div className="border-y border-[#d7e0e8]">
+        <div className="section-wrap">
+          <div role="tablist" aria-label={en ? "Room types" : "Tipos de habitación"} className="flex overflow-x-auto pt-2" onKeyDown={event => {
+            const index = tabs.findIndex(tab => tab.id === category);
+            const next = event.key === "ArrowRight" ? (index + 1) % tabs.length : event.key === "ArrowLeft" ? (index + tabs.length - 1) % tabs.length : event.key === "Home" ? 0 : event.key === "End" ? tabs.length - 1 : -1;
+            if (next < 0) return;
+            event.preventDefault();
+            setCategory(tabs[next].id);
+            document.getElementById("room-tab-" + tabs[next].id)?.focus();
+          }}>
+            {tabs.map(tab => <button key={tab.id} id={"room-tab-" + tab.id} type="button" role="tab" aria-selected={category === tab.id} aria-controls="room-category-panel" tabIndex={category === tab.id ? 0 : -1} onClick={() => setCategory(tab.id)} className={"grow cursor-pointer whitespace-nowrap border-b-4 px-4 py-3 text-lg font-bold sm:text-xl " + (category === tab.id ? "border-[#003b71] text-[#003b71]" : "border-transparent text-[#202b36] hover:text-[#003b71]")}>{en ? tab.en : tab.es}</button>)}
           </div>
-        </article>;
-      })}
+        </div>
+      </div>
+      <div id="room-category-panel" role="tabpanel" aria-labelledby={"room-tab-" + category} tabIndex={0} className="section-wrap py-5">
+        <p className="mb-4 text-sm" aria-live="polite">{en ? "Room options: " : "Opciones de alojamiento: "}{visibleRooms.length}</p>
+        {visibleRooms.length === 0 && <p className="py-8 text-center">{en ? "Contact the hotel to confirm accessibility options." : "Contacta al hotel para confirmar las opciones de accesibilidad."}</p>}
+        <ul className="blue-rooms-list !grid !grid-cols-1 !gap-4 !p-0 md:!grid-cols-2 lg:!grid-cols-3 xl:!grid-cols-4">
+          {visibleRooms.map((room, index) => {
+            const highlights = room.features.filter(f => /personas|cama|Jacuzzi|Balcón|Vista|Escritorio|Minibar|Smart TV/.test(f)).slice(0, 4);
+            return <li key={room.src} className="flex min-w-0 flex-col overflow-hidden rounded-lg border border-[#d7e0e8] bg-white">
+              <img className="aspect-[7/4] w-full object-cover" src={room.src} alt={tr(room.name)} loading={index < 2 ? "eager" : "lazy"} />
+              <div className="flex flex-1 flex-col px-4 pt-3 pb-4">
+                <h3 className="text-lg leading-snug font-bold">{tr(room.name)}</h3>
+                <details className="mb-3">
+                  <summary className="cursor-pointer py-1 text-sm font-semibold text-[#003b71] underline">{en ? "View room details" : "Ver detalles de la habitación"}</summary>
+                  <p className="my-2 text-sm">{en ? tr(room.name) : room.description}</p>
+                  <ul className="list-disc pl-5 text-sm">{room.features.map(feature => <li key={feature}>{tr(feature)}</li>)}</ul>
+                </details>
+                <ul className="mb-4 grid grid-cols-2 gap-x-4 gap-y-1 pl-4 text-sm text-[#52616f]">{highlights.map(feature => <li className="list-disc break-words" key={feature}>{tr(feature)}</li>)}</ul>
+                <a className="mt-auto block rounded bg-[#003b71] px-3 py-3 text-center text-sm font-bold !text-white hover:bg-[#002b55]" href={whatsapp} target="_blank" rel="noopener noreferrer">{en ? "Check availability" : "Consultar disponibilidad"}</a>
+              </div>
+            </li>;
+          })}
+        </ul>
+      </div>
     </section>
-    <footer className="section-wrap blue-rooms-footer"><p>{en ? "Rates vary by date and room category. Confirm final pricing and availability before booking." : "Las tarifas varían según la fecha y categoría. Confirma el precio final y la disponibilidad antes de reservar."}</p><a href={tripAdvisor} target="_blank" rel="noopener noreferrer">{en ? "View Hotel BlueThree on Tripadvisor ↗" : "Ver Hotel BlueThree en Tripadvisor ↗"}</a></footer>
+    <footer className="section-wrap blue-rooms-footer"><a href={tripAdvisor} target="_blank" rel="noopener noreferrer">{en ? "View Hotel BlueThree on Tripadvisor ↗" : "Ver Hotel BlueThree en Tripadvisor ↗"}</a></footer>
   </main>;
 }
