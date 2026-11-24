@@ -48,7 +48,7 @@ export default function ContactoPage() {
           <h2>Encuéntranos en Chancay</h2>
           <p>Residencial Buena Vista – Las Tres Pirámides, Chancay 15130, Perú.</p>
           <a className="button button-dark" href={mapsUrl} target="_blank" rel="noopener noreferrer">Cómo llegar en Google Maps ↗</a>
-          <Image src="/Amenities.jpeg" alt="Instalaciones de Hotel BlueThree Chancay" loading="lazy" />
+          <Image width={1200} height={800} src="/Amenities.jpeg" alt="Instalaciones de Hotel BlueThree Chancay" loading="lazy" />
         </aside>
       </div>
     </section>

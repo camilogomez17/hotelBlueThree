@@ -17,3 +17,5 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Import `Link` from `next/link` for internal navigation and `Image` from `next/image` where appropriate. Ensure links wrap their intended children and JSX tags are balanced.
 - Keep Spanish and English implementations consistent, with appropriate localized text and date formatting.
 - Before pushing, run `npx eslint .`, `npx tsc --noEmit`, and `npm run build`. Report any checks that cannot be run; do not claim they passed.
+
+- Every dynamic or string-source Next.js Image needs width and height or fill; configure remotePatterns for external image hosts. Verify Tailwind important modifiers are suffixes on complete utility names.

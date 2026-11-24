@@ -96,7 +96,7 @@ export default function Home() {
               const index = (active + offset + photos.length) % photos.length;
               const photo = photos[index];
               return <button key={offset} type="button" className={offset === 0 ? "filmstrip-slide is-current" : "filmstrip-slide"} onClick={() => offset < 0 ? previous() : offset > 0 ? next() : setShowAll(!showAll)} aria-label={offset === 0 ? "View all photos" : `Ver fotografía: ${photo.title}`}>
-                <Image src={photo.src} alt={photo.alt} loading={offset === 0 ? "eager" : "lazy"} />
+                <Image width={1200} height={800} src={photo.src} alt={photo.alt} loading={offset === 0 ? "eager" : "lazy"} />
               </button>;
             })}
           </div>
@@ -105,7 +105,7 @@ export default function Home() {
           <button className="filmstrip-count" type="button" onClick={() => setShowAll(!showAll)} aria-label="Open full gallery">{active + 1}/{photos.length}</button>
         </div>
         {showAll && <div className="filmstrip-thumbnails" aria-label="All photos">
-          {photos.map((photo, index) => <button key={photo.src} type="button" className={active === index ? "filmstrip-thumb is-active" : "filmstrip-thumb"} onClick={() => setActive(index)} aria-label={`Seleccionar ${photo.title}`}><Image src={photo.src} alt={photo.alt} loading="lazy" /></button>)}
+          {photos.map((photo, index) => <button key={photo.src} type="button" className={active === index ? "filmstrip-thumb is-active" : "filmstrip-thumb"} onClick={() => setActive(index)} aria-label={`Seleccionar ${photo.title}`}><Image width={1200} height={800} src={photo.src} alt={photo.alt} loading="lazy" /></button>)}
         </div>}
       </section>
 
@@ -187,7 +187,7 @@ export default function Home() {
         <div className="room-grid" aria-label="Available rooms and suites">
           {roomPhotos.map((photo) => (
             <article className="room-card" key={photo.src}>
-              <Image src={photo.src} alt={photo.alt} loading="lazy" />
+              <Image width={1200} height={800} src={photo.src} alt={photo.alt} loading="lazy" />
               <div className="room-card-content">
                 <h3>{photo.title}</h3>
                 <a className="room-details-link" href="/en/rooms">View room details</a>

@@ -42,7 +42,7 @@ export function SiteHeader() {
       const date=new Date(now.getTime()+offset*86400000);
       const parts=formatter.formatToParts(date);
       const part=(type:string)=>parts.find(item=>item.type===type)?.value??"";
-      return {day:part("day"),month:part("month").replace(".",""),weekday:part("weekay").replace(".","")};
+      return {day:part("day"),month:part("month").replace(".",""),weekday:part("weekday").replace(".","")};
     });
  });
  return <>
