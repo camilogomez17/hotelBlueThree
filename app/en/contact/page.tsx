@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: "Contact | Hotel BlueThree Chancay",
@@ -29,7 +30,7 @@ export default function ContactoPage() {
     <section className="section-wrap contact-compact-content">
       <div className="contact-compact-layout">
         <div>
-          <div className="contact-compact-heading"><p className="eyebrow">DIRECT ASSISTANCE</p><h2>Let's discuss your stay</h2></div>
+          <div className="contact-compact-heading"><p className="eyebrow">DIRECT ASSISTANCE</p><h2>Let&quot;s discuss your stay</h2></div>
           <div className="contact-compact-list">
             {channels.map(channel => <a key={channel.label} href={channel.href} target={channel.external ? "_blank" : undefined} rel={channel.external ? "noopener noreferrer" : undefined}>
               <span><strong>{channel.label}</strong><small>{channel.detail}</small></span><span aria-hidden="true">↗</span>
@@ -47,7 +48,7 @@ export default function ContactoPage() {
           <h2>Find us in Chancay</h2>
           <p>Residencial Buena Vista – Las Tres Pirámides, Chancay 15130, Peru.</p>
           <a className="button button-dark" href={mapsUrl} target="_blank" rel="noopener noreferrer">Directions on Google Maps ↗</a>
-          <img src="/Amenities.jpeg" alt="Hotel BlueThree Chancay facilities" loading="lazy" />
+          <Image src="/Amenities.jpeg" alt="Hotel BlueThree Chancay facilities" loading="lazy" />
         </aside>
       </div>
     </section>
