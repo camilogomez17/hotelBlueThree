@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from 'next/image'
+import { usePathname } from "next/navigation";
 
 const tripAdvisor = "https://www.tripadvisor.com/Hotel_Review-g2336594-d24005682-Reviews-Hotel_BlueThree_Chancay-Chancay_Lima_Region.html";
 const linktree = "https://linktr.ee/bluethree";
@@ -10,8 +11,12 @@ const socials = [["Instagram","https://www.instagram.com/hotelbluethreechancay/"
 
 const languageLabels = {es:"Español",en:"English"} as const;
 function LanguageChooser(){
- const [current,setCurrent]=useState<"es"|"en">("es");
- useEffect(()=>{const segment=window.location.pathname.split("/")[1];setCurrent(segment==="en"?segment:"es");document.documentElement.lang=segment==="en"?segment:"es";},[]);
+const pathname = usePathname();
+const current = pathname.split("/")[1] === "en" ? "en" : "es";
+
+useEffect(() => {
+  document.documentElement.lang = current;}, [current]);
+}
  function change(language:"es"|"en"){
   const pathname=window.location.pathname;
   const segments=pathname.split("/").filter(Boolean);
