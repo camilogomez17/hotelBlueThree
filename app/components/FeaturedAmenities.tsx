@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from 'next/image'
 
 export default function FeaturedAmenities({ language }: { language: "es" | "en" }) {
   const [selected, setSelected] = useState<number | null>(null);
@@ -21,7 +22,7 @@ export default function FeaturedAmenities({ language }: { language: "es" | "en" 
       <div className="featured-amenities-grid" id="featured-amenities">
         {items.map((item, index) => (
           <button key={item.title} type="button" className="featured-amenity-tile" aria-label={item.title} aria-haspopup="dialog" onClick={() => setSelected(index)}>
-            <img src={item.image} alt={item.title} loading="lazy" />
+            <Image src={item.image} alt={item.title} loading="lazy" />
             <span className="featured-amenity-shade"><strong>{item.title}</strong></span>
           </button>
         ))}
@@ -30,7 +31,7 @@ export default function FeaturedAmenities({ language }: { language: "es" | "en" 
         <div className="featured-amenity-backdrop" onClick={() => setSelected(null)}>
           <div role="dialog" aria-modal="true" aria-label={items[selected].title} className="featured-amenity-dialog" onClick={(event) => event.stopPropagation()}>
             <button type="button" className="featured-amenity-close" onClick={() => setSelected(null)} aria-label={es ? "Cerrar" : "Close"}>×</button>
-            <img src={items[selected].image} alt={items[selected].title} />
+            <Image src={items[selected].image} alt={items[selected].title} />
             <h3>{items[selected].title}</h3>
             <p>{items[selected].description}</p><a className="button button-dark" href={items[selected].href}>{es ? "Ver más" : "Learn more"}</a>
           </div>

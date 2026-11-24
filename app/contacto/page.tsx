@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: "Contacto | Hotel BlueThree Chancay",
@@ -47,7 +48,7 @@ export default function ContactoPage() {
           <h2>Encuéntranos en Chancay</h2>
           <p>Residencial Buena Vista – Las Tres Pirámides, Chancay 15130, Perú.</p>
           <a className="button button-dark" href={mapsUrl} target="_blank" rel="noopener noreferrer">Cómo llegar en Google Maps ↗</a>
-          <img src="/Amenities.jpeg" alt="Instalaciones de Hotel BlueThree Chancay" loading="lazy" />
+          <Image src="/Amenities.jpeg" alt="Instalaciones de Hotel BlueThree Chancay" loading="lazy" />
         </aside>
       </div>
     </section>

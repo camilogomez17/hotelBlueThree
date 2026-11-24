@@ -1,11 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
+import Image from 'next/image'
 
 const tripAdvisor = "https://www.tripadvisor.com/Hotel_Review-g2336594-d24005682-Reviews-Hotel_BlueThree_Chancay-Chancay_Lima_Region.html";
 const linktree = "https://linktr.ee/bluethree";
 const mapsUrl = "https://www.google.com/maps/place/Hotel+BlueThree+Chancay+%7C+Hoteles+en+Chancay+%26+Huaral/@-11.5491071,-77.260408,15.39z/data=!4m9!3m8!1s0x91068921449d21a5:0x7351952174e4f1fe!5m2!4m1!1i2!8m2!3d-11.5453985!4d-77.2588947!16s%2Fg%2F11rsr5p47y?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D";
 const address = "Residencial Buena Vista – Las Tres Pirámides, Chancay 15130, Perú";
-const attractions = [["Castillo de Chancay","An iconic historical and cultural attraction in the city."],["Museo Municipal de Chancay","Discover local history and culture."],["Eco Truly Park","An ecological and cultural site near the coast."],["Reserva Nacional de Lachay","Explore natural landscapes and seasonal coastal hills."]];
 const socials = [["Instagram","https://www.instagram.com/hotelbluethreechancay/"],["Facebook","https://www.facebook.com/Hotelesenchancayhuaral/"],["TikTok","https://www.tiktok.com/@hotelbluethreechancay"]];
 
 const languageLabels = {es:"Español",en:"English"} as const;
@@ -49,7 +49,7 @@ export function SiteHeader() {
             </button><LanguageChooser /></div>
         <div className="header-inner">
           <a className="brand" href="/en/" aria-label="Hotel BlueThree, go to homepage" onClick={() => setMenuOpen(false)}>
-            <img className="brand-logo" src="/logo2.jpeg" alt="" width={88} height={88} onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.nextElementSibling?.classList.remove("brand-fallback-hidden"); }} /><span className="brand-mark brand-fallback-hidden" aria-hidden="true">B<span>3</span></span>
+            <Image className="brand-logo" src="/logo2.jpeg" alt="" width={88} height={88} onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.nextElementSibling?.classList.remove("brand-fallback-hidden"); }} /><span className="brand-mark brand-fallback-hidden" aria-hidden="true">B<span>3</span></span>
             
           </a>
           <nav className={menuOpen ? "main-nav is-open" : "main-nav"} id="main-navigation" aria-label="Main navigation">
@@ -103,7 +103,7 @@ export function SiteHeader() {
 export function SiteFooter() {
  return <>
       <section className="contact-section section-wrap" id="contacto">
-        <div className="contact-copy"><p className="eyebrow">PLAN YOUR STAY</p><h2>Book your next<br/><em>visit to Chancay.</em></h2><p>Check rates, availability, room types and special requests through the hotel's official channels or Tripadvisor.</p><BookingLinks/></div>
+        <div className="contact-copy"><p className="eyebrow">PLAN YOUR STAY</p><h2>Book your next<br/><em>visit to Chancay.</em></h2><p>Check rates, availability, room types and special requests through the hotel&aposs official channels or Tripadvisor.</p><BookingLinks/></div>
         <div className="social-panel"><p className="eyebrow">OFFICIAL CHANNELS</p>{socials.map(([name, href]) => <a className="social-link" href={href} key={name} target="_blank" rel="noreferrer">{name}<span>↗</span></a>)}<a className="social-link" href="/en/contact">All our links<span>↗</span></a><a className="social-link" href={tripAdvisor} target="_blank" rel="noreferrer">Tripadvisor · Bookings and reviews<span>↗</span></a><a className="social-link" href="https://www.booking.com/searchresults.html?aid=390156&amp;label=duc511jc-10CAsosQFCE3RyZXMtYXJib2xlcy1henVsZXNIM1gDaKcCiAEBmAEzuAEHyAEP2AED6AEB-AEBiAIBqAIBuAKmhYjYBsACAdICJGVlNTI4NjhkLTY0YTUtNDg3MS1hZGRlLWI3ZTEwYTE5YWVlZtgCAeACAQ&amp;redirected=1&amp;city=-341519&amp;highlighted_hotels=15241340&amp;hlrd=user_sh&amp;source=hotel&amp;checkin=2026-11-21&amp;checkout=2026-11-22&amp;keep_landing=1&amp;sid=c027b02c5e916b27cfe75db44e9fae5d" target="_blank" rel="noopener noreferrer">Booking.com · Bookings<span>↗</span></a></div>
       </section>
 
@@ -112,7 +112,7 @@ export function SiteFooter() {
           <div className="footer-main">
             <div className="footer-about">
               <a className="brand footer-brand" href="/en/" aria-label="Hotel BlueThree, return to homepage">
-                <img className="brand-logo" src="/logo.jpeg" alt="" width={88} height={88} onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.nextElementSibling?.classList.remove("brand-fallback-hidden"); }} /><span className="brand-mark brand-fallback-hidden" aria-hidden="true">B<span>3</span></span>
+                <Image className="brand-logo" src="/logo.jpeg" alt="" width={88} height={88} onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.nextElementSibling?.classList.remove("brand-fallback-hidden"); }} /><span className="brand-mark brand-fallback-hidden" aria-hidden="true">B<span>3</span></span>
                 
               </a>
               <p>Discover Chancay. Relax at BlueThree.</p>

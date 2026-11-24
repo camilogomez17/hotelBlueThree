@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { rooms, whatsapp } from "../data/hotel";
+import Image from 'next/image'
 
 export default function HomeRoomCards() {
   const [selected, setSelected] = useState<number | null>(null);
@@ -18,7 +19,7 @@ export default function HomeRoomCards() {
       <div className="home-room-cards" aria-label="Habitaciones y suites">
         {rooms.map((room, index) => (
           <article className="home-room-card" key={room.src}>
-            <div className="home-room-image"><img src={room.src} alt={room.name} loading="lazy" /></div>
+            <div className="home-room-image"><Image src={room.src} alt={room.name} loading="lazy" /></div>
             <div className="home-room-card-body">
               <h3>{room.name}</h3>
               <button type="button" className="home-room-details" onClick={() => setSelected(index)}>Ver detalles de la habitación</button>
@@ -38,7 +39,7 @@ export default function HomeRoomCards() {
         <div className="home-room-modal-backdrop" onClick={() => setSelected(null)}>
           <div className="home-room-modal" role="dialog" aria-modal="true" aria-label={rooms[selected].name} onClick={(event) => event.stopPropagation()}>
             <button type="button" className="home-room-modal-close" onClick={() => setSelected(null)} aria-label="Cerrar">×</button>
-            <img src={rooms[selected].src} alt={rooms[selected].name} />
+            <Image src={rooms[selected].src} alt={rooms[selected].name} />
             <h3>{rooms[selected].name}</h3>
             <p>{rooms[selected].description}</p>
             <h4>Características de la habitación</h4>
