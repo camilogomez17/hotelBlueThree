@@ -34,18 +34,17 @@ function LanguageChooser(){
 function BookingLinks() { return <div className="booking-links"><a className="button button-dark" href={tripAdvisor} target="_blank" rel="noreferrer">Reservar en Tripadvisor <span>↗</span></a><a className="button button-outline" href="https://wa.me/message/IPFK3E5CKTNGK1" target="_blank" rel="noopener noreferrer">Contactar al hotel <span>↗</span></a></div>; }
 export function SiteHeader() {
  const [menuOpen,setMenuOpen]=useState(false);
- const [stayDates,setStayDates]=useState<{day:string;month:string;weekday:string}[]>([]);
  const [bedOption,setBedOption]=useState("1 cama · 2 huéspedes");
- useEffect(()=>{
-   const formatter=new Intl.DateTimeFormat("es-PE",{timeZone:"America/Lima",day:"numeric",month:"short",weekday:"short"});
-   const now=new Date();
-   setStayDates([0,1].map(offset=>{
-     const date=new Date(now.getTime()+offset*86400000);
-     const parts=formatter.formatToParts(date);
-     const part=(type:string)=>parts.find(item=>item.type===type)?.value??"";
-     return {day:part("day"),month:part("month").replace(".",""),weekday:part("weekday").replace(".","")};
-   }));
- },[]);
+ const [stayDates] = useState(() => {
+    const formatter=new Intl.DateTimeFormat("es-PE",{timeZone:"America/Lima",day:"numeric",month:"short",weekday:"short"});
+    const now=new Date();
+    return [0,1].map(offset=>{
+      const date=new Date(now.getTime()+offset*86400000);
+      const parts=formatter.formatToParts(date);
+      const part=(type:string)=>parts.find(item=>item.type===type)?.value??"";
+      return {day:part("day"),month:part("month").replace(".",""),weekday:part("weekay").replace(".","")};
+    });
+ });
  return <>
       <header className="site-header">
         <div className="hotel-top-navigation"><button className="menu-toggle" type="button" aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"} aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>
