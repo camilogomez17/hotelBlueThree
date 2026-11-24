@@ -8,6 +8,8 @@ import { ServicesGrid } from "./components/ServicesGrid";
 import PolicyTabs from "./components/PolicyTabs";
 import HomeRoomCards from "./components/HomeRoomCards";
 
+import Image from 'next/image'
+
 const photos = [
   {
     src: "https://images.trvl-media.com/lodging/90000000/89740000/89732700/89732652/c6474fe1.jpg?impolicy=resizecrop&ra=fill&rh=575&rw=575",
@@ -29,18 +31,6 @@ const photos = [
     alt: "Habitación con vista al atardecer",
     title: "Vistas",
   },
-];
-
-const salesPhotos = [
-  { src: "/rooms-clean/StandardRoom.jpeg", alt: "Habitación estándar", title: "Habitación estándar" },
-  { src: "/rooms-clean/JuniorSuite.jpeg", alt: "Junior suite", title: "Junior suite" },
-  { src: "/rooms-clean/DeluxeJuniorSuite.jpeg", alt: "Suite junior deluxe", title: "Suite junior deluxe" },
-  { src: "/rooms-clean/DeluxeSuiteTwoBed.jpeg", alt: "Suite deluxe con dos camas", title: "Suite deluxe" },
-  { src: "/rooms-clean/DoubleBedRoomJacuzziBalconyPanoramicView.jpeg", alt: "Habitación doble con jacuzzi y balcón", title: "Habitación doble con jacuzzi" },
-  { src: "/rooms-clean/GardenViewRoomWithJacuzzi.jpeg", alt: "Habitación con jacuzzi y vista al jardín", title: "Vista al jardín" },
-  { src: "/rooms-clean/JacuzziBalconyGardenViewSuite.jpeg", alt: "Suite con jacuzzi, balcón y vista al jardín", title: "Suite con balcón" },
-  { src: "/rooms-clean/JacuzziBalconyRoomPanoramicView.jpeg", alt: "Habitación con jacuzzi, balcón y vista panorámica", title: "Vista panorámica" },
-  { src: "/rooms-clean/JacuzziRoomGardenView.jpeg", alt: "Habitación con jacuzzi y jardín", title: "Suite jardín" },
 ];
 
 const diningCategories = ["Desayunos incluidos", "Jugos naturales", "Omelettes y desayunos", "Bebidas"];
@@ -68,31 +58,7 @@ const diningItems = [
   { name: "Mike", category: "Bebidas", price: "S/ 7.50" },
   { name: "Pilsen en lata 473 ml", category: "Bebidas", price: "S/ 7.50" },
 ];
-
-const roomPhotos = salesPhotos;
-
-const attractions = [
-  ["Castillo de Chancay", "Un emblemático atractivo histórico y cultural de la ciudad."],
-  ["Museo Municipal de Chancay", "Conoce la historia y cultura local."],
-  ["Eco Truly Park", "Un espacio ecológico y cultural junto al litoral."],
-  ["Reserva Nacional de Lachay", "Paisajes naturales y lomas estacionales para explorar."],
-];
-const socials = [
-  ["Instagram", "https://www.instagram.com/hotelbluethreechancay/"],
-  ["Facebook", "https://www.facebook.com/Hotelesenchancayhuaral/"],
-  ["TikTok", "https://www.tiktok.com/@hotelbluethreechancay"],
-];
 const tripAdvisor = "https://www.tripadvisor.com/Hotel_Review-g2336594-d24005682-Reviews-Hotel_BlueThree_Chancay-Chancay_Lima_Region.html";
-const linktree = "https://linktr.ee/bluethree";
-const mapsUrl = "https://www.google.com/maps/place/Hotel+BlueThree+Chancay+%7C+Hoteles+en+Chancay+%26+Huaral/@-11.5491071,-77.260408,15.39z/data=!4m9!3m8!1s0x91068921449d21a5:0x7351952174e4f1fe!5m2!4m1!1i2!8m2!3d-11.5453985!4d-77.2588947!16s%2Fg%2F11rsr5p47y?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D";
-const address = "Residencial Buena Vista – Las Tres Pirámides, Chancay 15130, Perú";
-
-function BookingLinks({ compact = false }: { compact?: boolean }) {
-  return <div className={compact ? "booking-links compact" : "booking-links"}>
-    <a className="button button-dark" href={tripAdvisor} target="_blank" rel="noreferrer">Reservar en Tripadvisor <span>↗</span></a>
-    <a className="button button-outline" href={"https://api.whatsapp.com/message/IPFK3E5CKTNGK1?autoload=1&app_absent=0"} target="_blank" rel="noreferrer">Contactar al hotel <span>↗</span></a>
-  </div>;
-}
 
 export default function Home() {
   const [active, setActive] = useState(0);
@@ -110,7 +76,7 @@ export default function Home() {
               const index = (active + offset + photos.length) % photos.length;
               const photo = photos[index];
               return <button key={offset} type="button" className={offset === 0 ? "filmstrip-slide is-current" : "filmstrip-slide"} onClick={() => offset < 0 ? previous() : offset > 0 ? next() : setShowAll(!showAll)} aria-label={offset === 0 ? "Ver todas las fotos" : `Ver fotografía: ${photo.title}`}>
-                <img src={photo.src} alt={photo.alt} loading={offset === 0 ? "eager" : "lazy"} />
+               <Image src={photo.src} alt={photo.alt} loading={offset === 0 ? "eager" : "lazy"} />
               </button>;
             })}
           </div>
@@ -119,7 +85,7 @@ export default function Home() {
           <button className="filmstrip-count" type="button" onClick={() => setShowAll(!showAll)} aria-label="Abrir galería completa">{active + 1}/{photos.length}</button>
         </div>
         {showAll && <div className="filmstrip-thumbnails" aria-label="Todas las fotografías">
-          {photos.map((photo, index) => <button key={photo.src} type="button" className={active === index ? "filmstrip-thumb is-active" : "filmstrip-thumb"} onClick={() => setActive(index)} aria-label={`Seleccionar ${photo.title}`}><img src={photo.src} alt={photo.alt} loading="lazy" /></button>)}
+          {photos.map((photo, index) => <button key={photo.src} type="button" className={active === index ? "filmstrip-thumb is-active" : "filmstrip-thumb"} onClick={() => setActive(index)} aria-label={`Seleccionar ${photo.title}`}><Image src={photo.src} alt={photo.alt} loading="lazy" /></button>)}
         </div>}
       </section>
 
