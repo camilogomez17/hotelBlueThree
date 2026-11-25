@@ -162,7 +162,6 @@ export function SiteFooter() {
             </div>
           </div>
           <div className="footer-bottom">
-            <small>© 2026 Hotel BlueThree Chancay. All rights reserved.</small>
             <a href="/en/">Back to top ↑</a>
           </div>
         </div>
