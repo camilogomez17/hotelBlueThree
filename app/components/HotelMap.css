@@ -9,5 +9,6 @@
 .bluethree-popup-content a{color:#003b71;text-decoration:underline}
 .bluethree-fullscreen button{width:40px;height:40px;background:white;color:#555;border:0;cursor:pointer;font-size:25px}
 .bluethree-popup.leaflet-popup{margin-bottom:10px}
-.bluethree-popup .leaflet-popup-tip-container{width:24px;height:12px;margin-left:-12px;margin-top:-1px;overflow:visible}
-.bluethree-popup .leaflet-popup-tip{width:20px;height:12px;margin:0 auto;padding:0;transform:none;clip-path:polygon(0 0,100% 0,50% 100%);background:#fff;box-shadow:none}
+.bluethree-popup .leaflet-popup-tip-container{display:none}
+.bluethree-popup .leaflet-popup-content-wrapper{position:relative;overflow:visible;background:#fff}
+.bluethree-popup .leaflet-popup-content-wrapper::after{content:"";position:absolute;left:50%;top:calc(100% - 2px);transform:translateX(-50%);width:24px;height:14px;background:#fff;clip-path:polygon(0 0,100% 0,50% 100%);pointer-events:none}
