@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import Image from "next/image";
 import L from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup, ZoomControl, useMap } from "react-leaflet";
@@ -49,17 +49,13 @@ function Fullscreen({ en }: { en: boolean }) {
 
 export default function HotelMap({ language = "es" }: { language?: "es" | "en" }) {
   const en = language === "en";
-  const marker = useRef<L.Marker>(null);
-  useEffect(() => {
-    marker.current?.openPopup();
-  }, []);
   return (
     <MapContainer className="bluethree-leaflet" center={position} zoom={16} zoomControl={false} scrollWheelZoom={false}>
       <TileLayer url="https://tile.openstreetmap.org/{z}/{x}/{y}.png" attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' />
       <ZoomControl position="bottomright" />
       <Fullscreen en={en} />
-      <Marker ref={marker} position={position} icon={pin} title="Hotel BlueThree Chancay">
-        <Popup className="bluethree-popup" closeButton={false} closeOnClick={false} closeOnEscapeKey={false} autoClose={false} autoPan={false} maxWidth={300} minWidth={180}>
+      <Marker position={position} icon={pin} title="Hotel BlueThree Chancay" />
+        <Popup position={position} offset={[0, -37]} className="bluethree-popup" closeButton={false} closeOnClick={false} closeOnEscapeKey={false} autoClose={false} autoPan={false} maxWidth={300} minWidth={180}>
           <div className="bluethree-popup-content">
             <Image src="/logo2.jpeg" alt="Hotel BlueThree" width={48} height={48} />
             <div>
@@ -69,7 +65,6 @@ export default function HotelMap({ language = "es" }: { language?: "es" | "en" }
             </div>
           </div>
         </Popup>
-      </Marker>
     </MapContainer>
   );
 }
