@@ -153,6 +153,7 @@ export function SiteFooter() {
               <h3>Your stay</h3>
               <a href="/en/contact">Contact</a>
               <a href={tripAdvisor} target="_blank" rel="noopener noreferrer">Book on Tripadvisor ↗</a>
+              <a href="https://www.booking.com/searchresults.html?aid=390156&amp;label=duc511jc-10CAsosQFCE3RyZXMtYXJib2xlcy1henVsZXNIM1gDaKcCiAEBmAEzuAEHyAEP2AED6AEB-AEBiAIBqAIBuAKmhYjYBsACAdICJGVlNTI4NjhkLTY0YTUtNDg3MS1hZGRlLWI3ZTEwYTE5YWVlZtgCAeACAQ&amp;redirected=1&amp;city=-341519&amp;highlighted_hotels=15241340&amp;hlrd=user_sh&amp;source=hotel&amp;keep_landing=1" target="_blank" rel="noopener noreferrer">Book on Booking.com ↗</a>
               <a href={linktree} target="_blank" rel="noopener noreferrer">Contact the hotel ↗</a>
               <a href="/en/policies">Hotel policies</a>
             </div>
