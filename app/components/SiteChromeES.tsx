@@ -118,7 +118,7 @@ export function SiteFooter() {
           <div className="footer-main">
             <div className="footer-about">
               <Link className="brand footer-brand" href="/" aria-label="Hotel BlueThree, volver al inicio">
-                <Image className="brand-logo" src="/logo.jpeg" alt="" width={88} height={88} onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.nextElementSibling?.classList.remove("brand-fallback-hidden"); }} /><span className="brand-mark brand-fallback-hidden" aria-hidden="true">B<span>3</span></span>
+                <Image className="brand-logo" src="/logo2.jpeg" alt="" width={88} height={88} onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.nextElementSibling?.classList.remove("brand-fallback-hidden"); }} /><span className="brand-mark brand-fallback-hidden" aria-hidden="true">B<span>3</span></span>
                 
               </Link>
               <p>Descubre Chancay. Descansa en BlueThree.</p>
