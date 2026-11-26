@@ -70,7 +70,7 @@ export default function Gastronomia() {
           <MenuSection title="Alcoholic beverages" items={alcoholicDrinks}/>
         </div>
       </div>
-      <div className="cafe-menu-footer"><p>Menu transcribed from the hotel's menu. Confirm availability, prices and conditions before ordering.</p><a className="button button-dark" href={whatsapp} target="_blank" rel="noopener noreferrer">Contact the hotel ↗</a></div>
+      <div className="cafe-menu-footer"><p>Menu transcribed from the hotel&apos;s menu. Confirm availability, prices and conditions before ordering.</p><a className="button button-dark" href={whatsapp} target="_blank" rel="noopener noreferrer">Contact the hotel ↗</a></div>
     </section>
   </main>;
 }

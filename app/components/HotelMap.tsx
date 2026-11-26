@@ -57,7 +57,7 @@ export default function HotelMap({ language = "es" }: { language?: "es" | "en" }
       <Marker position={position} icon={pin} title="Hotel BlueThree Chancay" />
         <Popup position={position} offset={[0, -37]} className="bluethree-popup" closeButton={false} closeOnClick={false} closeOnEscapeKey={false} autoClose={false} autoPan={false} maxWidth={300} minWidth={180}>
           <div className="bluethree-popup-content">
-            <Image src="/logo2.jpeg" alt="Hotel BlueThree" width={48} height={48} />
+            <Image src="/organized_photos/brand/logo2.jpeg" alt="Hotel BlueThree" width={48} height={48} />
             <div>
               <strong>Hotel BlueThree Chancay</strong>
               <span>Residencial Buena Vista – Las Tres Pirámides, Chancay 15130, Perú</span>
