@@ -60,11 +60,11 @@ export default function RoomsCatalog({ language = "es" }: { language?: "es" | "e
       <div id="room-category-panel" role="tabpanel" aria-labelledby={"room-tab-" + category} tabIndex={0} className="section-wrap py-5">
         <p className="mb-4 text-sm" aria-live="polite">{en ? "Room options: " : "Opciones de alojamiento: "}{visibleRooms.length}</p>
         {visibleRooms.length === 0 && <p className="py-8 text-center">{en ? "Contact the hotel to confirm accessibility options." : "Contacta al hotel para confirmar las opciones de accesibilidad."}</p>}
-        <ul className="blue-rooms-list grid! grid!-cols-1 gap-4! p-0! md:grid!-cols-2 lg:grid!-cols-3 xl:grid!-cols-4">
+        <ul className="blue-rooms-list grid! grid-cols-1! gap-4! p-0! md:grid-cols-2! lg:grid-cols-3! xl:grid-cols-4!">
           {visibleRooms.map((room, index) => {
             const highlights = room.features.filter(f => /personas|cama|Jacuzzi|Balcón|Vista|Escritorio|Minibar|Smart TV/.test(f)).slice(0, 4);
             return <li key={room.src} className="flex min-w-0 flex-col overflow-hidden rounded-lg border border-[#d7e0e8] bg-white">
-              <Image className="aspect-7/4 w-full object-cover" src={room.src} alt={tr(room.name)} loading={index < 2 ? "eager" : "lazy"} />
+              <Image width={1200} height={800} className="aspect-7/4 w-full object-cover" src={room.src} alt={tr(room.name)} loading={index < 2 ? "eager" : "lazy"} />
               <div className="flex flex-1 flex-col px-4 pt-3 pb-4">
                 <h3 className="text-lg leading-snug font-bold">{tr(room.name)}</h3>
                 <details className="mb-3">

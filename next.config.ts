@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images: { remotePatterns: [{ protocol: "https", hostname: "images.trvl-media.com", pathname: "/lodging/**" }] },
   async redirects() {
     return [
     { source: "/servicios", destination: "/informacion-del-hotel", permanent: true },
