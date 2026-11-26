@@ -79,7 +79,7 @@ export function GalleryViewer({
 
   return (
     <>
-      <div className="flex flex-wrap gap-3 mb-5" role="group" aria-label={copy.filters}>
+      <div className="content-gallery-filters" role="group" aria-label={copy.filters}>
         {categories.map((id) => (
           <button
             key={id}
@@ -89,7 +89,7 @@ export function GalleryViewer({
               setSelected(null);
               setCategory(id);
             }}
-            className={`border-b-4 px-3 py-2 font-semibold ${category === id ? "border-[#003b71]" : "border-transparent"}`}
+            className="content-gallery-filter"
           >
             {copy.categories[id]}
           </button>
@@ -107,11 +107,10 @@ export function GalleryViewer({
             <Image
               width={1200}
               height={800}
-              sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+              sizes="(min-width: 1200px) 33vw, 50vw"
               src={photo.src}
               alt={photo.name}
             />
-            <span>{photo.name}</span>
           </button>
         ))}
       </div>
