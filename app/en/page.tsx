@@ -183,7 +183,7 @@ export default function Home() {
       </section>
 
       <section className="rooms-section section-wrap">
-        <div className="section-heading"><div><p className="eyebrow">ROOMS AND SUITES</p><h2>Find your space<br/>to <em>unwind.</em></h2></div><p>Browse photos of the available rooms. Contact the hotel directly to confirm room categories, occupancy, rates and included amenities.</p></div>
+        <div className="section-heading"><div><p className="eyebrow">ROOMS AND SUITES</p><h2>Find your space<br/>to <em>unwind.</em></h2></div><p>Browse photos of the available rooms.</p></div>
         <div className="room-grid" aria-label="Available rooms and suites">
           {roomPhotos.map((photo) => (
             <article className="room-card" key={photo.src}>
