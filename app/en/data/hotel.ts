@@ -47,4 +47,3 @@ export const rooms = [
     "description": "Ask about options available for your dates."
   }
 ];
-export const gallery = [{src:"/organized_photos/amenities/Amenities.jpeg",name:"Instalaciones"},{src:"/organized_photos/dining/FoodMenu.jpeg",name:"Dining"},{src:"/organized_photos/events/CorporateEvents.jpeg",name:"Corporate events"},{src:"/organized_photos/events/LoveorAnniversaryOrBirthdayDecorationServices.jpeg",name:"Celebraciones"},...rooms.map(room=>({src:room.src,name:room.name}))];

@@ -220,4 +220,3 @@ export const rooms = [
     ]
   }
 ];
-export const gallery = [{src:"/organized_photos/amenities/Amenities.jpeg",name:"Instalaciones"},{src:"/organized_photos/dining/FoodMenu.jpeg",name:"Gastronomía"},{src:"/organized_photos/events/CorporateEvents.jpeg",name:"Eventos corporativos"},{src:"/organized_photos/events/LoveorAnniversaryOrBirthdayDecorationServices.jpeg",name:"Celebraciones"},...rooms.map(room=>({src:room.src,name:room.name}))];

@@ -1,5 +1,149 @@
 "use client";
+
+import Image from "next/image";
 import { useEffect, useState } from "react";
-import Image from 'next/image'
-type Photo={src:string;name:string};
-export function GalleryViewer({photos:allPhotos}:{photos:Photo[]}){const [category,setCategory]=useState("all");const categories=[["all","Todas"],["hotel","Hotel"],["rooms","Habitaciones"],["dining","Gastronomía"],["amenities","Comodidades"],["events","Eventos"]];const photos=allPhotos.filter(p=>category==="all"||(category==="hotel"||category==="amenities"?p.src==="/organized_photos/amenities/Amenities.jpeg":category==="dining"?p.src==="/organized_photos/dining/FoodMenu.jpeg":category==="events"?/CorporateEvents|DecorationServices/.test(p.src):! /Amenities.jpeg|FoodMenu.jpeg|CorporateEvents|DecorationServices/.test(p.src)));const [selected,setSelected]=useState<number|null>(null);useEffect(()=>{if(selected===null)return;const key=(event:KeyboardEvent)=>{if(event.key==="Escape")setSelected(null);if(event.key==="ArrowRight")setSelected(i=>i===null?null:(i+1)%photos.length);if(event.key==="ArrowLeft")setSelected(i=>i===null?null:(i-1+photos.length)%photos.length)};window.addEventListener("keydown",key);return()=>window.removeEventListener("keydown",key)},[selected,photos.length]);return <><div className="flex flex-wrap gap-3 mb-5" aria-label="Gallery categories">{categories.map(([id,label])=><button type="button" key={id} aria-pressed={category===id} onClick={()=>{setSelected(null);setCategory(id)}} className={"border-b-4 px-3 py-2 font-semibold "+(category===id?"border-[#003b71]":"border-transparent")}>{label}</button>)}</div><div className="content-gallery-grid">{photos.map((photo,i)=><button className="content-gallery-item" key={photo.src} type="button" onClick={()=>setSelected(i)} aria-label={`Ampliar: ${photo.name}`}><Image width={1200} height={800} src={photo.src} alt={photo.name} loading="lazy"/><span>{photo.name}</span></button>)}</div>{selected!==null&&<div className="content-lightbox" role="dialog" aria-modal="true" aria-label="Visor de fotografías" onClick={()=>setSelected(null)}><button className="content-lightbox-close" onClick={()=>setSelected(null)} aria-label="Cerrar galería">×</button><button className="content-lightbox-arrow" onClick={e=>{e.stopPropagation();setSelected((selected-1+photos.length)%photos.length)}} aria-label="Foto anterior">‹</button><figure onClick={e=>e.stopPropagation()}><Image width={1200} height={800} src={photos[selected].src} alt={photos[selected].name}/><figcaption>{photos[selected].name} · {selected+1} de {photos.length}</figcaption></figure><button className="content-lightbox-arrow" onClick={e=>{e.stopPropagation();setSelected((selected+1)%photos.length)}} aria-label="Foto siguiente">›</button></div>}</>}
+import type { GalleryCategory, GalleryPhoto } from "../data/gallery";
+
+const labels = {
+  es: {
+    categories: {
+      all: "Todas",
+      hotel: "Hotel",
+      rooms: "Habitaciones",
+      dining: "Gastronomía",
+      amenities: "Comodidades",
+      events: "Eventos",
+    },
+    filters: "Categorías de la galería",
+    viewer: "Visor de fotografías",
+    open: "Ampliar",
+    close: "Cerrar galería",
+    previous: "Foto anterior",
+    next: "Foto siguiente",
+    of: "de",
+  },
+  en: {
+    categories: {
+      all: "All",
+      hotel: "Hotel",
+      rooms: "Rooms",
+      dining: "Dining",
+      amenities: "Amenities",
+      events: "Events",
+    },
+    filters: "Gallery categories",
+    viewer: "Photo viewer",
+    open: "Enlarge",
+    close: "Close gallery",
+    previous: "Previous photo",
+    next: "Next photo",
+    of: "of",
+  },
+};
+
+const categories = [
+  "all", "hotel", "rooms", "dining", "amenities", "events",
+] as const;
+
+export function GalleryViewer({
+  photos: allPhotos,
+  locale,
+}: {
+  photos: GalleryPhoto[];
+  locale: keyof typeof labels;
+}) {
+  const [category, setCategory] = useState<GalleryCategory | "all">("all");
+  const [selected, setSelected] = useState<number | null>(null);
+  const copy = labels[locale];
+  const photos = category === "all"
+    ? allPhotos
+    : allPhotos.filter((photo) => photo.category === category);
+  const selectedPhoto = selected === null ? undefined : photos[selected];
+
+  useEffect(() => {
+    if (selected === null) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setSelected(null);
+      if (event.key === "ArrowRight") {
+        setSelected((index) => index === null ? null : (index + 1) % photos.length);
+      }
+      if (event.key === "ArrowLeft") {
+        setSelected((index) => index === null ? null : (index - 1 + photos.length) % photos.length);
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [selected, photos.length]);
+
+  return (
+    <>
+      <div className="flex flex-wrap gap-3 mb-5" role="group" aria-label={copy.filters}>
+        {categories.map((id) => (
+          <button
+            key={id}
+            type="button"
+            aria-pressed={category === id}
+            onClick={() => {
+              setSelected(null);
+              setCategory(id);
+            }}
+            className={`border-b-4 px-3 py-2 font-semibold ${category === id ? "border-[#003b71]" : "border-transparent"}`}
+          >
+            {copy.categories[id]}
+          </button>
+        ))}
+      </div>
+      <div className="content-gallery-grid">
+        {photos.map((photo, index) => (
+          <button
+            className="content-gallery-item"
+            key={photo.src}
+            type="button"
+            onClick={() => setSelected(index)}
+            aria-label={`${copy.open}: ${photo.name}`}
+          >
+            <Image
+              width={1200}
+              height={800}
+              sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+              src={photo.src}
+              alt={photo.name}
+            />
+            <span>{photo.name}</span>
+          </button>
+        ))}
+      </div>
+      {selected !== null && selectedPhoto && (
+        <div
+          className="content-lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label={copy.viewer}
+          onClick={(event) => {
+            if (event.target === event.currentTarget) setSelected(null);
+          }}
+        >
+          <button type="button" className="content-lightbox-close" onClick={() => setSelected(null)} aria-label={copy.close}>×</button>
+          <button
+            type="button"
+            className="content-lightbox-arrow"
+            onClick={() => setSelected((selected - 1 + photos.length) % photos.length)}
+            aria-label={copy.previous}
+          >‹</button>
+          <figure>
+            <Image width={1200} height={800} src={selectedPhoto.src} alt={selectedPhoto.name} />
+            <figcaption>{selectedPhoto.name} · {selected + 1} {copy.of} {photos.length}</figcaption>
+          </figure>
+          <button
+            type="button"
+            className="content-lightbox-arrow"
+            onClick={() => setSelected((selected + 1) % photos.length)}
+            aria-label={copy.next}
+          >›</button>
+        </div>
+      )}
+    </>
+  );
+}
