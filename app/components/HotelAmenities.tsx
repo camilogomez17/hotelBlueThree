@@ -1,3 +1,6 @@
+"use client";
+
+import { useRef } from "react";
 import { ServiceIcon } from "./ServicesGrid";
 
 type Language = "es" | "en";
@@ -58,23 +61,27 @@ export default function HotelAmenities({ language }: { language: Language }) {
           </div>
         ))}
       </div>
-
+      <HotelAccessibility language={language} />
     </section>
   );
 }
 
 export function HotelAccessibility({ language }: { language: Language }) {
   const es = language === "es";
+  const dialog = useRef<HTMLDialogElement>(null);
   return (
-      <details className="hotel-accessibility-details">
-        <summary>{es ? "Características no accesibles para personas con discapacidades" : "Features not accessible to people with disabilities"}</summary>
+      <div className="hotel-accessibility-details">
+        <button type="button" className="button button-dark" aria-haspopup="dialog" onClick={() => dialog.current?.showModal()}>{es ? "Características no accesibles para personas con discapacidades" : "Features not accessible to people with disabilities"}</button>
+        <dialog ref={dialog} className="hotel-accessibility-modal" aria-labelledby="accessibility-modal-title" onClick={event => { if (event.target === event.currentTarget) dialog.current?.close(); }}>
+        <button type="button" className="featured-amenity-close" onClick={() => dialog.current?.close()} aria-label={es ? "Cerrar" : "Close"}>×</button>
         <p>{es
           ? "Solicita información sobre accesos, habitaciones y servicios adaptados directamente a recepción. "
           : "Contact reception for details about accessible entrances, rooms, and services. "}</p>
         <div className="hotel-accessibility-unavailable">
-          <h3>{es ? "Las siguientes características no están disponibles:" : "The following features are not available:"}</h3>
+          <h3 id="accessibility-modal-title">{es ? "Las siguientes características no están disponibles:" : "The following features are not available:"}</h3>
           <ul>{unavailableFeatures[language].map((feature) => <li key={feature}>{feature}</li>)}</ul>
         </div>
-      </details>
+      </dialog>
+      </div>
   );
 }
