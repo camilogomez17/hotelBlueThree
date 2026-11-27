@@ -8,13 +8,12 @@ export const services = [
   { name: "Desayuno", icon: "breakfast", detail: "Consulta opciones incluidas y horarios." },
   { name: "Recepción 24 horas", icon: "clock", detail: "Atención durante tu estadía." },
   { name: "Servicio a la habitación", icon: "service", detail: "Confirma las opciones disponibles con recepción." },
-  { name: "Jardín", icon: "garden", detail: "Espacio exterior para disfrutar." },
   { name: "Habitaciones con jacuzzi", icon: "bath", detail: "Disponibles en categorías seleccionadas." },
   { name: "Lavandería", icon: "laundry", detail: "Consulta disponibilidad y posibles cargos." },
   { name: "Eventos y reuniones", icon: "meeting", detail: "Consulta espacios y condiciones." },
   { name: "Información local", icon: "map", detail: "Consulta información para conocer Chancay." },
   { name: "Traslados al aeropuerto y locales", icon: "map", detail: "Servicio a solicitud con costo adicional; confirma rutas y tarifas." },
-  { name: "Decoraciones para ocasiones especiales", icon: "meeting", detail: "Consulta paquetes, disponibilidad y precios." },
+  { name: "Decoración de habitaciones para fechas especiales", icon: "meeting", detail: "Aniversarios, cumpleaños, días festivos y bodas. Consulta paquetes y precios." },
 ];
 
 const paths: Record<string, string[]> = {
