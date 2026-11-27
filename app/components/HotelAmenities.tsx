@@ -58,6 +58,14 @@ export default function HotelAmenities({ language }: { language: Language }) {
           </div>
         ))}
       </div>
+
+    </section>
+  );
+}
+
+export function HotelAccessibility({ language }: { language: Language }) {
+  const es = language === "es";
+  return (
       <details className="hotel-accessibility-details">
         <summary>{es ? "Características no accesibles para personas con discapacidades" : "Features not accessible to people with disabilities"}</summary>
         <p>{es
@@ -68,6 +76,5 @@ export default function HotelAmenities({ language }: { language: Language }) {
           <ul>{unavailableFeatures[language].map((feature) => <li key={feature}>{feature}</li>)}</ul>
         </div>
       </details>
-    </section>
   );
 }
