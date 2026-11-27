@@ -15,6 +15,7 @@ export const services = [
   { name: "Airport and local transfers", icon: "map", detail: "Available on request for an additional charge; confirm routes and pricing." },
   { name: "Room decoration", icon: "meeting", detail: "Anniversaries, birthdays, holidays and weddings. Ask about packages and pricing." },
   { name: "Pet-friendly", icon: "pets", detail: "Pets are welcome." },
+  { name: "Digital keys", icon: "key", detail: "Digital keys available." },
 ];
 
 const paths: Record<string, string[]> = {
@@ -30,6 +31,7 @@ const paths: Record<string, string[]> = {
   laundry: ["M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z","M5 8h14","M12 11a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z","M8 5h.01","M11 5h.01"],
   meeting: ["M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z","M17 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z","M2 20v-3a5 5 0 0 1 10 0v3","M13 20v-3a5 5 0 0 1 9 0v3"],
   pets: ["M12 12c-3 0-7 4-7 7 0 4 5 2 7 1 2 1 7 3 7-1 0-3-4-7-7-7Z","M5 6a2 3 0 1 0 0 6 2 3 0 1 0 0-6Z","M10 2a2 3 0 1 0 0 6 2 3 0 1 0 0-6Z","M15 2a2 3 0 1 0 0 6 2 3 0 1 0 0-6Z","M20 6a2 3 0 1 0 0 6 2 3 0 1 0 0-6Z"],
+  key: ["M14 3a6 6 0 0 0-5.7 7.9L3 16v5h5v-3h3v-3l2.1-2.3A6 6 0 1 0 14 3Z","M16 7h.01"],
   map: ["m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2V5Z","M9 3v16","M15 5v16"],
 };
 
