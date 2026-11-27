@@ -1155,3 +1155,8 @@ img,video,iframe{max-width:100%}
 .hotel-policies-page .for-your-stay-contact{margin-bottom:24px}
 .hotel-policies-page .for-your-stay-links{align-items:center;gap:12px 20px;overflow-wrap:anywhere}
 .hotel-policies-page .for-your-stay-top>.button{margin-left:auto;align-self:flex-end}
+
+.for-your-stay-links a{display:inline-flex;align-items:center;gap:4px;text-decoration:none;min-width:0}
+.for-your-stay-links a>span{text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.for-your-stay-links a>svg{flex:none;width:28px;height:28px}
+.for-your-stay-links a>svg.stay-external-icon{width:14px;height:14px}
