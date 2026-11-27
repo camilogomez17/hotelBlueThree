@@ -1101,3 +1101,15 @@ img,video,iframe{max-width:100%}
 .featured-amenity-tile--menu{display:flex;flex-direction:column;aspect-ratio:auto}
 .featured-amenity-tile--menu img{height:auto;aspect-ratio:2/3}
 .featured-amenity-dialog--menu img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+
+.hotel-overview-split{display:grid;grid-template-columns:minmax(0,1fr);max-width:1280px;margin:0 auto}
+.hotel-overview-info{min-width:0}
+@media(min-width:1024px){
+ .hotel-overview-split{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start;padding:24px;gap:32px}
+ .hotel-overview-info .hotel-utility-inner{flex-wrap:wrap;justify-content:flex-start;gap:12px 20px;padding:12px 16px}
+ .hotel-overview-info .utility-contact{flex:1 1 100%;justify-content:flex-start;flex-wrap:wrap;gap:8px 20px}
+ .hotel-overview-info .filmstrip-intro{text-align:left;padding:24px 0}
+ .hotel-overview-info .home-intro-actions{justify-content:flex-start}
+ .hotel-overview-split>.services-section{min-width:0;padding:0 0 24px 24px;border-left:1px solid #d6e0e8}
+ .hotel-overview-split .hotel-amenity-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
