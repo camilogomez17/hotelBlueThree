@@ -4,7 +4,7 @@ type Language = "es" | "en";
 
 const information = {
   en: [
-    { icon: "P", title: "Parking", rows: [["Self-parking", "Complimentary"], ["Valet parking", "Available"], ["EV charging", "Not available"], ["Secured", "Available"], ["Covered", "Not available"], ["In/Out privileges", "Not available"]] },
+    { icon: "P", title: "Parking", rows: [["Self-parking", "Complimentary"], ["Valet parking", "Available"], ["EV charging", "Not available"], ["Secured", "Available"], ["Covered", "Available"], ["In/Out privileges", "Available"]] },
     { icon: "↗", title: "Airport shuttle", rows: [["Jorge Chávez International Airport", "Private transport by request; confirm price and availability"]] },
     { icon: "♧", title: "Kids services", rows: [["Cribs", "By request"], ["Childcare", "Not available"], ["Kids menu", "Ask the cafeteria"], ["Connecting rooms", "Confirm availability"]] },
     { icon: "⊘", title: "Smoke-free", rows: [["Smoking rooms available", "No"], ["Smoking policy", "A penalty may apply for smoking in non-smoking rooms"]] },
@@ -12,7 +12,7 @@ const information = {
     { icon: "♢", title: "Pets", rows: [["Pets", "Pet-friendly"]] },
   ],
   es: [
-    { icon: "P", title: "Estacionamiento", rows: [["Estacionamiento propio", "Gratuito"], ["Servicio de valet", "Sí disponible"], ["Carga de vehículos eléctricos", "No disponible"], ["Vigilado", "Disponible"], ["Techado", "No disponible"], ["Entradas y salidas", "No disponibles"]] },
+    { icon: "P", title: "Estacionamiento", rows: [["Estacionamiento propio", "Gratuito"], ["Servicio de valet", "Sí disponible"], ["Carga de vehículos eléctricos", "No disponible"], ["Vigilado", "Disponible"], ["Techado", "Disponible"], ["Entradas y salidas", "Disponibles"]] },
     { icon: "↗", title: "Traslado al aeropuerto", rows: [["Aeropuerto Internacional Jorge Chávez", "Transporte privado previa solicitud; confirmar precio y disponibilidad"]] },
     { icon: "♧", title: "Servicios para niños", rows: [["Cunas", "Previa solicitud"], ["Cuidado infantil", "No disponible"], ["Menú infantil", "Consultar con cafetería"], ["Habitaciones comunicadas", "Confirmar disponibilidad"]] },
     { icon: "⊘", title: "Espacios libres de humo", rows: [["Habitaciones para fumadores", "No"], ["Política de fumadores", "Puede aplicarse una penalidad por fumar en habitaciones para no fumadores"]] },
