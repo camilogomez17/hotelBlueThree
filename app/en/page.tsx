@@ -109,6 +109,8 @@ export default function Home() {
         </div>}
       </section>
 
+      <div className="hotel-overview-split">
+      <div className="hotel-overview-info">
       <aside className="hotel-utility-rail" aria-label="Hotel information and contact">
         <div className="hotel-utility-inner">
           <div className="utility-reviews">
@@ -162,7 +164,9 @@ export default function Home() {
         <p>We are located 10 minutes away from Chancay Beach. Enjoy your stay in Chancay, near attractions such as Chancay Castle, Chancay Municipal Museum, Eco Truly Park and Lachay National Reserve. Explore our rooms and suites, some featuring a jacuzzi, balcony/panoramic views, prices with breakfast included, taxi services with private transport, corporate events, and decorations for hotel rooms.</p><div className="home-intro-actions"><a className="button button-dark" href="/en/rooms">Explore rooms</a><a className="button button-outline" href="/en/location">View location</a></div>
       </section>
 
+      </div>
       <section className="services-section" id="servicios"><ServicesGrid /></section>
+      </div>
 
       <section className="intro section-wrap" id="habitaciones">
         <div className="intro-label"><span className="rule" /> HOTEL BLUETHREE CHANCAY</div>
