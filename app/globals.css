@@ -1133,3 +1133,8 @@ img,video,iframe{max-width:100%}
 .featured-service-gallery .featured-amenity-shade{position:absolute;bottom:0;left:0;right:0;padding-right:70px}
 .featured-service-gallery .filmstrip-thumbnails{grid-template-columns:repeat(5,minmax(0,1fr))}
 @media(max-width:600px){.featured-service-gallery .filmstrip-slide{width:86vw}.featured-service-gallery .filmstrip-thumbnails{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.hotel-accessibility-details>button{padding:12px 26px;border:0;border-radius:6px;background:#003b71;color:#fff;font-weight:700;cursor:pointer;white-space:normal;max-width:100%}
+.hotel-accessibility-modal{position:fixed;inset:0;margin:auto;width:min(720px,calc(100% - 32px));max-height:85vh;overflow:auto;box-sizing:border-box;padding:40px 28px 28px;border:0;border-radius:10px;background:#fff;color:#293e4e;text-align:left}
+.hotel-accessibility-modal::backdrop{background:rgba(0,0,0,.65)}
+.hotel-accessibility-modal .featured-amenity-close{position:absolute;top:8px;right:12px}
