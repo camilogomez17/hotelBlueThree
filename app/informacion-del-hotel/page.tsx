@@ -13,9 +13,9 @@ export default function HotelInformationPage() {
     <div className="services-page-banner">
       <p className="eyebrow">HOTEL BLUETHREE CHANCAY</p>
       <h1>Información de Hotel</h1>
-      <p>Descubre las comodidades y opciones de atención para tu estadía en Chancay.</p>
+      <p>Descubre las comodidades y opciones de atención para tu estadía en Hotel BlueThree.</p>
     </div>
-    <section className="section-wrap hotel-policies-page"><ForYourStay language="es" /><h2 className="hotel-our-policies-heading">Comodidades</h2><ServicesGrid full /><FeaturedAmenities language="es" /></section>
+    <section className="section-wrap hotel-policies-page"><ForYourStay language="es" showTitle={false} /><h2 className="hotel-our-policies-heading">Comodidades</h2><ServicesGrid full /><FeaturedAmenities language="es" /></section>
     <section className="services-page-contact">
       <h2>¿Necesitas información sobre un servicio?</h2>
       <p>Consulta disponibilidad, condiciones y posibles cargos antes de reservar.</p>
