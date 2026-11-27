@@ -1149,3 +1149,6 @@ img,video,iframe{max-width:100%}
 .hotel-accessibility-modal .hotel-accessibility-unavailable li{display:list-item;padding-left:4px;margin:0 0 12px;font-size:16px;line-height:1.6;text-align:left}
 .hotel-accessibility-modal-body>p{border-top:1px solid #dce4eb;padding-top:16px;margin:20px 0 0;font-size:14px;line-height:1.6}
 @media(max-width:600px){.hotel-accessibility-modal-header{padding:18px 20px;gap:12px}.hotel-accessibility-modal-body{padding:20px}.hotel-accessibility-modal .hotel-accessibility-unavailable li{font-size:15px}}
+
+.hotel-policies-page .for-your-stay-top{display:flex;justify-content:flex-end}
+.hotel-policies-page .for-your-stay-top>.button{margin-left:auto;align-self:flex-end}
