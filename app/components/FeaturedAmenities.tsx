@@ -29,7 +29,7 @@ export default function FeaturedAmenities({ language }: { language: "es" | "en" 
       </div>
       {selected !== null && (
         <div className="featured-amenity-backdrop" onClick={() => setSelected(null)}>
-          <div role="dialog" aria-modal="true" aria-label={items[selected].title} className={`featured-amenity-dialog${items[selected].image === "/organized_photos/dining/FoodMenu.jpeg" ? " featured-amenity-dialog--menu" : ""}`} onClick={(event) => event.stopPropagation()}>
+          <div role="dialog" aria-modal="true" aria-label={items[selected].title} className={`featured-amenity-dialog${items[selected].image === "/organized_photos/dining/FoodMenu.jpeg" ? " featured-amenity-dialog--menu" : " featured-amenity-dialog--event"}`} onClick={(event) => event.stopPropagation()}>
             <button type="button" className="featured-amenity-close" onClick={() => setSelected(null)} aria-label={es ? "Cerrar" : "Close"}>×</button>
             <Image width={items[selected].image === "/organized_photos/dining/FoodMenu.jpeg" ? 800 : 1200} height={items[selected].image === "/organized_photos/dining/FoodMenu.jpeg" ? 1200 : 800} src={items[selected].image} alt={items[selected].title} />
             <h3>{items[selected].title}</h3>
