@@ -13,7 +13,7 @@ export const services = [
   { name: "Eventos y reuniones", icon: "meeting", detail: "Consulta espacios y condiciones." },
   { name: "Información local", icon: "map", detail: "Consulta información para conocer Chancay." },
   { name: "Traslados al aeropuerto y locales", icon: "map", detail: "Servicio a solicitud con costo adicional; confirma rutas y tarifas." },
-  { name: "Decoración de habitaciones para fechas especiales", icon: "meeting", detail: "Aniversarios, cumpleaños, días festivos y bodas. Consulta paquetes y precios." },
+  { name: "Decoración de habitaciones", icon: "meeting", detail: "Aniversarios, cumpleaños, días festivos y bodas. Consulta paquetes y precios." },
 ];
 
 const paths: Record<string, string[]> = {
