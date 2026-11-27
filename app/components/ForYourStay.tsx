@@ -17,7 +17,7 @@ const information = {
     { icon: "♧", title: "Servicios para niños", rows: [["Cunas", "Previa solicitud"], ["Cuidado infantil", "No disponible"], ["Menú infantil", "Consultar con cafetería"], ["Habitaciones comunicadas", "Disponible"]] },
     { icon: "⊘", title: "Espacios libres de humo", rows: [["Habitaciones para fumadores", "No"], ["Política de fumadores", "Puede aplicarse una penalidad por fumar en habitaciones para no fumadores"]] },
     { icon: "☕", title: "Desayuno", rows: [["Disponibilidad", "Consultar con recepción"], ["Tipo", "Menú de cafetería; confirmar opciones y precios"]] },
-    { icon: "♢", title: "Mascotas", rows: [["Mascotas", "Permitidas"]] },
+    { icon: "♢", title: "Mascotas", rows: [["Mascotas", "Pet friendly"]] },
   ],
 } as const;
 
