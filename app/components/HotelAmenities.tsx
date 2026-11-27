@@ -3,13 +3,13 @@ type Language = "es" | "en";
 const categories = {
   en: [
     { icon: "♨", title: "Dining", items: ["Cafeteria", "Room service"] },
-    { icon: "✦", title: "Fitness and recreation", items: ["Jacuzzis", "Fitness center"] },
+    { icon: "✦", title: "Jacuzzi & recreation", items: ["Jacuzzis", "Room decoration for special dates: anniversaries, birthdays, holidays and weddings"] },
     { icon: "▣", title: "Business and work", items: ["Meeting rooms"] },
     { icon: "◇", title: "Conveniences", items: ["Free parking", "Free Wi-Fi", "Digital Key", "Connecting rooms"] },
   ],
   es: [
     { icon: "♨", title: "Gastronomía", items: ["Cafetería", "Servicio a la habitación"] },
-    { icon: "✦", title: "Actividad física y recreación", items: ["Jacuzzis", "Gimnasio"] },
+    { icon: "✦", title: "Jacuzzi y recreación", items: ["Jacuzzis", "Decoración de habitaciones para fechas especiales: aniversarios, cumpleaños, días festivos y bodas"] },
     { icon: "▣", title: "Negocios y trabajo", items: ["Salas de reuniones"] },
     { icon: "◇", title: "Comodidades", items: ["Estacionamiento gratuito", "Wi-Fi gratuito", "Llave digital", "Habitaciones comunicadas"] },
   ],
