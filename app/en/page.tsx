@@ -161,7 +161,8 @@ export default function Home() {
       <div className="hotel-overview-split">
       <div className="hotel-overview-info">
       <section className="filmstrip-intro" aria-label="About Hotel BlueThree">
-        <p>We are located 10 minutes away from Chancay Beach. Enjoy your stay in Chancay, near attractions such as Chancay Castle, Chancay Municipal Museum, Eco Truly Park and Lachay National Reserve. Explore our rooms and suites, some featuring a jacuzzi, balcony/panoramic views, prices with breakfast included, taxi services with private transport, corporate events, and decorations for hotel rooms.</p><div className="home-intro-actions"><a className="button button-dark" href="/en/rooms">Explore rooms</a><a className="button button-outline" href="/en/location">View location</a></div>
+        <h2>Hotel BlueThree Chancay</h2>
+        <p>Our hotel is 10 minutes away from Chancay Beach. Enjoy your stay in Chancay, near attractions such as Chancay Castle, Chancay Municipal Museum, Eco Truly Park and Lachay National Reserve. Explore our rooms and suites, some featuring a jacuzzi, balcony/panoramic views, prices with breakfast included, taxi services with private transport, corporate events, and decorations for hotel rooms.</p><div className="home-intro-actions"><a className="button button-dark" href="/en/rooms">Explore rooms</a><a className="button button-outline" href="/en/location">View location</a></div>
       </section>
 
       </div>
