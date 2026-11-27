@@ -109,10 +109,6 @@ export default function Home() {
         </div>}
       </section>
 
-      <section className="filmstrip-intro" aria-label="About Hotel BlueThree">
-        <p>Enjoy your stay in Chancay, near attractions such as Chancay Castle, Chancay Municipal Museum, Eco Truly Park and Lachay National Reserve. Explore our rooms and suites, some featuring a jacuzzi, balcony/panoramic views, prices with breakfast included, taxi services with private transport, corporate events, and decorations for hotel rooms.</p><div className="home-intro-actions"><a className="button button-dark" href="/en/rooms">Explore rooms</a><a className="button button-outline" href="/en/location">View location</a></div>
-      </section>
-
       <aside className="hotel-utility-rail" aria-label="Hotel information and contact">
         <div className="hotel-utility-inner">
           <div className="utility-reviews">
@@ -161,6 +157,10 @@ export default function Home() {
           <div className="utility-mobile-times"><span><strong>Check-in</strong> 2:00 p. m.</span><span aria-hidden="true">→</span><span><strong>Check-out</strong> 11:00 a. m.</span></div>
         </div>
       </div>
+
+      <section className="filmstrip-intro" aria-label="About Hotel BlueThree">
+        <p>We are located 10 minutes away from Chancay Beach. Enjoy your stay in Chancay, near attractions such as Chancay Castle, Chancay Municipal Museum, Eco Truly Park and Lachay National Reserve. Explore our rooms and suites, some featuring a jacuzzi, balcony/panoramic views, prices with breakfast included, taxi services with private transport, corporate events, and decorations for hotel rooms.</p><div className="home-intro-actions"><a className="button button-dark" href="/en/rooms">Explore rooms</a><a className="button button-outline" href="/en/location">View location</a></div>
+      </section>
 
       <section className="services-section" id="servicios"><ServicesGrid /></section>
 
