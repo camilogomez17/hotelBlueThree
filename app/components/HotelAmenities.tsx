@@ -73,15 +73,20 @@ export function HotelAccessibility({ language }: { language: Language }) {
       <div className="hotel-accessibility-details">
         <button type="button" className="button button-dark" aria-haspopup="dialog" onClick={() => dialog.current?.showModal()}>{es ? "Características no accesibles para personas con discapacidades" : "Features not accessible to people with disabilities"}</button>
         <dialog ref={dialog} className="hotel-accessibility-modal" aria-labelledby="accessibility-modal-title" onClick={event => { if (event.target === event.currentTarget) dialog.current?.close(); }}>
-        <button type="button" className="featured-amenity-close" onClick={() => dialog.current?.close()} aria-label={es ? "Cerrar" : "Close"}>×</button>
-        <p>{es
-          ? "Solicita información sobre accesos, habitaciones y servicios adaptados directamente a recepción. "
-          : "Contact reception for details about accessible entrances, rooms, and services. "}</p>
-        <div className="hotel-accessibility-unavailable">
-          <h3 id="accessibility-modal-title">{es ? "Las siguientes características no están disponibles:" : "The following features are not available:"}</h3>
-          <ul>{unavailableFeatures[language].map((feature) => <li key={feature}>{feature}</li>)}</ul>
-        </div>
-      </dialog>
+          <div className="hotel-accessibility-modal-header">
+            <h2 id="accessibility-modal-title">{es ? "Características no accesibles para personas con discapacidades" : "Features not accessible to people with disabilities"}</h2>
+            <button type="button" className="hotel-accessibility-modal-close" onClick={() => dialog.current?.close()} aria-label={es ? "Cerrar" : "Close"}>×</button>
+          </div>
+          <div className="hotel-accessibility-modal-body">
+            <div className="hotel-accessibility-unavailable">
+              <h3>{es ? "Las siguientes características no están disponibles:" : "The following features are not available:"}</h3>
+              <ul>{unavailableFeatures[language].map((feature) => <li key={feature}>{feature}</li>)}</ul>
+            </div>
+            <p>{es
+              ? "Solicita información sobre accesos, habitaciones y servicios adaptados directamente a recepción."
+              : "Contact reception for details about accessible entrances, rooms, and services."}</p>
+          </div>
+        </dialog>
       </div>
   );
 }
