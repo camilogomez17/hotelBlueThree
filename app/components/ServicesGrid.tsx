@@ -3,7 +3,7 @@ import Link from "next/link";
 export const services = [
   { name: "Wi-Fi", icon: "wifi", detail: "Consulta la conectividad disponible durante tu estadía." },
   { name: "Estacionamiento", icon: "parking", detail: "Confirma disponibilidad y condiciones." },
-  { name: "Aire acondicionado", icon: "air", detail: "Disponible en categorías seleccionadas." },
+  { name: "Aire acondicionado", icon: "air", detail: "Disponible en todas las habitaciones." },
   { name: "Cafetería", icon: "dining", detail: "Alimentos y bebidas de la carta de la cafetería." },
   { name: "Desayuno", icon: "breakfast", detail: "Consulta opciones incluidas y horarios." },
   { name: "Recepción 24 horas", icon: "clock", detail: "Atención durante tu estadía." },
