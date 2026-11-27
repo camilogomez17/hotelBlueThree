@@ -1,17 +1,19 @@
+import { ServiceIcon } from "./ServicesGrid";
+
 type Language = "es" | "en";
 
 const categories = {
   en: [
-    { icon: "01", title: "Dining", items: ["Cafeteria", "Room service"] },
-    { icon: "02", title: "Jacuzzi & recreation", items: ["Jacuzzis", "Room decoration for special dates: anniversaries, birthdays, holidays and weddings"] },
-    { icon: "03", title: "Business and work", items: ["Meeting rooms"] },
-    { icon: "04", title: "Conveniences", items: ["Free parking", "Free Wi-Fi", "Digital Key", "Connecting rooms"] },
+    { icon: "dining", title: "Dining", items: ["Cafeteria", "Room service"] },
+    { icon: "bath", title: "Jacuzzi & recreation", items: ["Jacuzzis", "Room decoration for special dates: anniversaries, birthdays, holidays and weddings"] },
+    { icon: "meeting", title: "Business and work", items: ["Meeting rooms"] },
+    { icon: "service", title: "Conveniences", items: ["Free parking", "Free Wi-Fi", "Digital Key", "Connecting rooms"] },
   ],
   es: [
-    { icon: "01", title: "Gastronomía", items: ["Cafetería", "Servicio a la habitación"] },
-    { icon: "02", title: "Jacuzzi y recreación", items: ["Jacuzzis", "Decoración de habitaciones para fechas especiales: aniversarios, cumpleaños, días festivos y bodas"] },
-    { icon: "03", title: "Negocios y trabajo", items: ["Salas de reuniones"] },
-    { icon: "04", title: "Comodidades", items: ["Estacionamiento gratuito", "Wi-Fi gratuito", "Llave digital", "Habitaciones comunicadas"] },
+    { icon: "dining", title: "Gastronomía", items: ["Cafetería", "Servicio a la habitación"] },
+    { icon: "bath", title: "Jacuzzi y recreación", items: ["Jacuzzis", "Decoración de habitaciones para fechas especiales: aniversarios, cumpleaños, días festivos y bodas"] },
+    { icon: "meeting", title: "Negocios y trabajo", items: ["Salas de reuniones"] },
+    { icon: "service", title: "Comodidades", items: ["Estacionamiento gratuito", "Wi-Fi gratuito", "Llave digital", "Habitaciones comunicadas"] },
   ],
 };
 
@@ -23,7 +25,7 @@ export default function HotelAmenities({ language }: { language: Language }) {
       <div className="hotel-amenities-categories">
         {categories[language].map((category) => (
           <div className="hotel-amenities-category" key={category.title}>
-            <span className="hotel-amenities-icon" aria-hidden="true">{category.icon}</span>
+            <span className="hotel-amenities-icon" aria-hidden="true"><ServiceIcon icon={category.icon} /></span>
             <div>
               <h3>{category.title}</h3>
               <ul>{category.items.map((item) => <li key={item}>{item}</li>)}</ul>
