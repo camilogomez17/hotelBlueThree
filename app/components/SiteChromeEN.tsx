@@ -35,7 +35,7 @@ useEffect(() => {
 function BookingLinks() { return <div className="booking-links"><a className="button button-dark" href={tripAdvisor} target="_blank" rel="noreferrer">Book on Tripadvisor <span>↗</span></a><a className="button button-outline" href="https://wa.me/message/IPFK3E5CKTNGK1" target="_blank" rel="noopener noreferrer">Contact the hotel <span>↗</span></a></div>; }
 export function SiteHeader() {
  const [menuOpen,setMenuOpen]=useState(false);
- const [bedOption,setBedOption]=useState("1 bed · 2 guests");
+ const [rooms,setRooms]=useState(1);
  const [today,setToday]=useState("");
  const [checkIn,setCheckIn]=useState("");
  const [checkOut,setCheckOut]=useState("");
@@ -54,7 +54,7 @@ export function SiteHeader() {
   return ()=>window.clearTimeout(timer);
  },[]);
  const validDates=Boolean(today && checkIn && checkOut && checkIn>=today && checkOut>checkIn);
- const message=`Hello, I would like to inquire about rates and availability.\nCheck-in: ${checkIn}\nCheck-out: ${checkOut}\nRoom: ${bedOption}`;
+ const message=`Hello, I would like to inquire about rates and availability.\nCheck-in: ${checkIn}\nCheck-out: ${checkOut}\nRooms: ${rooms}`;
  return <>
       <header className="site-header">
         <div className="hotel-top-navigation"><button className="menu-toggle" type="button" aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>
@@ -93,19 +93,31 @@ export function SiteHeader() {
             event.preventDefault();
             if(validDates) window.open("https://wa.me/51914046710?text="+encodeURIComponent(message),"_blank","noopener,noreferrer");
           }}>
-            <div className="hotel-date-fields">
-              <label><span>Check-in</span><input type="date" required min={today || undefined} value={checkIn} onChange={event=>{
-                const date=event.target.value;
-                setCheckIn(date);
-                if(date && (!checkOut || checkOut<=date)) setCheckOut(nextDay(date));
-              }}/></label>
-              <label><span>Check-out</span><input type="date" required min={checkIn ? nextDay(checkIn) : undefined} value={checkOut} onChange={event=>setCheckOut(event.target.value)}/></label>
+            <div className="hotel-date-display grid grid-cols-2 gap-0">
+              {[
+                {label:"Check-in",value:checkIn,min:today,onChange:(date:string)=>{
+                  setCheckIn(date);
+                  if(date && (!checkOut || checkOut<=date)) setCheckOut(nextDay(date));
+                }},
+                {label:"Check-out",value:checkOut,min:checkIn ? nextDay(checkIn) : today,onChange:setCheckOut}
+              ].map(field=>{
+                const date=field.value ? new Date(field.value+"T00:00:00Z") : null;
+                const format=(options:Intl.DateTimeFormatOptions)=>date ? new Intl.DateTimeFormat("en-US",{...options,timeZone:"UTC"}).format(date) : "—";
+                return <label key={field.label} className="hotel-calendar-field relative flex min-w-0 cursor-pointer flex-col gap-1 px-3 py-1">
+                  <span className="text-xs font-semibold uppercase tracking-wide">{field.label}</span>
+                  <div className="hotel-date-tile" aria-hidden="true">
+                    <span className="hotel-date-number">{format({day:"numeric"})}</span>
+                    <span className="hotel-date-label"><strong>{format({month:"short"})}</strong><span>{format({weekday:"short"})}</span></span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
+                  </div>
+                  <input className="hotel-calendar-input absolute inset-0 h-full w-full cursor-pointer opacity-0" aria-label={field.label} type="date" required min={field.min || undefined} value={field.value} onClick={event=>{try{event.currentTarget.showPicker?.()}catch{ /* native picker fallback */ }}} onChange={event=>field.onChange(event.target.value)}/>
+                </label>;
+              })}
             </div>
             <label className="hotel-bed-choice">
-              <span className="sr-only">Room type and guests</span>
-              <select value={bedOption} onChange={event=>setBedOption(event.target.value)}>
-                <option value="1 bed · 2 guests">1 bed, 2 guests</option>
-                <option value="2 beds · 4 guests">2 beds, 4 guests</option>
+              <span className="sr-only">Number of rooms</span>
+              <select value={rooms} onChange={event=>setRooms(Number(event.target.value))}>
+                {[1,2,4,8,16].map(count=><option key={count} value={count}>{count} {count===1 ? "room" : "rooms"}</option>)}
               </select>
             </label>
             <button className="hotel-search-submit" type="submit" disabled={!validDates}>Check prices ↗</button>
