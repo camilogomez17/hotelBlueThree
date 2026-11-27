@@ -19,7 +19,7 @@ export default function HotelAmenities({ language }: { language: Language }) {
   const es = language === "es";
   return (
     <section className="hotel-amenities" aria-labelledby="hotel-amenities-heading">
-      <h2 id="hotel-amenities-heading">{es ? "Nuestros servicios" : "Our amenities"}</h2>
+      <h2 id="hotel-amenities-heading">{es ? "Nuestros servicios" : "Our services"}</h2>
       <div className="hotel-amenities-categories">
         {categories[language].map((category) => (
           <div className="hotel-amenities-category" key={category.title}>
