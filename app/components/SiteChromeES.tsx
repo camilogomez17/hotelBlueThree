@@ -35,20 +35,25 @@ function BookingLinks() { return <div className="booking-links"><a className="bu
 export function SiteHeader() {
  const [menuOpen,setMenuOpen]=useState(false);
  const [bedOption,setBedOption]=useState("1 cama · 2 huéspedes");
- const [stayDates, setStayDates] = useState<{day:string;month:string;weekday:string}[]>([]);
- useEffect(() => {
-  const timer = window.setTimeout(() => {
-    const formatter=new Intl.DateTimeFormat("es-PE",{timeZone:"America/Lima",day:"numeric",month:"short",weekday:"short"});
-    const now=new Date();
-    setStayDates([0, 1].map(offset => {
-      const date=new Date(now.getTime()+offset*86400000);
-      const parts=formatter.formatToParts(date);
-      const part=(type:string)=>parts.find(item=>item.type===type)?.value??"";
-      return {day:part("day"),month:part("month").replace(".",""),weekday:part("weekday").replace(".","")};
-    }));
-  }, 0);
-  return () => window.clearTimeout(timer);
- }, []);
+ const [today,setToday]=useState("");
+ const [checkIn,setCheckIn]=useState("");
+ const [checkOut,setCheckOut]=useState("");
+ function nextDay(date:string){
+  const day=new Date(date+"T00:00:00Z");
+  day.setUTCDate(day.getUTCDate()+1);
+  return day.toISOString().slice(0,10);
+ }
+ useEffect(()=>{
+  const timer=window.setTimeout(()=>{
+   const date=new Intl.DateTimeFormat("sv-SE",{timeZone:"America/Lima",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
+   setToday(date);
+   setCheckIn(date);
+   setCheckOut(nextDay(date));
+  },0);
+  return ()=>window.clearTimeout(timer);
+ },[]);
+ const validDates=Boolean(today && checkIn && checkOut && checkIn>=today && checkOut>checkIn);
+ const message=`Hola, quisiera consultar precios y disponibilidad.\nEntrada: ${checkIn}\nSalida: ${checkOut}\nHabitación: ${bedOption}`;
  return <>
       <header className="site-header">
         <div className="hotel-top-navigation"><button className="menu-toggle" type="button" aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"} aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>
@@ -82,14 +87,17 @@ export function SiteHeader() {
             <h1>Hotel BlueThree Chancay</h1>
             <a href={mapsUrl} target="_blank" rel="noopener noreferrer">{address} <span aria-hidden="true">↗</span></a>
           </div>
-          <div className="hotel-search-form">
-            <div className="hotel-date-display" aria-label="Entrada hoy y salida mañana, hora de Perú">
-              {stayDates.length ? stayDates.map((date,index)=>(
-                <div className="hotel-date-tile" key={index}>
-                  <span className="hotel-date-number">{date.day}</span>
-                  <span className="hotel-date-label"><strong>{date.month}</strong><span>{date.weekday}</span></span>
-                </div>
-              )) : <span className="hotel-date-loading">Entrada hoy · Salida mañana</span>}
+          <form className="hotel-search-form" onSubmit={event=>{
+            event.preventDefault();
+            if(validDates) window.open("https://wa.me/51914046710?text="+encodeURIComponent(message),"_blank","noopener,noreferrer");
+          }}>
+            <div className="hotel-date-fields">
+              <label><span>Entrada</span><input type="date" required min={today || undefined} value={checkIn} onChange={event=>{
+                const date=event.target.value;
+                setCheckIn(date);
+                if(date && (!checkOut || checkOut<=date)) setCheckOut(nextDay(date));
+              }}/></label>
+              <label><span>Salida</span><input type="date" required min={checkIn ? nextDay(checkIn) : undefined} value={checkOut} onChange={event=>setCheckOut(event.target.value)}/></label>
             </div>
             <label className="hotel-bed-choice">
               <span className="sr-only">Tipo de habitación y huéspedes</span>
@@ -98,8 +106,8 @@ export function SiteHeader() {
                 <option value="2 camas · 4 huéspedes">2 camas, 4 huéspedes</option>
               </select>
             </label>
-            <a className="hotel-search-submit" href={tripAdvisor} target="_blank" rel="noopener noreferrer">Consultar precios ↗</a>
-          </div>
+            <button className="hotel-search-submit" type="submit" disabled={!validDates}>Consultar precios ↗</button>
+          </form>
         </div>
         <p className="hotel-search-disclaimer">Fechas mostradas según la hora de Perú. Confirma disponibilidad, tarifas y condiciones directamente con el hotel.</p>
       </section>
