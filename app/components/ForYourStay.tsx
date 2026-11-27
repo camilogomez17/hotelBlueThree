@@ -24,19 +24,19 @@ const information = {
 export default function ForYourStay({ language, showTitle = true }: { language: Language; showTitle?: boolean }) {
   const es = language === "es";
   return (
-    <section className="for-your-stay" aria-labelledby={showTitle ? "for-your-stay-title" : undefined} aria-label={showTitle ? undefined : es ? "Información de estadía" : "Stay information"}>
+    <section className="for-your-stay" aria-labelledby="for-your-stay-title">
       <div className="for-your-stay-top">
-        {showTitle && <h2 id="for-your-stay-title">{es ? "Para tu estadía" : "For your stay"}</h2>}
+        <h2 id="for-your-stay-title">{es ? (showTitle ? "Para tu estadía" : "Para su estadía") : "For your stay"}</h2>
         <a className="button button-dark" href={whatsapp} target="_blank" rel="noopener noreferrer">{es ? "Consultar habitaciones" : "Find a Room"}</a>
       </div>
       <div className="for-your-stay-contact">
         <p>{es ? "Entrada" : "Check-in"} <strong>2:00 p. m.</strong> <span aria-hidden="true">→</span> {es ? "Salida" : "Check-out"} <strong>11:00 a. m.</strong></p>
         <div className="for-your-stay-links">
-          <a href="https://www.google.com/maps/search/?api=1&query=Hotel+BlueThree+Chancay+Peru" target="_blank" rel="noopener noreferrer">⌖ {es ? "Cómo llegar" : "Directions"}</a>
-          <a href={whatsapp} target="_blank" rel="noopener noreferrer">✉ {es ? "Contactar recepción" : "Contact reception"}</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Hotel+BlueThree+Chancay+Peru" target="_blank" rel="noopener noreferrer">{es ? "Ubicación" : "Location"}</a>
+          <a href="mailto:bluethreechancay@gmail.com">bluethreechancay@gmail.com</a>
+          <a href="tel:+51914046710">+51 914 046 710</a>
         </div>
       </div>
-      <p className="for-your-stay-address">Residencial Buena Vista – Las Tres Pirámides, Chancay 15130, Perú</p>
       <div className="for-your-stay-grid">
         {information[language].map((tile) => (
           <article className="for-your-stay-tile" key={tile.title}>
