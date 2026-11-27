@@ -89,8 +89,6 @@ export default function Home() {
         </div>}
       </section>
 
-      <div className="hotel-overview-split">
-      <div className="hotel-overview-info">
       <aside className="hotel-utility-rail" aria-label="Información y contacto del hotel">
         <div className="hotel-utility-inner">
           <div className="utility-reviews">
@@ -140,6 +138,8 @@ export default function Home() {
         </div>
       </div>
 
+      <div className="hotel-overview-split">
+      <div className="hotel-overview-info">
       <section className="filmstrip-intro" aria-label="Presentación de Hotel BlueThree">
         <p>Estamos ubicados a 10 minutos de la playa de Chancay. Disfruta de una estadía en Chancay, cerca de atractivos como el Castillo de Chancay, el Museo Municipal de Chancay, Eco Truly Park y la Reserva Nacional de Lachay. Explora nuestras habitaciones y suites, algunas con jacuzzi, balcón, vistas panorámicas, precios con desayuno incluido, servicio de traslado con transporte privado, eventos corporativos, y servicio de decoraciones de habitaciones.</p><div className="home-intro-actions"><a className="button button-dark" href="/habitaciones">Explorar habitaciones</a><a className="button button-outline" href="/ubicacion">Ver ubicación</a></div>
       </section>
