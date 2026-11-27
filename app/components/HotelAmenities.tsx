@@ -2,16 +2,16 @@ type Language = "es" | "en";
 
 const categories = {
   en: [
-    { icon: "♨", title: "Dining", items: ["Cafeteria", "Room service"] },
-    { icon: "✦", title: "Jacuzzi & recreation", items: ["Jacuzzis", "Room decoration for special dates: anniversaries, birthdays, holidays and weddings"] },
-    { icon: "▣", title: "Business and work", items: ["Meeting rooms"] },
-    { icon: "◇", title: "Conveniences", items: ["Free parking", "Free Wi-Fi", "Digital Key", "Connecting rooms"] },
+    { icon: "01", title: "Dining", items: ["Cafeteria", "Room service"] },
+    { icon: "02", title: "Jacuzzi & recreation", items: ["Jacuzzis", "Room decoration for special dates: anniversaries, birthdays, holidays and weddings"] },
+    { icon: "03", title: "Business and work", items: ["Meeting rooms"] },
+    { icon: "04", title: "Conveniences", items: ["Free parking", "Free Wi-Fi", "Digital Key", "Connecting rooms"] },
   ],
   es: [
-    { icon: "♨", title: "Gastronomía", items: ["Cafetería", "Servicio a la habitación"] },
-    { icon: "✦", title: "Jacuzzi y recreación", items: ["Jacuzzis", "Decoración de habitaciones para fechas especiales: aniversarios, cumpleaños, días festivos y bodas"] },
-    { icon: "▣", title: "Negocios y trabajo", items: ["Salas de reuniones"] },
-    { icon: "◇", title: "Comodidades", items: ["Estacionamiento gratuito", "Wi-Fi gratuito", "Llave digital", "Habitaciones comunicadas"] },
+    { icon: "01", title: "Gastronomía", items: ["Cafetería", "Servicio a la habitación"] },
+    { icon: "02", title: "Jacuzzi y recreación", items: ["Jacuzzis", "Decoración de habitaciones para fechas especiales: aniversarios, cumpleaños, días festivos y bodas"] },
+    { icon: "03", title: "Negocios y trabajo", items: ["Salas de reuniones"] },
+    { icon: "04", title: "Comodidades", items: ["Estacionamiento gratuito", "Wi-Fi gratuito", "Llave digital", "Habitaciones comunicadas"] },
   ],
 };
 
