@@ -10,13 +10,13 @@ const categories = {
     { icon: "dining", title: "Dining", items: ["Cafeteria", "Breakfast", "Special diets (vegetarian, vegan, etc.)", "Room service"] },
     { icon: "bath", title: "Jacuzzi & recreation", items: ["Jacuzzis", "Room decoration"] },
     { icon: "meeting", title: "Business and work", items: ["Meeting rooms", "Corporate events", "Weddings", "Birthdays"] },
-    { icon: "service", title: "Conveniences", items: ["Free parking", "Free Wi-Fi", "Digital Key", "Connecting rooms", "Air conditioning", "24-hour reception", "Laundry (additional charge)", "Local information", "Airport and local transfers"] },
+    { icon: "service", title: "Conveniences", items: ["Free parking", "Free Wi-Fi", "Digital Key", "Connecting rooms", "Air conditioning", "24-hour reception", "Laundry (additional charge)", "Local information", "Airport and local transfers", "Pets allowed"] },
   ],
   es: [
     { icon: "dining", title: "Gastronomía", items: ["Cafetería", "Desayuno", "Dietas especiales (vegetarianas, veganas, etc.)", "Servicio a la habitación"] },
     { icon: "bath", title: "Jacuzzi y recreación", items: ["Jacuzzis", "Decoración de habitaciones"] },
     { icon: "meeting", title: "Negocios y trabajo", items: ["Salas de reuniones", "Eventos corporativos", "Matrimonios", "Cumpleaños"] },
-    { icon: "service", title: "Comodidades", items: ["Estacionamiento gratis", "Wi-Fi gratis", "Llave digital", "Habitaciones comunicadas", "Aire acondicionado", "Recepción 24 horas", "Lavandería (costo aparte)", "Información local", "Traslados al aeropuerto y locales"] },
+    { icon: "service", title: "Comodidades", items: ["Estacionamiento gratis", "Wi-Fi gratis", "Llave digital", "Habitaciones comunicadas", "Aire acondicionado", "Recepción 24 horas", "Lavandería (costo aparte)", "Información local", "Traslados al aeropuerto y locales", "Mascotas permitidas"] },
   ],
 };
 
