@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import HotelAmenities from "../components/HotelAmenities";
 import ForYourStay from "../components/ForYourStay";
 import FeaturedAmenities from "../components/FeaturedAmenities";
 import { ServicesGrid } from "../components/ServicesGrid";
@@ -15,6 +16,7 @@ export default function HotelInformationPage() {
       <p>Descubre las comodidades y opciones de atención para tu estadía en Hotel BlueThree.</p>
     </div>
     <section className="section-wrap hotel-policies-page">
+      <HotelAmenities language="es" />
       <h2 className="hotel-our-policies-heading">Comodidades</h2><ServicesGrid full />
       <FeaturedAmenities language="es" />
       <ForYourStay language="es" showTitle={false} />
