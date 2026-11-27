@@ -1,4 +1,5 @@
 import { whatsapp } from "../data/hotel";
+import { ServiceIcon } from "./ServicesGrid";
 
 type Language = "es" | "en";
 
@@ -40,7 +41,7 @@ export default function ForYourStay({ language, showTitle = true }: { language: 
       <div className="for-your-stay-grid">
         {information[language].map((tile) => (
           <article className="for-your-stay-tile" key={tile.title}>
-            <span className="for-your-stay-icon" aria-hidden="true">{tile.icon}</span>
+            <span className="for-your-stay-icon" aria-hidden="true">{tile.icon === "♢" ? <ServiceIcon icon="pets" /> : tile.icon}</span>
             <div>
               <h3>{tile.title}</h3>
               <dl>{tile.rows.map(([label, value]) => (
