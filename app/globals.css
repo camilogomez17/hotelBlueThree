@@ -267,7 +267,7 @@ a{color:inherit;text-decoration:none}
 .hotel-search-widget{position:relative;z-index:30;background:#fff;border-bottom:1px solid #e5e5e5;padding:24px 32px 17px}
 .hotel-search-inner{max-width:1280px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:32px}
 .hotel-search-identity{min-width:240px;flex:1 1 310px}
-.hotel-search-identity h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;color:#171717;font-size:clamp(23px,2vw,30px);line-height:1.25;margin:0 0 10px}
+.hotel-search-identity h1{font-family:Georgia,"Times New Roman",serif;font-weight:700;color:#003b71;font-size:clamp(23px,2vw,30px);line-height:1.25;margin:0 0 10px}
 .hotel-search-identity a{font-size:13px;color:#003b71;text-decoration:underline;text-underline-offset:3px;line-height:1.5}
 .hotel-search-form{display:flex;align-items:end;justify-content:flex-end;flex-wrap:wrap;gap:10px;flex:2 1 750px}
 .hotel-date-fields,.hotel-search-selects{display:flex;gap:8px}
