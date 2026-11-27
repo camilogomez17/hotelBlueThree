@@ -70,7 +70,7 @@ export function SiteHeader() {
           </nav>
           <div className="header-actions">
             
-            <a className="header-cta" href={tripAdvisor} target="_blank" rel="noopener noreferrer">Reservar <span aria-hidden="true">↗</span></a>
+            <a className="header-cta" href="https://wa.me/message/IPFK3E5CKTNGK1" target="_blank" rel="noopener noreferrer">Reservar <span aria-hidden="true">↗</span></a>
             
           </div>
         </div>
