@@ -3,7 +3,7 @@ import Link from "next/link";
 export const services = [
   { name: "Wi-Fi", icon: "wifi", detail: "Ask about connectivity during your stay." },
   { name: "Parking", icon: "parking", detail: "Confirm availability and parking conditions." },
-  { name: "Air conditioning", icon: "air", detail: "Available in selected room categories." },
+  { name: "Air conditioning", icon: "air", detail: "Available in all rooms." },
   { name: "Cafeteria", icon: "dining", detail: "Food and drinks from the hotel's café menu." },
   { name: "Breakfast", icon: "breakfast", detail: "Ask about included options and serving hours." },
   { name: "24-hour reception", icon: "clock", detail: "Reception assistance during your stay." },
