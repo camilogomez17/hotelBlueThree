@@ -17,8 +17,8 @@ export default function HotelInformationPage() {
     </div>
     <section className="section-wrap hotel-policies-page">
       <HotelAmenities language="en" />
-      <h2 className="hotel-our-policies-heading">Amenities</h2><ServicesGrid full />
       <FeaturedAmenities language="en" />
+      <h2 className="hotel-our-policies-heading">Amenities</h2><ServicesGrid full />
       <ForYourStay language="en" showTitle={false} />
     </section>
     <section className="services-page-contact">
