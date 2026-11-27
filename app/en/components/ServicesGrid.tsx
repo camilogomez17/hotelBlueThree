@@ -4,17 +4,16 @@ export const services = [
   { name: "Wi-Fi", icon: "wifi", detail: "Ask about connectivity during your stay." },
   { name: "Parking", icon: "parking", detail: "Confirm availability and parking conditions." },
   { name: "Air conditioning", icon: "air", detail: "Available in selected room categories." },
-  { name: "Café", icon: "dining", detail: "Food and drinks from the hotel's café menu." },
+  { name: "Cafeteria", icon: "dining", detail: "Food and drinks from the hotel's café menu." },
   { name: "Breakfast", icon: "breakfast", detail: "Ask about included options and serving hours." },
   { name: "24-hour reception", icon: "clock", detail: "Reception assistance during your stay." },
   { name: "Room service", icon: "service", detail: "Confirm available options with reception." },
-  { name: "Garden", icon: "garden", detail: "Outdoor space to enjoy." },
   { name: "Rooms with jacuzzi", icon: "bath", detail: "Available in selected room categories." },
   { name: "Laundry", icon: "laundry", detail: "Ask about availability and possible charges." },
   { name: "Events and meetings", icon: "meeting", detail: "Ask about spaces and arrangements." },
   { name: "Local information", icon: "map", detail: "Ask for information about Chancay." },
   { name: "Airport and local transfers", icon: "map", detail: "Available on request for an additional charge; confirm routes and pricing." },
-  { name: "Special occasion decorations", icon: "meeting", detail: "Ask about decoration packages, availability and pricing." },
+  { name: "Room decoration for special dates", icon: "meeting", detail: "Anniversaries, birthdays, holidays and weddings. Ask about packages and pricing." },
 ];
 
 const paths: Record<string, string[]> = {
