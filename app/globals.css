@@ -1113,3 +1113,6 @@ img,video,iframe{max-width:100%}
  .hotel-overview-split>.services-section{min-width:0;padding:0 0 24px 24px;border-left:1px solid #d6e0e8}
  .hotel-overview-split .hotel-amenity-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
+
+.hotel-overview-split .filmstrip-intro h2,.hotel-overview-split .services-section h2{font-family:Arial,Helvetica,sans-serif;font-weight:700;color:#003b71;font-size:clamp(24px,2.5vw,32px);line-height:1.2;letter-spacing:normal;margin:0 0 16px}
+.hotel-overview-split .filmstrip-intro p{font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.55;color:#003b71;font-weight:700}
