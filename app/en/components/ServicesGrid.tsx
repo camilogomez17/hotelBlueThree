@@ -13,7 +13,7 @@ export const services = [
   { name: "Events and meetings", icon: "meeting", detail: "Ask about spaces and arrangements." },
   { name: "Local information", icon: "map", detail: "Ask for information about Chancay." },
   { name: "Airport and local transfers", icon: "map", detail: "Available on request for an additional charge; confirm routes and pricing." },
-  { name: "Room decoration for special dates", icon: "meeting", detail: "Anniversaries, birthdays, holidays and weddings. Ask about packages and pricing." },
+  { name: "Room decoration", icon: "meeting", detail: "Anniversaries, birthdays, holidays and weddings. Ask about packages and pricing." },
 ];
 
 const paths: Record<string, string[]> = {
