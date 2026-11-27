@@ -59,7 +59,7 @@ export default function HotelAmenities({ language }: { language: Language }) {
         ))}
       </div>
       <details className="hotel-accessibility-details">
-        <summary>{es ? "Características de accesibilidad" : "Accessible Features"}</summary>
+        <summary>{es ? "Características no accesibles para personas con discapacidades" : "Features not accessible to people with disabilities"}</summary>
         <p>{es
           ? "Solicita información sobre accesos, habitaciones y servicios adaptados directamente a recepción. "
           : "Contact reception for details about accessible entrances, rooms, and services. "}</p>
