@@ -14,7 +14,7 @@ export const services = [
   { name: "Local information", icon: "map", detail: "Ask for information about Chancay." },
   { name: "Airport and local transfers", icon: "map", detail: "Available on request for an additional charge; confirm routes and pricing." },
   { name: "Room decoration", icon: "meeting", detail: "Anniversaries, birthdays, holidays and weddings. Ask about packages and pricing." },
-  { name: "Pets", icon: "pets", detail: "Pets are allowed." },
+  { name: "Pet-friendly", icon: "pets", detail: "Pets are welcome." },
 ];
 
 const paths: Record<string, string[]> = {
