@@ -70,7 +70,7 @@ export function SiteHeader() {
             </button><LanguageChooser /></div>
         <div className="header-inner">
           <a className="brand" href="/en/" aria-label="Hotel BlueThree, go to homepage" onClick={() => setMenuOpen(false)}>
-            <Image className="brand-logo" src="/logo2.jpeg" alt="" width={88} height={88} onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.nextElementSibling?.classList.remove("brand-fallback-hidden"); }} /><span className="brand-mark brand-fallback-hidden" aria-hidden="true">B<span>3</span></span>
+            <Image className="brand-logo" src="/organized_photos/brand/logo2.jpeg" alt="" width={88} height={88} onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.nextElementSibling?.classList.remove("brand-fallback-hidden"); }} /><span className="brand-mark brand-fallback-hidden" aria-hidden="true">B<span>3</span></span>
             
           </a>
           <nav className={menuOpen ? "main-nav is-open" : "main-nav"} id="main-navigation" aria-label="Main navigation">
@@ -133,7 +133,7 @@ export function SiteFooter() {
           <div className="footer-main">
             <div className="footer-about">
               <a className="brand footer-brand" href="/en/" aria-label="Hotel BlueThree, return to homepage">
-                <Image className="brand-logo" src="/logo2.jpeg" alt="" width={88} height={88} onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.nextElementSibling?.classList.remove("brand-fallback-hidden"); }} /><span className="brand-mark brand-fallback-hidden" aria-hidden="true">B<span>3</span></span>
+                <Image className="brand-logo" src="/organized_photos/brand/logo2.jpeg" alt="" width={88} height={88} onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.nextElementSibling?.classList.remove("brand-fallback-hidden"); }} /><span className="brand-mark brand-fallback-hidden" aria-hidden="true">B<span>3</span></span>
                 
               </a>
               <p>Discover Chancay. Relax at BlueThree.</p>

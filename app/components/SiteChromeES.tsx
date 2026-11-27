@@ -56,7 +56,7 @@ export function SiteHeader() {
             </button><LanguageChooser /></div>
         <div className="header-inner">
           <Link className="brand" href="/" aria-label="Hotel BlueThree, ir al inicio" onClick={() => setMenuOpen(false)}>
-            <Image className="brand-logo" src="/logo2.jpeg" alt="" width={88} height={88} onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.nextElementSibling?.classList.remove("brand-fallback-hidden"); }} /><span className="brand-mark brand-fallback-hidden" aria-hidden="true">B<span>3</span></span>
+            <Image className="brand-logo" src="/organized_photos/brand/logo2.jpeg" alt="" width={88} height={88} onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.nextElementSibling?.classList.remove("brand-fallback-hidden"); }} /><span className="brand-mark brand-fallback-hidden" aria-hidden="true">B<span>3</span></span>
           </Link>
           <nav className={menuOpen ? "main-nav is-open" : "main-nav"} id="main-navigation" aria-label="Navegación principal">
             <Link href="/" onClick={() => setMenuOpen(false)}>Inicio</Link>
@@ -118,7 +118,7 @@ export function SiteFooter() {
           <div className="footer-main">
             <div className="footer-about">
               <Link className="brand footer-brand" href="/" aria-label="Hotel BlueThree, volver al inicio">
-                <Image className="brand-logo" src="/logo2.jpeg" alt="" width={88} height={88} onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.nextElementSibling?.classList.remove("brand-fallback-hidden"); }} /><span className="brand-mark brand-fallback-hidden" aria-hidden="true">B<span>3</span></span>
+                <Image className="brand-logo" src="/organized_photos/brand/logo2.jpeg" alt="" width={88} height={88} onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.nextElementSibling?.classList.remove("brand-fallback-hidden"); }} /><span className="brand-mark brand-fallback-hidden" aria-hidden="true">B<span>3</span></span>
                 
               </Link>
               <p>Descubre Chancay. Descansa en BlueThree.</p>

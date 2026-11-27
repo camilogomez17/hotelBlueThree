@@ -33,15 +33,15 @@ const photos = [
 ];
 
 const salesPhotos = [
-  { src: "/rooms-clean/StandardRoom.jpeg", alt: "Standard room", title: "Standard room" },
-  { src: "/rooms-clean/JuniorSuite.jpeg", alt: "Junior suite", title: "Junior suite" },
-  { src: "/rooms-clean/DeluxeJuniorSuite.jpeg", alt: "Deluxe junior suite", title: "Deluxe junior suite" },
-  { src: "/rooms-clean/DeluxeSuiteTwoBed.jpeg", alt: "Deluxe suite with two beds", title: "Deluxe suite" },
-  { src: "/rooms-clean/DoubleBedRoomJacuzziBalconyPanoramicView.jpeg", alt: "Double room with jacuzzi and balcony", title: "Double room with jacuzzi" },
-  { src: "/rooms-clean/GardenViewRoomWithJacuzzi.jpeg", alt: "Room with jacuzzi and garden view", title: "Garden view" },
-  { src: "/rooms-clean/JacuzziBalconyGardenViewSuite.jpeg", alt: "Suite with jacuzzi, balcony and garden view", title: "Suite with balcony" },
-  { src: "/rooms-clean/JacuzziBalconyRoomPanoramicView.jpeg", alt: "Room with jacuzzi, balcony and panoramic view", title: "Panoramic view" },
-  { src: "/rooms-clean/JacuzziRoomGardenView.jpeg", alt: "Room with jacuzzi and garden", title: "Garden suite" },
+  { src: "/organized_photos/rooms/StandardRoom.jpeg", alt: "Standard room", title: "Standard room" },
+  { src: "/organized_photos/rooms/JuniorSuite.jpeg", alt: "Junior suite", title: "Junior suite" },
+  { src: "/organized_photos/rooms/DeluxeJuniorSuite.jpeg", alt: "Deluxe junior suite", title: "Deluxe junior suite" },
+  { src: "/organized_photos/rooms/DeluxeSuiteTwoBed.jpeg", alt: "Deluxe suite with two beds", title: "Deluxe suite" },
+  { src: "/organized_photos/rooms/DoubleBedRoomJacuzziBalconyPanoramicView.jpeg", alt: "Double room with jacuzzi and balcony", title: "Double room with jacuzzi" },
+  { src: "/organized_photos/rooms/GardenViewRoomWithJacuzzi.jpeg", alt: "Room with jacuzzi and garden view", title: "Garden view" },
+  { src: "/organized_photos/rooms/JacuzziBalconyGardenViewSuite.jpeg", alt: "Suite with jacuzzi, balcony and garden view", title: "Suite with balcony" },
+  { src: "/organized_photos/rooms/JacuzziBalconyRoomPanoramicView.jpeg", alt: "Room with jacuzzi, balcony and panoramic view", title: "Panoramic view" },
+  { src: "/organized_photos/rooms/JacuzziRoomGardenView.jpeg", alt: "Room with jacuzzi and garden", title: "Garden suite" },
 ];
 
 const diningCategories = ["Included breakfasts", "Fresh juices", "Omelettes and breakfasts", "Drinks"];
@@ -110,7 +110,7 @@ export default function Home() {
       </section>
 
       <section className="filmstrip-intro" aria-label="About Hotel BlueThree">
-        <p>Enjoy your stay in Chancay, near attractions such as Chancay Castle, Chancay Municipal Museum, Eco Truly Park and Lachay National Reserve. Explore our rooms and suites, some featuring a jacuzzi, balcony and panoramic views.</p><div className="home-intro-actions"><a className="button button-dark" href="/en/rooms">Explore rooms</a><a className="button button-outline" href="/en/location">View location</a></div>
+        <p>Enjoy your stay in Chancay, near attractions such as Chancay Castle, Chancay Municipal Museum, Eco Truly Park and Lachay National Reserve. Explore our rooms and suites, some featuring a jacuzzi, balcony/panoramic views, prices with breakfast included, transport services to the airport, corporate events, and decorations for hotel rooms..</p><div className="home-intro-actions"><a className="button button-dark" href="/en/rooms">Explore rooms</a><a className="button button-outline" href="/en/location">View location</a></div>
       </section>
 
       <aside className="hotel-utility-rail" aria-label="Hotel information and contact">
@@ -183,7 +183,7 @@ export default function Home() {
       </section>
 
       <section className="rooms-section section-wrap">
-        <div className="section-heading"><div><p className="eyebrow">ROOMS AND SUITES</p><h2>Find your space<br/>to <em>unwind.</em></h2></div><p>Browse photos of the available rooms. Contact the hotel directly to confirm room categories, occupancy, rates and included amenities.</p></div>
+        <div className="section-heading"><div><p className="eyebrow">ROOMS AND SUITES</p><h2>Find your space<br/>to <em>unwind.</em></h2></div><p>Browse photos of the available rooms.</p></div>
         <div className="room-grid" aria-label="Available rooms and suites">
           {roomPhotos.map((photo) => (
             <article className="room-card" key={photo.src}>

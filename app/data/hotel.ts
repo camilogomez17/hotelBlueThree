@@ -2,7 +2,7 @@ export const whatsapp = "https://wa.me/message/IPFK3E5CKTNGK1";
 export const tripAdvisor = "https://www.tripadvisor.com/Hotel_Review-g2336594-d24005682-Reviews-Hotel_BlueThree_Chancay-Chancay_Lima_Region.html";
 export const rooms = [
   {
-    "src": "/rooms-clean/StandardRoom.jpeg",
+    "src": "/organized_photos/rooms/StandardRoom.jpeg",
     "name": "Habitación estándar",
     "description": "Habitación con cama de 2 plazas, Smart TV de 32 pulgadas, minibar y escritorio.",
     "features": [
@@ -24,7 +24,7 @@ export const rooms = [
     ]
   },
   {
-    "src": "/rooms-clean/JuniorSuite.jpeg",
+    "src": "/organized_photos/rooms/JuniorSuite.jpeg",
     "name": "Suite junior",
     "description": "Suite junior para dos personas con escritorio, minibar y Smart TV de 32 pulgadas.",
     "features": [
@@ -47,7 +47,7 @@ export const rooms = [
     ]
   },
   {
-    "src": "/rooms-clean/DeluxeJuniorSuite.jpeg",
+    "src": "/organized_photos/rooms/DeluxeJuniorSuite.jpeg",
     "name": "Junior suite deluxe",
     "description": "Suite junior deluxe con escritorio, minibar, aire acondicionado y Smart TV de 32 pulgadas.",
     "features": [
@@ -70,7 +70,7 @@ export const rooms = [
     ]
   },
   {
-    "src": "/rooms-clean/DeluxeSuiteTwoBed.jpeg",
+    "src": "/organized_photos/rooms/DeluxeSuiteTwoBed.jpeg",
     "name": "Suite deluxe",
     "description": "Suite deluxe con cama de 2 plazas, Smart TV de 42 pulgadas, minibar y caja fuerte.",
     "features": [
@@ -93,7 +93,7 @@ export const rooms = [
     ]
   },
   {
-    "src": "/rooms-clean/DoubleBedRoomJacuzziBalconyPanoramicView.jpeg",
+    "src": "/organized_photos/rooms/DoubleBedRoomJacuzziBalconyPanoramicView.jpeg",
     "name": "Jacuzzi con dos camas, balcón y vista panorámica",
     "description": "Habitación con dos camas de distinto tamaño, jacuzzi, balcón y vista panorámica.",
     "features": [
@@ -118,7 +118,7 @@ export const rooms = [
     ]
   },
   {
-    "src": "/rooms-clean/GardenViewRoomWithJacuzzi.jpeg",
+    "src": "/organized_photos/rooms/GardenViewRoomWithJacuzzi.jpeg",
     "name": "Jacuzzi tántrica con vista al jardín",
     "description": "Habitación para dos personas con jacuzzi, silla tántrica y vista al jardín.",
     "features": [
@@ -144,7 +144,7 @@ export const rooms = [
     ]
   },
   {
-    "src": "/rooms-clean/JacuzziBalconyGardenViewSuite.jpeg",
+    "src": "/organized_photos/rooms/JacuzziBalconyGardenViewSuite.jpeg",
     "name": "Jacuzzi y balcón con vista al jardín",
     "description": "Habitación con jacuzzi, balcón con vista al jardín y Smart TV de 42 pulgadas.",
     "features": [
@@ -169,7 +169,7 @@ export const rooms = [
     ]
   },
   {
-    "src": "/rooms-clean/JacuzziBalconyRoomPanoramicView.jpeg",
+    "src": "/organized_photos/rooms/JacuzziBalconyRoomPanoramicView.jpeg",
     "name": "Jacuzzi y balcón con vista panorámica",
     "description": "Habitación para dos personas con jacuzzi, balcón panorámico y Smart TV de 42 pulgadas.",
     "features": [
@@ -194,7 +194,7 @@ export const rooms = [
     ]
   },
   {
-    "src": "/rooms-clean/JacuzziRoomGardenView.jpeg",
+    "src": "/organized_photos/rooms/JacuzziRoomGardenView.jpeg",
     "name": "Jacuzzi tántrica con vista al jardín",
     "description": "Habitación para dos personas con jacuzzi, silla tántrica y vista al jardín.",
     "features": [
@@ -220,4 +220,3 @@ export const rooms = [
     ]
   }
 ];
-export const gallery = [{src:"/Amenities.jpeg",name:"Instalaciones"},{src:"/FoodMenu.jpeg",name:"Gastronomía"},{src:"/CorporateEvents.jpeg",name:"Eventos corporativos"},{src:"/LoveorAnniversaryOrBirthdayDecorationServices.jpeg",name:"Celebraciones"},...rooms.map(room=>({src:room.src,name:room.name}))];
