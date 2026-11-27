@@ -9,7 +9,7 @@ const information = {
     { icon: "♧", title: "Kids services", rows: [["Cribs", "By request"], ["Childcare", "Not available"], ["Kids menu", "Ask the cafeteria"], ["Connecting rooms", "Confirm availability"]] },
     { icon: "⊘", title: "Smoke-free", rows: [["Smoking rooms available", "No"], ["Smoking policy", "A penalty may apply for smoking in non-smoking rooms"]] },
     { icon: "☕", title: "Breakfast", rows: [["Availability", "Ask reception"], ["Type", "Cafeteria menu; confirm options and pricing"]] },
-    { icon: "♢", title: "Pets", rows: [["Pets", "Allowed"]] },
+    { icon: "♢", title: "Pets", rows: [["Pets", "Pet-friendly"]] },
   ],
   es: [
     { icon: "P", title: "Estacionamiento", rows: [["Estacionamiento propio", "Gratuito"], ["Servicio de valet", "No disponible"], ["Carga de vehículos eléctricos", "No disponible"], ["Vigilado", "Disponible"], ["Techado", "No disponible"], ["Entradas y salidas", "No disponibles"]] },
