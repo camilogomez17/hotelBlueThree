@@ -21,12 +21,12 @@ const information = {
   ],
 } as const;
 
-export default function ForYourStay({ language }: { language: Language }) {
+export default function ForYourStay({ language, showTitle = true }: { language: Language; showTitle?: boolean }) {
   const es = language === "es";
   return (
-    <section className="for-your-stay" aria-labelledby="for-your-stay-title">
+    <section className="for-your-stay" aria-labelledby={showTitle ? "for-your-stay-title" : undefined} aria-label={showTitle ? undefined : es ? "Información de estadía" : "Stay information"}>
       <div className="for-your-stay-top">
-        <h2 id="for-your-stay-title">{es ? "Para tu estadía" : "For your stay"}</h2>
+        {showTitle && <h2 id="for-your-stay-title">{es ? "Para tu estadía" : "For your stay"}</h2>}
         <a className="button button-dark" href={whatsapp} target="_blank" rel="noopener noreferrer">{es ? "Consultar habitaciones" : "Find a Room"}</a>
       </div>
       <div className="for-your-stay-contact">
