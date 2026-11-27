@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import HotelAmenities from "../../components/HotelAmenities";
 import ForYourStay from "../../components/ForYourStay";
 import FeaturedAmenities from "../../components/FeaturedAmenities";
 import { ServicesGrid } from "../components/ServicesGrid";
@@ -16,7 +15,6 @@ export default function HotelInformationPage() {
       <p>Discover the amenities and services available during your stay in Hotel BlueThree.</p>
     </div>
     <section className="section-wrap hotel-policies-page">
-      <HotelAmenities language="en" />
       <h2 className="hotel-our-policies-heading">Amenities</h2><ServicesGrid full />
       <FeaturedAmenities language="en" />
       <ForYourStay language="en" showTitle={false} />
