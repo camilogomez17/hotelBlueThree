@@ -1126,3 +1126,10 @@ img,video,iframe{max-width:100%}
 .hotel-accessibility-unavailable h3{font-family:Arial,Helvetica,sans-serif;font-size:20px;font-weight:700;color:#003b71;margin:0 0 16px;line-height:1.3}
 .hotel-accessibility-unavailable ul{list-style:disc;padding-left:24px;margin:0}
 .hotel-accessibility-unavailable li{margin-bottom:10px;font-size:15px;line-height:1.5}
+
+.featured-service-gallery .filmstrip-track{max-width:none}
+.featured-service-gallery .filmstrip-slide{position:relative;width:min(768px,70vw)}
+.featured-service-gallery .featured-service-placeholder{display:grid;place-items:center;width:100%;height:100%;background:#e9edf0;color:#003b71}
+.featured-service-gallery .featured-amenity-shade{position:absolute;bottom:0;left:0;right:0;padding-right:70px}
+.featured-service-gallery .filmstrip-thumbnails{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media(max-width:600px){.featured-service-gallery .filmstrip-slide{width:86vw}.featured-service-gallery .filmstrip-thumbnails{grid-template-columns:repeat(2,minmax(0,1fr))}}
