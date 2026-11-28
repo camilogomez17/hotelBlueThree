@@ -1,6 +1,7 @@
 "use client";
 
 import BlueThreeBenefits from "./components/BlueThreeBenefits";
+import HomeDiningFeature from "./components/HomeDiningFeature";
 import HomeLocation from "./components/HomeLocation";
 
 import { useState } from "react";
@@ -133,6 +134,8 @@ export default function Home() {
         <PolicyTabs language="es" />
         <div className="home-policies-more"><a className="room-explore-button" href="/politicas">Ver todas las políticas ↗</a></div>
       </section>
+
+      <HomeDiningFeature language="es" />
 
       <section className="bluethree-events" aria-labelledby="bluethree-events-heading"><div className="bluethree-events-inner"><h2 id="bluethree-events-heading">Reuniones y eventos</h2><p>Organiza tu próxima reunión, celebración u ocasión especial en BlueThree, Chancay. Comunícate con nuestro equipo para consultar los espacios disponibles, la organización y las opciones para tu grupo.</p><a href="/contacto" className="bluethree-events-button">Planificar un evento</a></div></section>
 
