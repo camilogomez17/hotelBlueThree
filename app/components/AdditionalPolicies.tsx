@@ -34,7 +34,7 @@ export default function AdditionalPolicies({ language }: { language: "es" | "en"
               <div><dt>{es ? "Horario de entrada" : "Check-in time"}</dt><dd>{es ? "2:00 p. m." : "2:00 p.m."}</dd></div>
               <div><dt>{es ? "Horario de salida" : "Check-out time"}</dt><dd>{es ? "11:00 a. m." : "11:00 a.m."}</dd></div>
               <div><dt>{es ? "Cargo por salida anticipada" : "Early checkout fee"}</dt><dd>0</dd></div>
-              <div><dt>{es ? "Cargo por salida tardía" : "Late checkout fee"}</dt><dd>{es ? "50 %. Después de 4 horas, 90 %." : "50%. After 4 hours, 90%."}</dd></div>
+              <div><dt>{es ? "Cargo por salida tardía" : "Late checkout fee"}</dt><dd>{es ? "Antes de 4 horas, 50 %. Después de 4 horas, 99 %." : "Before 4 hours, 50%. After 4 hours, 99%."}</dd></div>
             </dl>
           </div>
         </details>
