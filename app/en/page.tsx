@@ -44,32 +44,6 @@ const salesPhotos = [
   { src: "/organized_photos/rooms/JacuzziRoomGardenView.jpeg", alt: "Room with jacuzzi and garden", title: "Garden suite" },
 ];
 
-const diningCategories = ["Included breakfasts", "Fresh juices", "Omelettes and breakfasts", "Drinks"];
-
-const diningItems = [
-  { name: "Egg sandwich", category: "Included breakfasts" },
-  { name: "Chicken sandwich", category: "Included breakfasts" },
-  { name: "Huachana sausage", category: "Included breakfasts" },
-  { name: "Coffee", category: "Included breakfasts" },
-  { name: "Oatmeal", category: "Included breakfasts" },
-  { name: "Pineapple", category: "Fresh juices", price: "S/ 10.00" },
-  { name: "Strawberry", category: "Fresh juices", price: "S/ 10.00" },
-  { name: "Mixed fruit juice", category: "Fresh juices", price: "S/ 10.00" },
-  { name: "Papaya", category: "Fresh juices", price: "S/ 10.00" },
-  { name: "Avocado toast", category: "Omelettes and breakfasts", price: "S/ 11.50" },
-  { name: "American breakfast", category: "Omelettes and breakfasts", price: "S/ 10.50" },
-  { name: "Chancay-style breakfast", category: "Omelettes and breakfasts", price: "S/ 10.50" },
-  { name: "Chicken ciabatta", category: "Omelettes and breakfasts", price: "S/ 10.50" },
-  { name: "Inka Cola 600 ml", category: "Drinks", price: "S/ 4.00" },
-  { name: "Coca Cola 600 ml", category: "Drinks", price: "S/ 4.00" },
-  { name: "Cielo water 625 ml", category: "Drinks", price: "S/ 2.00" },
-  { name: "Frugos del Valle", category: "Drinks", price: "S/ 2.50" },
-  { name: "Vino Queirolo rosé 750 ml", category: "Drinks", price: "S/ 25.00" },
-  { name: "Wheat beer 620 ml", category: "Drinks", price: "S/ 10.00" },
-  { name: "Mike", category: "Drinks", price: "S/ 7.50" },
-  { name: "Pilsen can 473 ml", category: "Drinks", price: "S/ 7.50" },
-];
-
 const roomPhotos = salesPhotos;
 const tripAdvisor = "https://www.tripadvisor.com/Hotel_Review-g2336594-d24005682-Reviews-Hotel_BlueThree_Chancay-Chancay_Lima_Region.html"
 
@@ -207,27 +181,6 @@ export default function Home() {
       </section>
 
       <BlueThreeBenefits language="en" />
-
-      <section className="home-dining-section section-wrap" id="gastronomia">
-        <div className="section-heading"><div><p className="eyebrow">BLUETHREE CAFÉ</p><h2>Flavors to enjoy<br/>your <em>stay.</em></h2></div><p>Explore our menu categories and selections. Check prices, ingredients and details on the full menu.</p></div>
-        <div className="home-dining-grid" aria-label="Dining categories">
-          {diningCategories.map(category => <div className="home-dining-card" key={category}>
-            <h3>{category}</h3>
-          </div>)}
-        </div>
-        <div className="home-dining-marquee" aria-label="Selected dishes and drinks from our menu">
-          <div className="home-dining-marquee-track">
-            {[0, 1].map(copy => <div className="home-dining-marquee-set" key={copy} aria-hidden={copy === 1}>
-              {diningItems.map(item => <div className="home-dining-item" key={item.name}>
-                <span className="home-dining-item-category">{item.category}</span>
-                <strong>{item.name}</strong>
-                {item.price && <span className="home-dining-item-price">{item.price}</span>}
-              </div>)}
-            </div>)}
-          </div>
-        </div>
-        <div className="home-dining-more"><a className="room-explore-button" href="/en/dining">View full menu and prices ↗</a></div>
-      </section>
 
       <section className="home-policies-section section-wrap" id="politicas">
         <div className="section-heading"><div><p className="eyebrow">BEFORE YOUR ARRIVAL</p><h2>Information<br/>and <em>policies.</em></h2></div><p>Review fees, family policies, parking, pets, smoking and Wi-Fi before booking.</p></div>

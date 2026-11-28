@@ -33,31 +33,6 @@ const photos = [
   },
 ];
 
-const diningCategories = ["Desayunos incluidos", "Jugos naturales", "Omelettes y desayunos", "Bebidas"];
-
-const diningItems = [
-  { name: "Pan con huevo", category: "Desayunos incluidos" },
-  { name: "Pan con pollo", category: "Desayunos incluidos" },
-  { name: "Salchicha huachana", category: "Desayunos incluidos" },
-  { name: "Café", category: "Desayunos incluidos" },
-  { name: "Avena", category: "Desayunos incluidos" },
-  { name: "Piña", category: "Jugos naturales", price: "S/ 10.00" },
-  { name: "Fresa", category: "Jugos naturales", price: "S/ 10.00" },
-  { name: "Jugo mixto", category: "Jugos naturales", price: "S/ 10.00" },
-  { name: "Papaya", category: "Jugos naturales", price: "S/ 10.00" },
-  { name: "Avocado toast", category: "Omelettes y desayunos", price: "S/ 11.50" },
-  { name: "American breakfast", category: "Omelettes y desayunos", price: "S/ 10.50" },
-  { name: "Chancayano", category: "Omelettes y desayunos", price: "S/ 10.50" },
-  { name: "Pan ciabatta con pollo", category: "Omelettes y desayunos", price: "S/ 10.50" },
-  { name: "Inka Cola 600 ml", category: "Bebidas", price: "S/ 4.00" },
-  { name: "Coca Cola 600 ml", category: "Bebidas", price: "S/ 4.00" },
-  { name: "Agua Cielo 625 ml", category: "Bebidas", price: "S/ 2.00" },
-  { name: "Frugos del Valle", category: "Bebidas", price: "S/ 2.50" },
-  { name: "Vino Queirolo rosé 750 ml", category: "Bebidas", price: "S/ 25.00" },
-  { name: "Cerveza trigo 620 ml", category: "Bebidas", price: "S/ 10.00" },
-  { name: "Mike", category: "Bebidas", price: "S/ 7.50" },
-  { name: "Pilsen en lata 473 ml", category: "Bebidas", price: "S/ 7.50" },
-];
 const tripAdvisor = "https://www.tripadvisor.com/Hotel_Review-g2336594-d24005682-Reviews-Hotel_BlueThree_Chancay-Chancay_Lima_Region.html";
 
 export default function Home() {
@@ -152,27 +127,6 @@ export default function Home() {
       <HomeRoomCards />
 
       <BlueThreeBenefits language="es" />
-
-      <section className="home-dining-section section-wrap" id="gastronomia">
-        <div className="section-heading"><div><p className="eyebrow">CAFETERÍA BLUETHREE</p><h2>Sabores para disfrutar<br/>tu <em>estadía.</em></h2></div><p>Descubre las categorías y opciones de nuestra carta. Consulta los precios, ingredientes y detalles en el menú completo.</p></div>
-        <div className="home-dining-grid" aria-label="Categorías de gastronomía">
-          {diningCategories.map(category => <div className="home-dining-card" key={category}>
-            <h3>{category}</h3>
-          </div>)}
-        </div>
-        <div className="home-dining-marquee" aria-label="Selección de platos y bebidas de nuestra carta">
-          <div className="home-dining-marquee-track">
-            {[0, 1].map(copy => <div className="home-dining-marquee-set" key={copy} aria-hidden={copy === 1}>
-              {diningItems.map(item => <div className="home-dining-item" key={item.name}>
-                <span className="home-dining-item-category">{item.category}</span>
-                <strong>{item.name}</strong>
-                {item.price && <span className="home-dining-item-price">{item.price}</span>}
-              </div>)}
-            </div>)}
-          </div>
-        </div>
-        <div className="home-dining-more"><a className="room-explore-button" href="/gastronomia">Ver menú completo y precios ↗</a></div>
-      </section>
 
       <section className="home-policies-section section-wrap" id="politicas">
         <div className="section-heading"><div><p className="eyebrow">ANTES DE TU LLEGADA</p><h2>Información<br/>y <em>políticas.</em></h2></div><p>Consulta tarifas, familias, estacionamiento, mascotas, fumar y Wi-Fi antes de reservar.</p></div>
