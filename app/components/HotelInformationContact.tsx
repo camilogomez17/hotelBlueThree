@@ -1,5 +1,6 @@
-import Link from "next/link";
 import { whatsapp } from "../data/hotel";
+
+const phoneHref = "tel:+51914046710";
 
 const socialLinks = [
   {
@@ -32,7 +33,7 @@ export default function HotelInformationContact({ language }: { language: "es" |
     <section className="services-page-contact" aria-label={es ? "Contacto del hotel" : "Hotel contact"}>
       <div className="section-wrap hotel-information-contact">
         <div className="hotel-information-contact-channels">
-          <a className="hotel-information-phone" href="tel:+51914046710">+51 914 046 710</a>
+          <a className="hotel-information-phone" href={phoneHref}>+51 914 046 710</a>
           <ul className="hotel-information-socials">
             {socialLinks.map(({ name, href, icon }) => (
               <li key={name}>
@@ -44,10 +45,10 @@ export default function HotelInformationContact({ language }: { language: "es" |
           </ul>
         </div>
         <div className="hotel-information-contact-actions">
-          <Link className="button button-dark" href={es ? "/habitaciones" : "/en/rooms"}>
+          <a className="button button-dark" href={whatsapp} target="_blank" rel="noopener noreferrer">
             {es ? "Reservas" : "Reservations"}
-          </Link>
-          <a className="button button-outline" href={whatsapp} target="_blank" rel="noopener noreferrer">
+          </a>
+          <a className="button button-outline" href={phoneHref}>
             {es ? "Contactar al hotel" : "Contact the hotel"}
           </a>
         </div>
