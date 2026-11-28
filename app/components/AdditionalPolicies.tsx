@@ -17,7 +17,7 @@ export default function AdditionalPolicies({ language }: { language: "es" | "en"
           <summary>{es ? "Entrada/Salida" : "Check-in/Check-out"} <span aria-hidden="true" /></summary>
           <div className="hotel-policy-accordion-content">
             <dl className="hotel-policy-accordion-rows">
-              <div><dt>{es ? "Edad mínima para registrarse" : "Minimum age to register"}</dt><dd>{confirmWithReception}</dd></div>
+              <div><dt>{es ? "Edad mínima para registrarse" : "Minimum age to register"}</dt><dd>{es ? "18 años" : "18"}</dd></div>
               <div><dt>{es ? "Horario de entrada" : "Check-in time"}</dt><dd>{es ? "2:00 p. m." : "2:00 p.m."}</dd></div>
               <div><dt>{es ? "Horario de salida" : "Check-out time"}</dt><dd>{es ? "11:00 a. m." : "11:00 a.m."}</dd></div>
               <div><dt>{es ? "Cargo por salida anticipada" : "Early checkout fee"}</dt><dd>{confirmWithReception}</dd></div>
