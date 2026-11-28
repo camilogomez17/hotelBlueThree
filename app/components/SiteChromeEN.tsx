@@ -8,6 +8,7 @@ const tripAdvisor = "https://www.tripadvisor.com/Hotel_Review-g2336594-d24005682
 const linktree = "https://linktr.ee/bluethree";
 const mapsUrl = "https://www.google.com/maps/place/Hotel+BlueThree+Chancay+%7C+Hoteles+en+Chancay+%26+Huaral/@-11.5491071,-77.260408,15.39z/data=!4m9!3m8!1s0x91068921449d21a5:0x7351952174e4f1fe!5m2!4m1!1i2!8m2!3d-11.5453985!4d-77.2588947!16s%2Fg%2F11rsr5p47y?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D";
 const address = "Residencial Buena Vista – Las Tres Pirámides, Chancay 15130, Perú";
+
 const socials = [["Instagram","https://www.instagram.com/hotelbluethreechancay/"],["Facebook","https://www.facebook.com/Hotelesenchancayhuaral/"],["TikTok","https://www.tiktok.com/@hotelbluethreechancay"]];
 
 const languageLabels = {es:"Español",en:"English"} as const;
@@ -33,7 +34,6 @@ useEffect(() => {
  return <label className="language-chooser" data-language-chooser><span className="sr-only">Idioma / Language</span><span aria-hidden="true" className="language-chooser-icon">◎</span><select aria-label="Idioma / Language" value={current} onChange={e=>change(e.target.value as "es"|"en")}>{Object.entries(languageLabels).map(([code,label])=><option key={code} value={code}>{label}</option>)}</select></label>;
 }
 
-function BookingLinks() { return <div className="booking-links"><a className="button button-dark" href={tripAdvisor} target="_blank" rel="noreferrer">Book on Tripadvisor <span>↗</span></a><a className="button button-outline" href="https://wa.me/message/IPFK3E5CKTNGK1" target="_blank" rel="noopener noreferrer">Contact the hotel <span>↗</span></a></div>; }
 export function SiteHeader() {
  const [menuOpen,setMenuOpen]=useState(false);
  const [rooms,setRooms]=useState(1);
@@ -113,12 +113,7 @@ export function SiteHeader() {
  </>;
 }
 export function SiteFooter() {
- return <>
-      <section className="contact-section section-wrap" id="contacto">
-        <div className="contact-copy"><p className="eyebrow">PLAN YOUR STAY</p><h2>Book your next<br/><em>visit to Chancay.</em></h2><p>Check rates, availability, room types and special requests through the hotel&aposs official channels or Tripadvisor.</p><BookingLinks/></div>
-        <div className="social-panel"><p className="eyebrow">OFFICIAL CHANNELS</p>{socials.map(([name, href]) => <a className="social-link" href={href} key={name} target="_blank" rel="noreferrer">{name}<span>↗</span></a>)}<a className="social-link" href="/en/contact">All our links<span>↗</span></a><a className="social-link" href={tripAdvisor} target="_blank" rel="noreferrer">Tripadvisor · Bookings and reviews<span>↗</span></a><a className="social-link" href="https://www.booking.com/searchresults.html?aid=390156&amp;label=duc511jc-10CAsosQFCE3RyZXMtYXJib2xlcy1henVsZXNIM1gDaKcCiAEBmAEzuAEHyAEP2AED6AEB-AEBiAIBqAIBuAKmhYjYBsACAdICJGVlNTI4NjhkLTY0YTUtNDg3MS1hZGRlLWI3ZTEwYTE5YWVlZtgCAeACAQ&amp;redirected=1&amp;city=-341519&amp;highlighted_hotels=15241340&amp;hlrd=user_sh&amp;source=hotel&amp;checkin=2026-11-21&amp;checkout=2026-11-22&amp;keep_landing=1&amp;sid=c027b02c5e916b27cfe75db44e9fae5d" target="_blank" rel="noopener noreferrer">Booking.com · Bookings<span>↗</span></a></div>
-      </section>
-
+ return (
       <footer className="site-footer">
         <div className="footer-inner">
           <div className="footer-main">
@@ -158,5 +153,5 @@ export function SiteFooter() {
           </div>
         </div>
       </footer>
- </>;
+ );;
 }

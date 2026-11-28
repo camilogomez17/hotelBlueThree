@@ -42,7 +42,15 @@ export default function AdditionalPolicies({ language }: { language: "es" | "en"
           <summary>{es ? "Pago" : "Payment"} <span aria-hidden="true" /></summary>
           <div className="hotel-policy-accordion-content">
             <dl className="hotel-policy-accordion-rows">
-              <div><dt>{es ? "Moneda" : "Currency"}</dt><dd>{es ? "Soles" : "Peruvian soles"}</dd></div>
+              <div>
+                <dt>{es ? "Moneda" : "Currency"}</dt>
+                <dd>
+                  <ul className="m-0 flex list-none flex-col gap-2 p-0" role="list">
+                    <li>{es ? "Soles" : "Peruvian soles"}</li>
+                    <li>{es ? "Dólares estadounidenses" : "U.S. dollars"}</li>
+                  </ul>
+                </dd>
+              </div>
               <div>
                 <dt>{es ? "Métodos de pago aceptados" : "Accepted payment methods"}</dt>
                 <dd>
