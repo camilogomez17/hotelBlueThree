@@ -43,7 +43,17 @@ export default function AdditionalPolicies({ language }: { language: "es" | "en"
           <div className="hotel-policy-accordion-content">
             <dl className="hotel-policy-accordion-rows">
               <div><dt>{es ? "Moneda" : "Currency"}</dt><dd>{es ? "Soles" : "Peruvian soles"}</dd></div>
-              <div><dt>{es ? "Métodos de pago aceptados" : "Accepted payment methods"}</dt><dd>{es ? "Visa, Mastercard, depósito bancario y efectivo" : "Visa, Mastercard, bank deposit, and cash"}</dd></div>
+              <div>
+                <dt>{es ? "Métodos de pago aceptados" : "Accepted payment methods"}</dt>
+                <dd>
+                  <ul className="m-0 flex list-none flex-col gap-2 p-0" role="list">
+                    <li>Visa</li>
+                    <li>Mastercard</li>
+                    <li>{es ? "Depósito bancario" : "Bank deposit"}</li>
+                    <li>{es ? "Efectivo" : "Cash"}</li>
+                  </ul>
+                </dd>
+              </div>
             </dl>
           </div>
         </details>
