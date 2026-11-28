@@ -1186,3 +1186,7 @@ img,video,iframe{max-width:100%}
 .for-your-stay-links a>span{text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
 .for-your-stay-links a>svg{flex:none;width:28px;height:28px}
 .for-your-stay-links a>svg.stay-external-icon{width:14px;height:14px}
+
+.home-faq{padding-block:clamp(32px,5vw,64px)}
+.home-faq h2{margin:0 0 24px;color:var(--blue-dark);font-size:clamp(28px,4vw,42px);font-weight:700;line-height:1.2}
+.home-faq .hotel-policy-accordion-content p{margin:0}
