@@ -88,7 +88,7 @@ export default function Home() {
   const next = () => setActive((current) => (current + 1) % photos.length);
 
   return (
-    <main id="inicio">
+    <main id="inicio" className="hotel-home">
       <section className="filmstrip-hero" id="galeria" aria-label="Hotel photo gallery">
         <div className="filmstrip-frame">
           <div className="filmstrip-track">
