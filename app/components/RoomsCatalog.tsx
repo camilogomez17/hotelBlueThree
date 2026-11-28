@@ -27,16 +27,26 @@ export default function RoomsCatalog({ language = "es" }: { language?: "es" | "e
   const tabs = [{id:"all",es:"Todas",en:"All"},{id:"guest",es:"Habitaciones",en:"Guest rooms"},{id:"suites",es:"Suites",en:"Suites"},{id:"accessible",es:"Accesibles",en:"Accessible"}];
   const visibleRooms = rooms.filter(room => category === "all" || (category === "accessible" ? room.features.some(feature => /accesible|movilidad reducida/i.test(feature)) : category === "suites" ? /suite/i.test(room.name) : !/suite/i.test(room.name)));
   const tr = (s: string) => en ? (translations[s] ?? s) : s;
+  const commonFeatures = ["Wi-Fi", "No fumar", "Estacionamiento incluido", "Aire acondicionado", "Calefacción", "Minibar"]
+    .filter(feature => rooms.length > 0 && rooms.every(room => room.features.includes(feature)))
+    .map(feature => feature === "No fumar" ? (en ? "Non-smoking rooms" : "Habitaciones para no fumadores") : tr(feature));
+  const stayFeatures = [
+    ...commonFeatures,
+    en ? "Jacuzzi in select rooms" : "Jacuzzi en habitaciones seleccionadas",
+    en ? "Rates with breakfast included" : "Tarifas con desayuno incluido",
+    en ? "Room decoration service" : "Servicio de decoración de habitaciones",
+  ];
+
   return <main className="blue-rooms-page">
     <header className="section-wrap">
       <h1 className="py-6 text-center text-[32px] leading-tight font-bold text-[#002b55] sm:py-7 sm:text-[40px]">{en ? "Rooms and suites" : "Habitaciones y suites"}</h1>
       <div className="mb-4 sm:mb-5">
-        <h2 className="pb-2 text-center text-lg font-bold text-[#002b55]">{en ? "Your stay includes" : "Tu estadía incluye"}</h2>
+        <h2 className="pb-2 text-center text-lg font-bold text-[#002b55]">{en ? "Amenities and stay options" : "Comodidades y opciones para tu estadía"}</h2>
         <ul className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-base">
-          {["Wi-Fi", "No fumar", "Estacionamiento incluido", "Aire acondicionado", "Calefacción", "Minibar"].filter(feature => rooms.length > 0 && rooms.every(room => room.features.includes(feature))).map(feature => (
+          {stayFeatures.map(feature => (
             <li key={feature} className="flex items-center gap-1">
               <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6" /></svg>
-              {feature === "No fumar" ? (en ? "Non-smoking rooms" : "Habitaciones para no fumadores") : tr(feature)}
+              {feature}
             </li>
           ))}
         </ul>
