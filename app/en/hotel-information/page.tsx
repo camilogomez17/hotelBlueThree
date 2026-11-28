@@ -23,10 +23,10 @@ export default function HotelInformationPage() {
       <h2 className="hotel-our-policies-heading">Amenities</h2><ServicesGrid full />
       <ForYourStay language="en" showTitle={false} />
     </section>
-    <HotelInformationContact language="en" />
     <section className="section-wrap hotel-information-policies" aria-labelledby="hotel-information-policies">
       <h2 className="hotel-our-policies-heading" id="hotel-information-policies">Our policies</h2>
       <AdditionalPolicies language="en" />
     </section>
+    <HotelInformationContact language="en" />
   </main>;
 }
