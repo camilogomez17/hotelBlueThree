@@ -354,10 +354,22 @@ a{color:inherit;text-decoration:none}
 .amenities-full .hotel-amenity-grid{row-gap:42px}
 .amenities-full .hotel-amenity-item{flex-direction:column;justify-content:flex-start;text-align:center;gap:9px}
 .amenities-full .hotel-amenity-item p{margin:0;font-size:13px;line-height:1.5;color:var(--muted);max-width:190px}
-.services-page-contact{background:#f5f8fa;padding:54px 20px;text-align:center;display:flex;align-items:center;flex-direction:column;gap:10px}
-.services-page-contact h2{font-size:26px;margin:0;color:var(--blue-dark)}
-.services-page-contact p{margin:0 0 12px;color:var(--muted)}
-.services-page-contact a{color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+.services-page-contact{background:var(--surface);padding:32px 0;border-block:1px solid var(--line)}
+.hotel-information-contact{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
+.hotel-information-contact-channels,.hotel-information-contact-actions,.hotel-information-socials{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.hotel-information-contact-channels{gap:20px}
+.hotel-information-phone{color:var(--blue);font-size:20px;font-weight:700;white-space:nowrap}
+.hotel-information-phone:hover{text-decoration:underline;text-underline-offset:3px}
+.hotel-information-socials{list-style:none;margin:0;padding:0;gap:8px}
+.hotel-information-socials a{display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;color:var(--blue);background:var(--white)}
+.hotel-information-socials a:hover{color:var(--white);background:var(--blue);border-color:var(--blue)}
+.hotel-information-socials svg{width:21px;height:21px}
+.hotel-information-contact a:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.hotel-information-contact-actions .button{justify-content:center;min-height:44px}
+@media(max-width:650px){
+  .hotel-information-contact,.hotel-information-contact-channels{flex-direction:column;gap:16px}
+  .hotel-information-contact-actions,.hotel-information-socials{justify-content:center}
+}
 .services-page-footer{padding:28px 5%;display:flex;justify-content:space-between;gap:20px;background:var(--blue-dark);color:#fff;font-size:13px}
 @media(max-width:600px){.services-page-header{flex-wrap:wrap}.services-page-header nav{width:100%;justify-content:space-between;gap:12px}.services-page-banner{padding:48px 20px}.services-page-main{padding:45px 18px}.services-page-footer{flex-direction:column}}
 
@@ -831,11 +843,14 @@ img,video,iframe{max-width:100%}
 .hotel-our-policies-heading{padding-top:32px;margin:0;text-align:center;font-size:clamp(26px,3vw,36px);color:#123c55}
 .hotel-policy-note{margin-top:30px}
 .hotel-policy-proposal{font-size:14px;line-height:1.6;color:#52616f;margin:0 0 20px}
+.hotel-information-policies{padding-bottom:48px}
+.hotel-information-policies .hotel-our-policies-heading{font-weight:700}
 .hotel-policy-accordion{border-top:1px solid #dce5ec}
 .hotel-policy-accordion details{border-bottom:1px solid #dce5ec}
 .hotel-policy-accordion summary{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 6px;list-style:none;cursor:pointer;font-weight:750;font-size:19px;color:#173a54}
 .hotel-policy-accordion summary::-webkit-details-marker{display:none}
-.hotel-policy-accordion summary span{display:grid;place-items:center;flex:0 0 32px;width:32px;height:32px;border-radius:50%;background:#003b71;color:#fff;font-size:23px;transition:transform .15s}
+.hotel-policy-accordion summary span{display:grid;place-items:center;flex:0 0 32px;width:32px;height:32px;border-radius:50%;background:#003b71;color:#fff;transition:transform .15s}
+.hotel-policy-accordion summary span::before{content:"";width:9px;height:9px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg)}
 .hotel-policy-accordion details[open] summary span{transform:rotate(180deg)}
 .hotel-policy-accordion summary:focus-visible{outline:2px solid #003b71;outline-offset:2px}
 .hotel-policy-accordion-content{padding:0 6px 24px;line-height:1.7}

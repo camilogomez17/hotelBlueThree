@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import HotelInformationContact from "../../components/HotelInformationContact";
+import AdditionalPolicies from "../../components/AdditionalPolicies";
 import HotelAmenities from "../../components/HotelAmenities";
 import ForYourStay from "../../components/ForYourStay";
 import FeaturedAmenities from "../../components/FeaturedAmenities";
@@ -21,11 +23,10 @@ export default function HotelInformationPage() {
       <h2 className="hotel-our-policies-heading">Amenities</h2><ServicesGrid full />
       <ForYourStay language="en" showTitle={false} />
     </section>
-    <section className="services-page-contact">
-      <h2>Need information about a service?</h2>
-      <p>Check availability, conditions and possible charges before booking.</p>
-      <a href="mailto:bluethreechancay@gmail.com">bluethreechancay@gmail.com</a>
-      <a href="tel:+51914046710">+51 914 046 710</a>
+    <HotelInformationContact language="en" />
+    <section className="section-wrap hotel-information-policies" aria-labelledby="hotel-information-policies">
+      <h2 className="hotel-our-policies-heading" id="hotel-information-policies">Our policies</h2>
+      <AdditionalPolicies language="en" />
     </section>
   </main>;
 }
