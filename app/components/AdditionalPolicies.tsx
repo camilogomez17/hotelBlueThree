@@ -6,7 +6,7 @@ export default function AdditionalPolicies({ language }: { language: "es" | "en"
     <div className="hotel-policy-note">
       <div className="hotel-policy-accordion">
         <details open>
-          <summary>{es ? "En caso de daños y/o perjuicios" : "Damage to hotel property"} <span aria-hidden="true" /></summary>
+          <summary>{es ? "Daños y/o Perjuicios" : "Damage to hotel property"} <span aria-hidden="true" /></summary>
           <div className="hotel-policy-accordion-content">
             <p>
               {es
