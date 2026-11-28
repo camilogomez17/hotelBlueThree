@@ -848,12 +848,13 @@ img,video,iframe{max-width:100%}
 .hotel-policy-accordion{border-top:1px solid #dce5ec}
 .hotel-policy-accordion details{border-bottom:1px solid #dce5ec}
 .hotel-policy-accordion summary{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 6px;list-style:none;cursor:pointer;font-weight:750;font-size:19px;color:#173a54}
+.hotel-policy-accordion details[open] summary{border-bottom:1px solid #dce5ec}
 .hotel-policy-accordion summary::-webkit-details-marker{display:none}
 .hotel-policy-accordion summary span{display:grid;place-items:center;flex:0 0 32px;width:32px;height:32px;border-radius:50%;background:#003b71;color:#fff;transition:transform .15s}
 .hotel-policy-accordion summary span::before{content:"";width:9px;height:9px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg)}
 .hotel-policy-accordion details[open] summary span{transform:rotate(180deg)}
 .hotel-policy-accordion summary:focus-visible{outline:2px solid #003b71;outline-offset:2px}
-.hotel-policy-accordion-content{padding:0 6px 24px;line-height:1.7}
+.hotel-policy-accordion-content{padding:12px 6px 24px;line-height:1.7}
 .hotel-policy-accordion-content>p{margin:0 0 12px}
 .hotel-policy-accordion-content>a{color:#003b71;text-decoration:underline}
 .hotel-policy-accordion-rows{margin:0}
