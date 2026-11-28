@@ -857,6 +857,7 @@ img,video,iframe{max-width:100%}
 .hotel-policy-accordion-content{padding:12px 6px 24px;line-height:1.7}
 .hotel-policy-accordion-content>p{margin:0 0 12px}
 .hotel-policy-accordion-content>a{color:#003b71;text-decoration:underline}
+.hotel-policy-accordion-subheading{margin:20px 0 6px;color:var(--blue);font-weight:700}
 .hotel-policy-accordion-rows{margin:0}
 .hotel-policy-accordion-rows>div{display:grid;grid-template-columns:minmax(180px,1fr) minmax(0,2fr);gap:16px;padding:12px 0}
 .hotel-policy-accordion-rows dt{font-weight:700}
